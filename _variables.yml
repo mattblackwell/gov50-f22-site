@@ -1,0 +1,29 @@
+author: Matthew Blackwell
+
+instructor:
+  name: Prof. Matt Blackwell
+  name_no_title: Matt Blackwell
+  email: mblackwell@gov.harvard.edu
+  url: "https://mattblackwell.org"
+  twitter: matt_blackwell
+  github: matt_blackwell
+  office: "CGIS Knafel 305"
+  contact_policy: >-
+    E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
+  appointment_url: https://calendly.com/matt_blackwell/
+
+course:
+  number: "Gov 50"
+  semester: "Fall 2022"
+  days: "Tue/Thu"
+  time: "12:00–1:15 PM"
+  location: "TBA"
+  dates: "September 1st-December 20th, 2022"
+  github: ""
+  url: ""
+  copyright_year: "2022"
+  slack: ""
+
+university:
+  name: "Harvard University"
+  url: "https://www.harvard.edu"

@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Gov 50"
+  navbar:
+    pinned: true
+    background: "#3498db"
+    right:
+      - syllabus.qmd
+      - schedule.qmd
+
+format:
+  html:
+    theme:
+      - litera
+      - html/custom.scss
+    toc: true
+
+
+
