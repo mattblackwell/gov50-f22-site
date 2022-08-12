@@ -9,6 +9,8 @@ website:
     right:
       - syllabus.qmd
       - schedule.qmd
+      - text: "Assignments"
+        file: assignments/index.qmd
 
 format:
   html:

@@ -237,4 +237,4 @@ Of course, there are other resources at Harvard if you need them. A few are list
 * [Room 13](https://www.hcs.harvard.edu/~room13/)
 
 
-[ps0]: /assignments/00-r-intro/
+[ps0]: assignments/00-problem-set.html
