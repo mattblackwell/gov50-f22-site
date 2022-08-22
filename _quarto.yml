@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Gov 50"
+  favicon: "files/img/gov50-icon-512.png"
   navbar:
     pinned: true
     background: "#3498db"
