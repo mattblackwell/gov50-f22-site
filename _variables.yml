@@ -9,7 +9,7 @@ instructor:
   github: matt_blackwell
   office: "CGIS Knafel 305"
   contact_policy: >-
-    E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
+    General questions about the course should be posted to either the course Ed Discussion board or the course Slack. Someone on the teaching staff will attempt to respond to these messages within 25 hours, but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry! For other issues (absences, etc), feel free to email me or send me a direct message on Slack.
   appointment_url: https://calendly.com/matt_blackwell/
 
 course:
@@ -17,10 +17,10 @@ course:
   semester: "Fall 2022"
   days: "Tue/Thu"
   time: "12:00–1:15 PM"
-  location: "TBA"
+  location: "Emerson 210"
   dates: "September 1st-December 20th, 2022"
   github: ""
-  url: ""
+  url: "https://gov50.mattblackwell.org"
   copyright_year: "2022"
   slack: ""
 

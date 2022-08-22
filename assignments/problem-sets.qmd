@@ -26,7 +26,7 @@ The text of the problem sets will be posted here on the course website. We will 
    that, a popup will appear and you can copy the URL (you can click
    the little clipboard icon to copy this automatically).
 
-![](/files/img/github-clone.png){fig-alt="Cloning the repo"}
+![](/files/img/assignments/github-clone.png){fig-alt="Cloning the repo"}
 
 4. Now, switch to RStudio. Go to the menu bar and hit "File > New
    Project". You can then choose what type of project to start. Since
@@ -65,13 +65,13 @@ Once you are think you have completed the assignment, make sure to push your com
 
 On Gradescope, you'll find two entries for each assignment. One will be labelled "Zip File" and the other "PDF". Click on the Zip File entry and drag/select your zip into the box. Click "Upload."
 
-![](/files/img/gradescope-upload.png){fig-alt="Uploading your zip file to Gradescope"}
+![](/files/img/assignments/gradescope-upload.png){fig-alt="Uploading your zip file to Gradescope"}
 
 ### Step 3: Check autograder output
 
 When you submit the zip file, Gradescope will run a series of tests on your code to see if it runs and to check that you have completed the coding tasks asked of you in the assignment. You'll see a list of test results and an overall score.
 
-![](/files/img/gradescope-upload.png){fig-alt="Uploading your zip file to Gradescope"}
+![](/files/img/assignments/autograder-results.png){fig-alt="Uploading your zip file to Gradescope"}
 
 Check the messages on any questions you got wrong for hints about how to fix them. You may then re-upload the zip file again once you have fixed the code. You should repeat this process as many times as needed before you get a perfect score. 
 

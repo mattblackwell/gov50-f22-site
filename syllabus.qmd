@@ -85,6 +85,11 @@ No prerequisites will be assumed.  If you are unfamiliar with downloading and in
 
 This course satisfies the Methods requirement for the Government department and the "Quantitative Reasoning with Data" requirement in the Harvard College Curriculum. It also counts toward completion of the Government department data science track. 
 
+### Speaker Series
+
+We are planning a Gov 50 Speaker Series that will host optional events with guests from the world of data science. More information coming soon...
+
+
 ## Course structure
 
 ### Flow of the Course
@@ -238,3 +243,7 @@ Of course, there are other resources at Harvard if you need them. A few are list
 
 
 [ps0]: assignments/00-problem-set.html
+
+## Accessibility 
+
+Harvard University values inclusive excellence and providing equal educational opportunities for all students. Our goal is to remove barriers for disabled students related to inaccessible elements of instruction or design in this course. If reasonable accommodations are necessary to provide access, please contact the [Disability Access Office (DAO)](https://aeo.fas.harvard.edu/). Accommodations do not alter fundamental requirements of the course and are not retroactive. Students should request accommodations as early as possible, since they may take time to implement. Students should notify DAO at any time during the semester if adjustments to their communicated accommodation plan are needed.
