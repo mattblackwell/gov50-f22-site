@@ -20,5 +20,8 @@ format:
       - html/custom.scss
     toc: true
 
+execute:
+  freeze: auto
+
 
 
