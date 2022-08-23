@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2022-08-11">
+
+<title>Gov 50 - Problem Sets and Exams</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/img/gov50-icon-512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gov 50</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">Syllabus</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html">Schedule</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignments/index.html">Assignments</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-set-workflow" id="toc-problem-set-workflow" class="nav-link active" data-scroll-target="#problem-set-workflow">Problem set workflow</a></li>
+  <li><a href="#submitting-your-assignments" id="toc-submitting-your-assignments" class="nav-link" data-scroll-target="#submitting-your-assignments">Submitting your assignments</a>
+  <ul class="collapse">
+  <li><a href="#step-1-download-your-github-repo-as-a-zip-file" id="toc-step-1-download-your-github-repo-as-a-zip-file" class="nav-link" data-scroll-target="#step-1-download-your-github-repo-as-a-zip-file">Step 1: Download your GitHub repo as a zip file</a></li>
+  <li><a href="#step-2-submit-the-zip-file-to-gradescope" id="toc-step-2-submit-the-zip-file-to-gradescope" class="nav-link" data-scroll-target="#step-2-submit-the-zip-file-to-gradescope">Step 2: Submit the zip file to Gradescope</a></li>
+  <li><a href="#step-3-check-autograder-output" id="toc-step-3-check-autograder-output" class="nav-link" data-scroll-target="#step-3-check-autograder-output">Step 3: Check autograder output</a></li>
+  <li><a href="#step-4-upload-pdf" id="toc-step-4-upload-pdf" class="nav-link" data-scroll-target="#step-4-upload-pdf">Step 4: Upload PDF</a></li>
+  </ul></li>
+  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
+  <li><a href="#writing-good-code" id="toc-writing-good-code" class="nav-link" data-scroll-target="#writing-good-code">Writing good code</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem Sets and Exams</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 11, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>For both problem sets and exams, you will end up producing two types of documents:</p>
+<ol type="1">
+<li>An <code>.Rmd</code> file (or “RMarkdown file” when spoken) that is a plain-text file that contains the text of your write-up and the code used to do all of the calculations for the assignment. You don’t apply markup directly like in Word or Google docs, but by using various text shortcuts, like in Slack.</li>
+<li>An output <code>.pdf</code> file that contains the compiled version of the Rmd file. Usually, you might call this the write-up and it will be nicely formatted and ready for non-technical folks to read. In other classes, you might write these in Microsoft Word or Google Docs. In this class, this will be the output of compiling (or knitting, in the R lingo) the <code>.Rmd</code> file.</li>
+</ol>
+<section id="problem-set-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="problem-set-workflow">Problem set workflow</h2>
+<p>The text of the problem sets will be posted here on the course website. We will distribute templates and data for the problem sets via Github. To get started, follow these steps:</p>
+<ol type="1">
+<li>Follow the link at the top of the problem set on the course website a Canvas page that has all of the Github Classroom links for each assignment.</li>
+<li>Click on the Github Classroom link for the assignment in question. You’ll be presented with a page that asks you to accept the assignment. Click “Accept this assignment”.</li>
+<li>Go to this new problem set repository on GitHub. Click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).</li>
+</ol>
+<p><img src="../files/img/assignments/github-clone.png" class="img-fluid" alt="Cloning the repo"></p>
+<ol start="4" type="1">
+<li><p>Now, switch to RStudio. Go to the menu bar and hit “File &gt; New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. Because this is a <strong>private</strong> repository, you will be prompted to enter your GitHub username and password. Go ahead and do this.</p></li>
+<li><p>As you make changes to your file, make sure to commit those changes. Every commit is a point that you can always go back to if your code stops working for some reason. So doing this often will make sure that you have access to that great feature of git. At an absolute minimum, you should do this every time you complete a question, though you may want to do it more often than that. Committing often means you also don’t have to constantly create new versions of the same file because you’re afraid of making some change. Also, make sure to use informative commit messages so you know what’s changing.</p></li>
+<li><p>At some point, you’ll want to push your changes back to GitHub so the teaching staff can see your work (if you need help) or so that you can submit to Gradescope.</p></li>
+</ol>
+</section>
+<section id="submitting-your-assignments" class="level2">
+<h2 class="anchored" data-anchor-id="submitting-your-assignments">Submitting your assignments</h2>
+<section id="step-1-download-your-github-repo-as-a-zip-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-your-github-repo-as-a-zip-file">Step 1: Download your GitHub repo as a zip file</h3>
+<p><img src="../files/img/github-zip.png" class="img-fluid" alt="Downloading your repo as a zip file"></p>
+<p>Once you are think you have completed the assignment, make sure to push your commits to GitHub and then go to the repository website and download the repo as a <code>.zip</code> file under the green “Code” button. It’s important to use the default name for the zip file, so you may have to delete an older zip file if you have already downloaded it to the same location. In general, it will have the structure <code>problem-set-X-username-main.zip</code> where <code>X</code> is the problem set number and <code>username</code> is your GitHub username.</p>
+</section>
+<section id="step-2-submit-the-zip-file-to-gradescope" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-submit-the-zip-file-to-gradescope">Step 2: Submit the zip file to Gradescope</h3>
+<p>On Gradescope, you’ll find two entries for each assignment. One will be labelled “Zip File” and the other “PDF”. Click on the Zip File entry and drag/select your zip into the box. Click “Upload.”</p>
+<p><img src="../files/img/assignments/gradescope-upload.png" class="img-fluid" alt="Uploading your zip file to Gradescope"></p>
+</section>
+<section id="step-3-check-autograder-output" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-check-autograder-output">Step 3: Check autograder output</h3>
+<p>When you submit the zip file, Gradescope will run a series of tests on your code to see if it runs and to check that you have completed the coding tasks asked of you in the assignment. You’ll see a list of test results and an overall score.</p>
+<p><img src="../files/img/assignments/autograder-results.png" class="img-fluid" alt="Uploading your zip file to Gradescope"></p>
+<p>Check the messages on any questions you got wrong for hints about how to fix them. You may then re-upload the zip file again once you have fixed the code. You should repeat this process as many times as needed before you get a perfect score.</p>
+<p>If you get an autograder error saying “The autograder failed to execute correctly” and you are using the Safari browser on macOS, check to see if Safari is unzipping the zip file automatically upon download. If it is, you can turn off this setting by following <a href="https://wiki.umbc.edu/pages/viewpage.action?pageId=31919091">these instructions</a>.</p>
+</section>
+<section id="step-4-upload-pdf" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-upload-pdf">Step 4: Upload PDF</h3>
+<p>Once you are satisfied with your autograding, then you should produce your final PDF report by hitting the “Knit” button at the top of the RStudio editor. This should produce a PDF output that you can then upload to Gradescope. In Gradescope, there will be an assignment labelled “Problem Set X: PDF”. There, you will be prompted to upload your final PDF report. You’ll be asked to indicate on which page each answer is. Label the PDF with where those answers are (being sure to mark two different pages if an answer continues on two pages).</p>
+</section>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<ol type="1">
+<li>Accept GitHub Classroom invite.</li>
+<li>Use RStudio to “Clone with HTTPS” this repo to your computer.</li>
+<li>Make progress editing the <code>.Rmd</code> file.
+<ul>
+<li>As you do, commit and push to GitHub regularly.</li>
+<li>You can check your answers with the autograder at any point.</li>
+<li>Make sure to <strong>name your code chunks</strong>.</li>
+<li>Add the names of anyone you discuss the problem set with on your write-up.</li>
+</ul></li>
+<li>Push final version to GitHub and download the <code>.zip</code> file.</li>
+<li>Upload the <code>.zip</code> file to the Gradescope autograder.</li>
+<li>Upload final <code>.pdf</code> file to Gradescope.</li>
+</ol>
+</section>
+<section id="writing-good-code" class="level2">
+<h2 class="anchored" data-anchor-id="writing-good-code">Writing good code</h2>
+<p>You’ll be writing code to do the analyses in this class. Code, like any language, provides many different ways of saying the same thing. One good practice of coding is to have what’s called good coding style. This refers to how you format the code that you so that it is (a) easy for you and others to read, and (b) less prone to making mistakes. Here are some general guidelines for writing R code and Rmd file.</p>
+<ul>
+<li>When writing R code and unless we tell you otherwise, follow the <a href="https://style.tidyverse.org/">tidyverse style guide</a>. For this class, the relevant parts of this document are the first couple of chapters. If you are ever uncertain about how to name something or how to write some code, see this document and it will likely help you quite a bit.</li>
+<li>Make sure the code chunks in the Rmd file have blank lines above and below them. If you don’t have this, it can sometimes cause problems with compilation.</li>
+<li>Try to keep your lines of code shorter than 80 characters since this makes reading code <strong>much</strong> easier. Usually this means writing some function arguments on a different line. See the style guide (section 2.5) for more on this.</li>
+<li>Include comments in your code and format them nicely as in <a href="https://style.tidyverse.org/functions.html#comments-1">section 3.4</a> of the style guide. These comments should explain why you wrote the code you wrote and any notes you had about how you came to this solution. This might include, say, other approaches you tried but didn’t work or approaches you might want to try if you ever revisit this. Look at our code and examples to get a sense of how to use comments. In RStudio, you can nicely format a comment by hitting Control-Shift-\.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

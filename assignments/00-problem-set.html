@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Gov 50">
+<meta name="dcterms.date" content="2022-08-12">
+
+<title>Gov 50 - Getting Started with R, R Studio, Git, and Github</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/img/gov50-icon-512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gov 50</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">Syllabus</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html">Schedule</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignments/index.html">Assignments</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#installing-r-and-rstudio" id="toc-installing-r-and-rstudio" class="nav-link active" data-scroll-target="#installing-r-and-rstudio">Installing R and RStudio</a></li>
+  <li><a href="#installing-and-configuring-git" id="toc-installing-and-configuring-git" class="nav-link" data-scroll-target="#installing-and-configuring-git">Installing and configuring git</a>
+  <ul class="collapse">
+  <li><a href="#install-git" id="toc-install-git" class="nav-link" data-scroll-target="#install-git">Install git</a></li>
+  <li><a href="#setup-a-github-account" id="toc-setup-a-github-account" class="nav-link" data-scroll-target="#setup-a-github-account">Setup a GitHub account</a></li>
+  <li><a href="#creating-your-first-repo" id="toc-creating-your-first-repo" class="nav-link" data-scroll-target="#creating-your-first-repo">Creating your first repo</a></li>
+  </ul></li>
+  <li><a href="#working-with-a-project-in-rstudio" id="toc-working-with-a-project-in-rstudio" class="nav-link" data-scroll-target="#working-with-a-project-in-rstudio">Working with a project in RStudio</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Getting Started with R, R Studio, Git, and Github</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gov 50 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 12, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="installing-r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="installing-r-and-rstudio">Installing R and RStudio</h2>
+<p>In this problem set, we’re going to get R, RStudio, and R Markdown set up on your computer. To get started, follow these steps:</p>
+<ol type="1">
+<li>Download and install the most recent version of <a href="https://cloud.r-project.org/">R</a>. There are versions available for the Windows, Mac, and Linux operating systems. On a Windows machine, you will want to install using the <code>R-x.y.z-win.exe</code> file where <code>x.y.z</code> is a version number. On a Mac, you will want to install using the <code>R-x.y.z.pkg</code> file that is notarized and signed.</li>
+<li>With R installed, download and install <a href="https://rstudio.com/">RStudio</a>. RStudio is a type of “integrated development environment” or IDE designed for R. It makes working with R considerably easier and is available for most platforms. It is also free.</li>
+<li>Install the packages we will use throughout the semester. To do this, either type or copy and paste each of the following lines of code into the “Console” in RStudio (lower left panel by default). Make sure you do this separately for each line. If you are asked if you want to install any packages from source, type “no”. Note that the symbols next to <code>my_package</code> are a less than sign <code>&lt;</code> followed by a minus sign <code>-</code> with no space between them.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"usethis"</span>, <span class="st">"devtools"</span>, <span class="st">"learnr"</span>, <span class="st">"tinytex"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(my_packages, <span class="at">repos =</span> <span class="st">"http://cran.rstudio.com"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"kosukeimai/qss-package"</span>, <span class="at">build_vignettes =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>For some things in the course, we’ll need produce PDFs from R and that requires something called LaTeX. If you’ve never heard of that, it’s completely fine and you should just run the following two lines of R code:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tinytex'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()  <span class="co"># install TinyTeX</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="installing-and-configuring-git" class="level2">
+<h2 class="anchored" data-anchor-id="installing-and-configuring-git">Installing and configuring git</h2>
+<p>Git is a version control program that helps organize the process of writing and maintaining code. It allows you to maintain a history of edits to your code without having to resort to a set of files like:</p>
+<pre><code>my_code.R
+my_code_v1.R
+my_code_v2_FINAL.R</code></pre>
+<p>There’s a lot to git and it will be harder to use in the beginning, but in the long term there are huge benefits of it. First, when you use git, you are much less likely to encounter a devastating data failure. All of your (committed) changes to your project are preserved, even when you make new changes or you revert old changes.</p>
+<p>Git is also a very useful way for people to collaborate. There is a huge community built up around it. And once your projects are publicly available on Github (a website for hosting git repositories), there are a host of ways that folks can collaborate with you.</p>
+<section id="install-git" class="level3">
+<h3 class="anchored" data-anchor-id="install-git">Install git</h3>
+<p>You might already have git installed on your computer, especially if you have a Mac. To check, in RStudio, click on the Terminal tab in the bottom-left panel (next to the Console tab). Type <code>git --version</code> at the command prompt. If you get a response with a version number, great you are all set. If you get any kind of error message, you learn how to install git on your machine <a href="https://happygitwithr.com/install-git.html">here</a>.</p>
+</section>
+<section id="setup-a-github-account" class="level3">
+<h3 class="anchored" data-anchor-id="setup-a-github-account">Setup a GitHub account</h3>
+<p>Next, you can setup a <a href="https://github.com/join">GitHub</a> account. You can think of GitHub as similar to Dropbox or Google Drive for your git projects (“repositories”) where everything is public by default. Since you might use this account to interact with potential employers in the future, you should probably pick a professional username.</p>
+<p>Once you have a GitHub account, you can configure your local git program to interact with your account gracefully. Run the following two lines of code in the Terminal replacing <code>"John Harvard"</code> with your name and <code>"john@harvard.edu"</code> with your email address used to sign up for GitHub.</p>
+<pre><code>git config --global user.name "John Harvard"
+git config --global user.mail "john@harvard.edu"</code></pre>
+</section>
+<section id="creating-your-first-repo" class="level3">
+<h3 class="anchored" data-anchor-id="creating-your-first-repo">Creating your first repo</h3>
+<p>Once you are logged into Github and at its homepage, you can now create a new repo (shorthand for “repository”). These repositories are like folders in Dropbox except a bit more structured. Create one by clicking on the green “New” button in the top-left of the screen next to “Repositories.” It should look like this:</p>
+<p><img src="../files/img/assignments/github-create-new.png" class="img-fluid" alt="Create a new repo"></p>
+<p>Now a new screen should pop up requesting some information for the new repo. Give this new Repository the name <code>gov50-problem-set0</code> and set it to be a private repository. You can give it an informative description and check the “Initialize this repository with a README” checkbox. This latter option will add a README to the repository where you can add more information that will display nicely in the repository’s homepage. Your setup should look something like this:</p>
+<p><img src="../files/img/assignments/github-create-options.png" class="img-fluid" alt="New Repo Options"></p>
+<p>Once you create your repo, you are ready to connect it to RStudio on your local computer. The easiest way to do this is go to the repo homepage (you’re already there if you’ve just created it) and click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).</p>
+<p><img src="../files/img/assignments/github-clone.png" class="img-fluid" alt="Cloning the repo"></p>
+<p>Now, switch to RStudio. Go to the menu bar and hit “File &gt; New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. And now you’ll have your project ready to go in RStudio.</p>
+</section>
+</section>
+<section id="working-with-a-project-in-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-a-project-in-rstudio">Working with a project in RStudio</h2>
+<p>You’ll see in the bottom right window of RStudio you’ll now see the files from your Github project.</p>
+<p><img src="../files/img/assignments/rstudio-files.png" class="img-fluid" alt="Files in RStudio"></p>
+<p>Let’s edit the README file by clicking on <code>README.md</code> in that file pane and you’ll be able to edit it in the top-left pane. Change the header from <code># gov-50-problem-set0</code> to <code># Introduction</code> and save the file (⌘+S or Ctrl+S). If you click on the “Git” tab in the top right panel, you will a list of the changes you’ve made to the repo since the last commit (you can think of a commit as a more permanent type of saving work to the git repo).</p>
+<p><img src="../files/img/assignments/rstudio-git-panel.png" class="img-fluid" alt="Git panel in RStudio"></p>
+<p>One thing you’ll notice here is that git thinks that <code>gov50-problem-set0.Rproj</code> is a file that maybe should go into the repo. But this file is just for our local copy of RStudio and shouldn’t really go into the repo. To prevent git from bothering us about it every time we open something, we can modify the <code>.gitignore</code> file to tell git to ignore certain files. Open <code>.gitignore</code> and add a new line with <code>*.Rproj</code> on it to tell git to ignore any file with the extension <code>.Rproj</code>. Make sure to save the file.</p>
+<p><img src="../files/img/assignments/rstudio-edit-gitignore.png" class="img-fluid" alt="Editing .gitignore"></p>
+<p>If you go back to the Git tab in the top right and refresh (little circular arrow in the top right corner), you see that <code>gov50-problem-set0.Rproj</code> is removed from our list. Now we are ready to commit our changes. Click the “Staged” box for <code>.gitignore</code> and <code>README.md</code> and hit the “Commit” button just above the file list. You’ll see a window with the changes that you are about to commit.</p>
+<p><img src="../files/img/assignments/rstudio-commit.png" class="img-fluid" alt="Commit dialog box in RStudio"></p>
+<p>You can click on different files to see what exactly you are changing. Add a short but informative commit message that describes what you are committing and hit “Commit”. Once this completes, you can hit the “Push” button in the top right to push that commit back to Github. If you go back to your repo’s homepage on Github and refresh the page, you’ll see the updates to your README file and the new <code>.gitignore</code>.</p>
+<p><img src="../files/img/assignments/github-changed.png" class="img-fluid" alt="Github repo after commit"></p>
+<p>And you’re done! You’ve just created your first repo.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
