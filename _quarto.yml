@@ -12,6 +12,8 @@ website:
       - schedule.qmd
       - text: "Assignments"
         file: assignments/index.qmd
+      - text: "Ed"
+        href: https://edstem.org/us/courses/24957/discussion/
 
 format:
   html:

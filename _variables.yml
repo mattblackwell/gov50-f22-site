@@ -19,10 +19,10 @@ course:
   time: "12:00–1:15 PM"
   location: "Emerson 210"
   dates: "September 1st-December 20th, 2022"
-  github: ""
+  github: "https://github.com/mattblackwell/gov50-f22-site"
   url: "https://gov50.mattblackwell.org"
   copyright_year: "2022"
-  slack: ""
+  slack: "https://gov-50-f22-62y.slack.com/ssb/redirect"
 
 university:
   name: "Harvard University"
