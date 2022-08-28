@@ -199,9 +199,10 @@ If you feel there has been an error in the grading of one your assignment, you m
 
 
 ### Office Hours and Availability
- My office hours are Wednesdays 10am-12pm  ET. If you have questions about the course material, computational issues, or other course-related issues please do not hesitate to set up an appointment with either any of us.
 
-If you have a general question, you can also post it on Canvas. This is almost always the fastest way to get an answer. However, you can also email me directly at [mblackwell@gov.harvard.edu](mailto:mblackwell@gov.harvard.edu). If the question is of general interest, I will forward the question and my answer to the class. Make sure to tell me explicitly in your email if you would like to stay anonymous.
+ My office hours are Tuesdays and Thursdays 1:30pm-3:00pm ET. If you have questions about the course material, computational issues, or other course-related issues please do not hesitate to set up an appointment with either any of us.
+
+If you have a general question, you should post it to the Ed discussion board (where you can make your question anonymous if you would like). This is almost always the fastest way to get an answer. However, you can also email me directly at [mblackwell@gov.harvard.edu](mailto:mblackwell@gov.harvard.edu) if you have a question that is about a personal situation. 
 
 ### Academic Honesty
 
