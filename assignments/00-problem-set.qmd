@@ -73,7 +73,7 @@ This will open a page on GitHub asking you to create a "Personal Access Token" o
 
 ![](/files/img/assignments/github-pat.png){fig-alt="Create a GitHub PAT"}
 
-You will then see a new screen with a long sequence of letters. This is your token or secret code. You should treat it like a password and do not share it with anyone. If you use a password manager like 1Password or LassPass, you can put it in a secure note in those programs. Copy this by hitting the button with the two boxes. 
+You will then see a new screen with a long sequence of letters. This is your token or secret code. You should treat it like a password and do not share it with anyone. If you use a password manager like 1Password or LastPass, you can put it in a secure note in those programs. Copy this by hitting the button with the two boxes. 
 
 ![](/files/img/assignments/github-pat-copy.png){fig-alt="Copy the GitHub PAT"}
 

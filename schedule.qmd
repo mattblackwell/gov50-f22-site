@@ -26,7 +26,8 @@ Below is the schedule for the semester. You can find the materials for each cour
 
 Here's a guide to the schedule:
 
-- [**Content**](/content/) ({{< fa book-open-reader >}}): This page contains the readings, slides, and recorded lectures (if any) for the topic. Read/watch these first.
+- [**Materials**](/materials/) ({{< fa book-open-reader >}}): This page contains the readings, slides, and recorded lectures (if any) for the topic. Read/watch these first.
+- **Tutorial** ({{< fa laptop-code >}}): A link to the tutorial for that week. 
 - **Assignment** ({{< fa pen-ruler >}}): This page contains the instructions for each assignment. **Assignments are due by 11:59 PM on the day they're listed.**
 
 The readings refer to following texts:
@@ -50,8 +51,8 @@ schedule <- schedule %>%
     mutate(var_content = ifelse(!is.na(content),
                                 glue('<a href="{content}.qmd"><i class="fa-solid fa-book-open-reader fa-lg"></i></a>'),
                                 glue('<font color="#e9ecef"><i class="fa-solid fa-book-open-reader fa-lg"></i></font>'))) %>%
-    mutate(var_example = ifelse(!is.na(example),
-                                glue('<a href="{example}.qmd"><i class="fa-solid fa-laptop-code fa-lg"></i></a>'),
+    mutate(var_tutorial = ifelse(!is.na(tutorial),
+                                glue('<a href="{tutorial}"><i class="fa-solid fa-laptop-code fa-lg"></i></a>'),
                                 glue('<font color="#e9ecef"><i class="fa-solid fa-laptop-code fa-lg"></i></font>'))) %>%
     mutate(var_assignment = ifelse(!is.na(assignment),
                                    glue('<a href="{assignment}.qmd"><i class="fa-solid fa-pen-ruler fa-lg"></i></a>'),
@@ -61,11 +62,11 @@ schedule <- schedule %>%
                              glue('<strong>{format(date, "%B %e")}</strong>–<strong>{format(date_end, "%B %e")}</strong>'))) %>%
     mutate(col_title = glue('{var_title}{var_deadline}')) %>%
     mutate(col_content = var_content,
-           col_example = var_example,
+           col_tutorial = var_tutorial,
            col_reading = var_reading,
            col_assignment = var_assignment) %>%
-  select(Week = week, Date = col_date, Title = col_title, Reading = col_reading, Content = col_content,
-         Example = col_example, Assignment = col_assignment)
+  select(Week = week, Date = col_date, Title = col_title, Reading = col_reading, Materials = col_content,
+         Tutorial = col_tutorial, Assignment = col_assignment) 
 
 week_count <- schedule |> count(Week)
 week_index <- week_count |> pull(n) |> set_names(paste0("Week ", week_count$Week))

@@ -1,0 +1,17 @@
+---
+title: "Introduction to Gov 50"
+date: 2022-09-01
+---
+
+
+## Readings 
+
+- The [syllabus](/syllabus.qmd) and [schedule](/schedule.qmd) pages. 
+- Review and try to start [Problem Set 0](/assignments/00-problem-set.html)
+
+
+## Slides
+
+- [PDF of slides as I present them](/slides/01_intro.pdf)
+- [PDF of handout version of slides](/slides/01_intro_handout.pdf) (no incremental slides)
+ 
