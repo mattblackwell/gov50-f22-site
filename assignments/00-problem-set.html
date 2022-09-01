@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.149">
+<meta name="generator" content="quarto-1.1.168">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -262,7 +262,7 @@ git config --global user.email "john@harvard.edu"</code></pre>
 </div>
 <p>This will open a page on GitHub asking you to create a “Personal Access Token” or PAT (this is the secret code). You’ll have to give the PAT a note that describes what it’s for and choose an expiration date. You can accept the default of 30 days but you will have to renew it a couple of times during the class. Alternatively, if you set it to a date after the semester ends, you shouldn’t have to touch this again. We recommend keeping the “scope” selections as they are and clicking the “Generate Token” button at the bottom of the page.</p>
 <p><img src="../files/img/assignments/github-pat.png" class="img-fluid" alt="Create a GitHub PAT"></p>
-<p>You will then see a new screen with a long sequence of letters. This is your token or secret code. You should treat it like a password and do not share it with anyone. If you use a password manager like 1Password or LassPass, you can put it in a secure note in those programs. Copy this by hitting the button with the two boxes.</p>
+<p>You will then see a new screen with a long sequence of letters. This is your token or secret code. You should treat it like a password and do not share it with anyone. If you use a password manager like 1Password or LastPass, you can put it in a secure note in those programs. Copy this by hitting the button with the two boxes.</p>
 <p><img src="../files/img/assignments/github-pat-copy.png" class="img-fluid" alt="Copy the GitHub PAT"></p>
 <p>Once you have copied the PAT, call <code>gitcreds::gitcreds_set()</code> from the RStudio console and paste the PAT when prompted. You should see the following:</p>
 <div class="cell">
