@@ -2,38 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/index.html</loc>
-    <lastmod>2022-09-01T15:06:32.128Z</lastmod>
+    <lastmod>2022-09-03T18:32:20.777Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/01_intro.html</loc>
-    <lastmod>2022-09-01T15:06:33.908Z</lastmod>
+    <lastmod>2022-09-03T18:32:22.509Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/about.html</loc>
-    <lastmod>2022-09-01T15:06:34.268Z</lastmod>
+    <lastmod>2022-09-03T18:32:22.849Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/syllabus.html</loc>
-    <lastmod>2022-09-01T15:06:34.916Z</lastmod>
+    <lastmod>2022-09-03T18:32:23.449Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/index.html</loc>
-    <lastmod>2022-09-01T15:06:35.280Z</lastmod>
+    <lastmod>2022-09-03T18:32:23.801Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/mattblackwell/gov50-f22-site/resources.html</loc>
+    <lastmod>2022-09-03T18:32:24.125Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/problem-sets.html</loc>
-    <lastmod>2022-09-01T15:06:35.680Z</lastmod>
+    <lastmod>2022-09-03T18:32:24.497Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/index.html</loc>
-    <lastmod>2022-09-01T15:06:35.980Z</lastmod>
+    <lastmod>2022-09-03T18:32:24.785Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/tutorials.html</loc>
+    <lastmod>2022-09-03T18:32:25.349Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/00-problem-set.html</loc>
-    <lastmod>2022-09-01T15:06:36.724Z</lastmod>
+    <lastmod>2022-09-03T18:32:26.057Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/schedule.html</loc>
-    <lastmod>2022-09-01T15:06:37.476Z</lastmod>
+    <lastmod>2022-09-03T18:32:26.861Z</lastmod>
   </url>
 </urlset>
