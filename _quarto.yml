@@ -10,10 +10,28 @@ website:
     right:
       - syllabus.qmd
       - schedule.qmd
+      - text: "Materials"
+        file: materials/index.qmd
       - text: "Assignments"
         file: assignments/index.qmd
       - text: "Ed"
         href: https://edstem.org/us/courses/24957/discussion/
+      - text: "Gradescope"
+        href: https://www.gradescope.com/courses/415456
+
+  sidebar:
+    - title: "Materials"
+      style: "docked"
+      search: false
+      background: dark
+      contents:
+        - section: "Overview"
+          contents:
+            - materials/index.qmd
+        - section: "Course Materials"
+          contents:
+            - text: "0: Introduction to Gov 50"
+              file: materials/01_intro.qmd
 
 format:
   html:

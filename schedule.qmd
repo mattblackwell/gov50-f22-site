@@ -38,7 +38,7 @@ The readings refer to following texts:
 
 
 ```{r build-table, echo=FALSE, results="asis"}
-schedule <- schedule %>%
+schedule <- schedule %>% 
     mutate(var_title = ifelse(!is.na(content),
                               glue('<span class="content-title">{title}</span>'),
                               glue('{title}'))) %>%
