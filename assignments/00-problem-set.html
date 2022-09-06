@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.179">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -209,6 +209,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../materials/01_intro.html" class="sidebar-item-text sidebar-link">0: Introduction to Gov 50</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/02_r_data_viz.html" class="sidebar-item-text sidebar-link">1: R, RMarkdown and Data Visualization</a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -315,13 +320,11 @@ git config --global user.email "john@harvard.edu"</code></pre>
 <p>You will then see a new screen with a long sequence of letters. This is your token or secret code. You should treat it like a password and do not share it with anyone. If you use a password manager like 1Password or LastPass, you can put it in a secure note in those programs. Copy this by hitting the button with the two boxes.</p>
 <p><img src="../files/img/assignments/github-pat-copy.png" class="img-fluid" alt="Copy the GitHub PAT"></p>
 <p>Once you have copied the PAT, call <code>gitcreds::gitcreds_set()</code> from the RStudio console and paste the PAT when prompted. You should see the following:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> gitcreds::gitcreds_set<span class="kw">()</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Enter password or token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span><span class="op">&gt;</span> Adding new credentials...</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span><span class="op">&gt;</span> Removing credentials from cache...</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span><span class="op">&gt;</span> Done.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre><code>&gt; gitcreds::gitcreds_set()
+? Enter password or token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-&gt; Adding new credentials...
+-&gt; Removing credentials from cache...
+-&gt; Done.</code></pre>
 <p>Once this is done, you should be all set for RStudio to communicate with GitHub. If you have any problems with the PAT process or want to know more about it, the <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> book has a <a href="https://happygitwithr.com/https-pat.html">great chapter</a> about it.</p>
 </section>
 <section id="creating-your-first-repo" class="level3">
@@ -345,7 +348,9 @@ git config --global user.email "john@harvard.edu"</code></pre>
 <p><img src="../files/img/assignments/rstudio-edit-gitignore.png" class="img-fluid" alt="Editing .gitignore"></p>
 <p>If you go back to the Git tab in the top right and refresh (little circular arrow in the top right corner), you see that <code>gov50-problem-set0.Rproj</code> is removed from our list. Now we are ready to commit our changes. Click the “Staged” box for <code>.gitignore</code> and <code>README.md</code> and hit the “Commit” button just above the file list. You’ll see a window with the changes that you are about to commit.</p>
 <p><img src="../files/img/assignments/rstudio-commit.png" class="img-fluid" alt="Commit dialog box in RStudio"></p>
-<p>You can click on different files to see what exactly you are changing. Add a short but informative commit message that describes what you are committing and hit “Commit”. Once this completes, you can hit the “Push” button in the top right to push that commit back to Github. If you go back to your repo’s homepage on Github and refresh the page, you’ll see the updates to your README file and the new <code>.gitignore</code>.</p>
+<p>You can click on different files to see what exactly you are changing. Add a short but informative commit message that describes what you are committing and hit “Commit”. Once this completes, you can hit the “Push” button in the top right to push that commit back to Github.</p>
+<p><img src="../files/img/assignments/rstudio-push.png" class="img-fluid" alt="Push to GitHub"></p>
+<p>If you go back to your repo’s homepage on Github and refresh the page, you’ll see the updates to your README file and the new <code>.gitignore</code>.</p>
 <p><img src="../files/img/assignments/github-changed.png" class="img-fluid" alt="Github repo after commit"></p>
 <p>And you’re done! You’ve just created your first repo.</p>
 
