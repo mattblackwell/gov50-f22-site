@@ -1,6 +1,6 @@
 ﻿week,date,date_end,title,deadline, reading,content,tutorial,assignment
 0,2022-09-01,,Introduction to the course,,,"/materials/01_intro",,
-1,2022-09-06,,"R, Rstudio, and data visualization",,MD Ch 1-2,,,
+1,2022-09-06,,"R, Rstudio, and data visualization",,MD Ch 1-2,"/materials/02_r_data_viz",,
 1,2022-09-07,,Tutorial 1,11:59 PM,,,https://mblackwell.shinyapps.io/01-r-basics-data-viz/,
 1,2022-09-08,,Data visualization,,,,,
 2,2022-09-12,,Tutorial 2,11:59 PM,,,,

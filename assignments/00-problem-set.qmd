@@ -79,7 +79,7 @@ You will then see a new screen with a long sequence of letters. This is your tok
 
 Once you have copied the PAT, call `gitcreds::gitcreds_set()` from the RStudio console and paste the PAT when prompted. You should see the following:
 
-```{sh eval = FALSE}
+```
 > gitcreds::gitcreds_set()
 ? Enter password or token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 -> Adding new credentials...
@@ -129,7 +129,11 @@ If you go back to the Git tab in the top right and refresh (little circular arro
 ![](/files/img/assignments/rstudio-commit.png){fig-alt="Commit dialog box in RStudio"}
 
 
-You can click on different files to see what exactly you are changing. Add a short but informative commit message that describes what you are committing and hit "Commit". Once this completes, you can hit the "Push" button in the top right to push that commit back to Github. If you go back to your repo's homepage on Github and refresh the page, you'll see the updates to your README file and the new `.gitignore`.
+You can click on different files to see what exactly you are changing. Add a short but informative commit message that describes what you are committing and hit "Commit". Once this completes, you can hit the "Push" button in the top right to push that commit back to Github. 
+
+![](/files/img/assignments/rstudio-push.png){fig-alt="Push to GitHub"}
+
+If you go back to your repo's homepage on Github and refresh the page, you'll see the updates to your README file and the new `.gitignore`.
 
 ![](/files/img/assignments/github-changed.png){fig-alt="Github repo after commit"}
 

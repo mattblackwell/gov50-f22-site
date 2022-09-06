@@ -1,0 +1,18 @@
+---
+title: "R Introduction, Data Visualization"
+date: 2022-09-06
+---
+
+
+## Readings 
+
+- [Chapter 1 of Modern Dive](https://moderndive.com/1-getting-started.html)
+- Review and try to start [Problem Set 0](/assignments/00-problem-set.html)
+
+
+## Slides
+
+- Tuesday lecture: 
+  - [PDF of slides as I present them](/slides/02_rintro_data_viz.pdf)
+  - [PDF of handout version of slides](/slides/02_rintro_data_viz_handout.pdf) (no incremental slides)
+ 
