@@ -12,7 +12,10 @@ date: 2022-09-06
 
 ## Slides
 
-- Tuesday lecture: 
+- Tuesday (9/6) lecture: 
   - [PDF of slides as I present them](/slides/02_rintro_data_viz.pdf)
   - [PDF of handout version of slides](/slides/02_rintro_data_viz_handout.pdf) (no incremental slides)
  
+- Thursday (9/8) lecture:
+  - [PDF of slides as I present them](/slides/03_data_viz.pdf)
+  - [PDF of handout version of slides](/slides/03_data_viz_handout.pdf) (no incremental slides)
