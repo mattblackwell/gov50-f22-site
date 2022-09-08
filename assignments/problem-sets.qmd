@@ -15,9 +15,7 @@ For both problem sets and exams, you will end up producing two types of document
 
 The text of the problem sets will be posted here on the course website. We will distribute templates and data for the problem sets via Github. To get started, follow these steps:
 
-1. Follow the link at the top of the problem set on the course website
-   a Canvas page that has all of the Github Classroom links for each
-   assignment.
+1. Go to the [Ed Board](https://edstem.org/us/courses/24957/) and find the pinned thread with the GitHub Classroom links for each assignment. 
 2. Click on the Github Classroom link for the assignment in question.
    You'll be presented with a page that asks you to accept the
    assignment. Click "Accept this assignment".
