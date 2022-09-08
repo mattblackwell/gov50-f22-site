@@ -133,6 +133,48 @@
     "text": "Git and GitHub Resources\n\nHappy Git with R"
   },
   {
+    "objectID": "assignments/01_hw_data_viz.html",
+    "href": "assignments/01_hw_data_viz.html",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "",
+    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#background",
+    "href": "assignments/01_hw_data_viz.html#background",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Background",
+    "text": "Background\nIn this problem set, you will get your bearings on how to produce an Rmarkdown report and how to produce data visualizations using ggplot. The data we will use is the Gapminder dataset, which gives some economic and demographic information about countries over time. The variables in this data are described below.\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\ncountry\nname of the country\n\n\ncontinent\nname of the country’s continent\n\n\nyear\nyear of the measurement, ranging from 1952 to 2007 in 5-year increments\n\n\nlifeExp\nlife expectancy at birth, in years\n\n\npop\npopulation\n\n\ngdpPercap\nGDP per capita (US dollars, inflation-adjusted)\n\n\n\n\n\n\n\nNOTE: In the template you’ll get from GitHub Classroom, the default settings for chunks is to only show the output of the chunk, not the code that generated it (echo = FALSE). This is to give your answers a clean look and to highlight the output rather than the source coe. The template also has a part that will dump all of the R code at the end so that we can look at it if needed."
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-1-5-points",
+    "href": "assignments/01_hw_data_viz.html#question-1-5-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 1 (5 points)",
+    "text": "Question 1 (5 points)\nMake sure that you load the gapminder and tidyverse packages in the setup chunk (right after the header). For this question, use the glimpse function to show basic information about the gapminder dataset. In the main text (that is, outside of a code chunk), tell us how many rows and columns there are in the data set and which of the variables are factors.\nRubric: 2 write-up points for using the glimpse function; 2 points for reporting the dimension of the data; 1 point for identifying factors."
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-2-10-points",
+    "href": "assignments/01_hw_data_viz.html#question-2-10-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 2 (10 points)",
+    "text": "Question 2 (10 points)\nLet’s investigate how life expectancy varies across the continents. Using ggplot, we want you to recreate the following figure:\n\nThese are boxplots of the distribution of life expectancy in each continent. Please make sure that you include the labels as shown in this figure. For the autograder to be able to process your plot, you should assign your the output of your ggplot call to plot_q2 and then evaluate plot_q2 to ensure that the plot is produced in the output. That is, your code should look like this:\n\nplot_q2 <- ggplot(<arguments>) +\n  geom_<type>(<arguments>) +\n  ...\n\nplot_q2\n\nRubric: 10 autograder points."
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-3-5-points",
+    "href": "assignments/01_hw_data_viz.html#question-3-5-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 3 (5 points)",
+    "text": "Question 3 (5 points)\nLooking at the previous plot, which continent has the highest median life expectancy? Which part of the boxplot can we determine this from?\nRubric: 5 write up points (2 for identifying the correct continent, 3 for correctly identifying how to find this on the boxplot)"
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-4-15-points",
+    "href": "assignments/01_hw_data_viz.html#question-4-15-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 4 (15 points)",
+    "text": "Question 4 (15 points)\nThe previous boxplot groups all the years together into one boxplot, but what if we want to understand how life expectancy is changing over time? Next, we will recreate the following plot:\n\nThe plot shows each country’s life expectancy trajectory over time, broken out by continent with smoothed average lines overlayed for each continent. To get started, we’ll give you a few clues about what we’ve done here:\n\nThe lines for each country use the color \"gray70\".\nThe size of the smoothed line is 1.1 and the method used is the loess smoother. We also have turned off the standard errors.\nMake sure that the facets are all on one row. Look at the facet_wrap documentation if need help with this.\nMake sure that the labels are correctly specified.\nUse the chunk options fig.width = 11 and fig.height = 4 to shrink the font size so the year labels will not overlap.\n\nFinally, assign the output of your ggplot call to plot_q4 and then evaluate plot_q4 (similarly to what you did in Question 2).\nRubric: 15 autograder points; 0 PDF points."
+  },
+  {
     "objectID": "assignments/problem-sets.html",
     "href": "assignments/problem-sets.html",
     "title": "Problem Sets and Exams",
@@ -144,7 +186,7 @@
     "href": "assignments/problem-sets.html#problem-set-workflow",
     "title": "Problem Sets and Exams",
     "section": "Problem set workflow",
-    "text": "Problem set workflow\nThe text of the problem sets will be posted here on the course website. We will distribute templates and data for the problem sets via Github. To get started, follow these steps:\n\nFollow the link at the top of the problem set on the course website a Canvas page that has all of the Github Classroom links for each assignment.\nClick on the Github Classroom link for the assignment in question. You’ll be presented with a page that asks you to accept the assignment. Click “Accept this assignment”.\nGo to this new problem set repository on GitHub. Click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).\n\n\n\nNow, switch to RStudio. Go to the menu bar and hit “File > New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. Because this is a private repository, you will be prompted to enter your GitHub username and password. Go ahead and do this.\nAs you make changes to your file, make sure to commit those changes. Every commit is a point that you can always go back to if your code stops working for some reason. So doing this often will make sure that you have access to that great feature of git. At an absolute minimum, you should do this every time you complete a question, though you may want to do it more often than that. Committing often means you also don’t have to constantly create new versions of the same file because you’re afraid of making some change. Also, make sure to use informative commit messages so you know what’s changing.\nAt some point, you’ll want to push your changes back to GitHub so the teaching staff can see your work (if you need help) or so that you can submit to Gradescope."
+    "text": "Problem set workflow\nThe text of the problem sets will be posted here on the course website. We will distribute templates and data for the problem sets via Github. To get started, follow these steps:\n\nGo to the Ed Board and find the pinned thread with the GitHub Classroom links for each assignment.\nClick on the Github Classroom link for the assignment in question. You’ll be presented with a page that asks you to accept the assignment. Click “Accept this assignment”.\nGo to this new problem set repository on GitHub. Click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).\n\n\n\nNow, switch to RStudio. Go to the menu bar and hit “File > New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. Because this is a private repository, you will be prompted to enter your GitHub username and password. Go ahead and do this.\nAs you make changes to your file, make sure to commit those changes. Every commit is a point that you can always go back to if your code stops working for some reason. So doing this often will make sure that you have access to that great feature of git. At an absolute minimum, you should do this every time you complete a question, though you may want to do it more often than that. Committing often means you also don’t have to constantly create new versions of the same file because you’re afraid of making some change. Also, make sure to use informative commit messages so you know what’s changing.\nAt some point, you’ll want to push your changes back to GitHub so the teaching staff can see your work (if you need help) or so that you can submit to Gradescope."
   },
   {
     "objectID": "assignments/problem-sets.html#submitting-your-assignments",
