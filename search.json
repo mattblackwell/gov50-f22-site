@@ -1,24 +1,143 @@
 [
   {
-    "objectID": "materials/02_r_data_viz.html",
-    "href": "materials/02_r_data_viz.html",
-    "title": "R Introduction, Data Visualization",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Chapter 1 of Modern Dive\nReview and try to start Problem Set 0"
+    "text": "About this site"
   },
   {
-    "objectID": "materials/02_r_data_viz.html#slides",
-    "href": "materials/02_r_data_viz.html#slides",
-    "title": "R Introduction, Data Visualization",
-    "section": "Slides",
-    "text": "Slides\n\nTuesday (9/6) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/8) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+    "objectID": "assignments/00-problem-set.html",
+    "href": "assignments/00-problem-set.html",
+    "title": "Getting Started with R, R Studio, Git, and Github",
+    "section": "",
+    "text": "In this problem set, we’re going to get R, RStudio, and R Markdown set up on your computer. To get started, follow these steps:\n\nDownload and install the most recent version of R. There are versions available for the Windows, Mac, and Linux operating systems. On a Windows machine, you will want to install using the R-x.y.z-win.exe file where x.y.z is a version number. On a Mac, you will want to install using the R-x.y.z.pkg file that is notarized and signed.\nWith R installed, download and install RStudio. RStudio is a type of “integrated development environment” or IDE designed for R. It makes working with R considerably easier and is available for most platforms. It is also free.\nInstall the packages we will use throughout the semester. To do this, either type or copy and paste each of the following lines of code into the “Console” in RStudio (lower left panel by default). Make sure you do this separately for each line. If you are asked if you want to install any packages from source, type “no”. Note that the symbols next to my_package are a less than sign < followed by a minus sign - with no space between them. (Don’t be worried if you see some red text here. Those are usually just messages telling you information about the packages you are installing. Unless you see the word Error you should be fine.)\n\n\nmy_packages <- c(\"tidyverse\", \"usethis\", \"devtools\", \"learnr\",\n                 \"tinytex\", \"gitcreds\")\ninstall.packages(my_packages, repos = \"http://cran.rstudio.com\")\nremotes::install_github(\"kosukeimai/qss-package\", build_vignettes = TRUE)\n\n\nFor some things in the course, we’ll need produce PDFs from R and that requires something called LaTeX. If you’ve never heard of that, it’s completely fine and you should just run the following two lines of R code:\n\n\ninstall.packages('tinytex')\ntinytex::install_tinytex()  # install TinyTeX"
   },
   {
-    "objectID": "materials/index.html",
-    "href": "materials/index.html",
-    "title": "Readings, lectures, and videos",
+    "objectID": "assignments/00-problem-set.html#installing-and-configuring-git",
+    "href": "assignments/00-problem-set.html#installing-and-configuring-git",
+    "title": "Getting Started with R, R Studio, Git, and Github",
+    "section": "Installing and configuring git",
+    "text": "Installing and configuring git\nGit is a version control program that helps organize the process of writing and maintaining code. It allows you to maintain a history of edits to your code without having to resort to a set of files like:\nmy_code.R\nmy_code_v1.R\nmy_code_v2_FINAL.R\nThere’s a lot to git and it will be harder to use in the beginning, but in the long term there are huge benefits of it. First, when you use git, you are much less likely to encounter a devastating data failure. All of your (committed) changes to your project are preserved, even when you make new changes or you revert old changes.\nGit is also a very useful way for people to collaborate. There is a huge community built up around it. And once your projects are publicly available on Github (a website for hosting git repositories), there are a host of ways that folks can collaborate with you.\n\nInstall git\nYou might already have git installed on your computer, especially if you have a Mac. To check, in RStudio, click on the Terminal tab in the bottom-left panel (next to the Console tab). Type git --version at the command prompt. If you get a response with a version number, great you are all set. If you get any kind of error message, you learn how to install git on your machine here.\n\n\nSetup a GitHub account\nNext, you can setup a GitHub account. You can think of GitHub as similar to Dropbox or Google Drive for your git projects (“repositories”) where everything is public by default. Since you might use this account to interact with potential employers in the future, you should probably pick a professional username.\nOnce you have a GitHub account, you can configure your local git program to interact with your account gracefully. Run the following two lines of code in the Terminal replacing \"John Harvard\" with your name and \"john@harvard.edu\" with your email address used to sign up for GitHub.\ngit config --global user.name \"John Harvard\"\ngit config --global user.email \"john@harvard.edu\"\n\n\nSet up RStudio to talk to GitHub\nWe also need to set up RStudio to be able to communicate with GitHub securely. This requires a bit of fidily configuration that we luckily only have to do once. Basically, we need to get a secret code from GitHub and store it in RStudio (kind of like a app-specific password when you’re using two-factor authentication). We can start the process from by doing:\n\nusethis::create_github_token()\n\nThis will open a page on GitHub asking you to create a “Personal Access Token” or PAT (this is the secret code). You’ll have to give the PAT a note that describes what it’s for and choose an expiration date. You can accept the default of 30 days but you will have to renew it a couple of times during the class. Alternatively, if you set it to a date after the semester ends, you shouldn’t have to touch this again. We recommend keeping the “scope” selections as they are and clicking the “Generate Token” button at the bottom of the page.\n\nYou will then see a new screen with a long sequence of letters. This is your token or secret code. You should treat it like a password and do not share it with anyone. If you use a password manager like 1Password or LastPass, you can put it in a secure note in those programs. Copy this by hitting the button with the two boxes.\n\nOnce you have copied the PAT, call gitcreds::gitcreds_set() from the RStudio console and paste the PAT when prompted. You should see the following:\n> gitcreds::gitcreds_set()\n? Enter password or token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n-> Adding new credentials...\n-> Removing credentials from cache...\n-> Done.\nOnce this is done, you should be all set for RStudio to communicate with GitHub. If you have any problems with the PAT process or want to know more about it, the Happy Git and GitHub for the useR book has a great chapter about it.\n\n\nCreating your first repo\nOnce you are logged into Github and at its homepage, you can now create a new repo (shorthand for “repository”). These repositories are like folders in Dropbox except a bit more structured. Create one by clicking on the green “New” button in the top-left of the screen next to “Repositories.” It should look like this:\n\nNow a new screen should pop up requesting some information for the new repo. Give this new Repository the name gov50-problem-set0 and set it to be a private repository. You can give it an informative description and check the “Initialize this repository with a README” checkbox. This latter option will add a README to the repository where you can add more information that will display nicely in the repository’s homepage. Your setup should look something like this:\n\nOnce you create your repo, you are ready to connect it to RStudio on your local computer. The easiest way to do this is go to the repo homepage (you’re already there if you’ve just created it) and click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).\n\nNow, switch to RStudio. Go to the menu bar and hit “File > New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. And now you’ll have your project ready to go in RStudio."
+  },
+  {
+    "objectID": "assignments/00-problem-set.html#working-with-a-project-in-rstudio",
+    "href": "assignments/00-problem-set.html#working-with-a-project-in-rstudio",
+    "title": "Getting Started with R, R Studio, Git, and Github",
+    "section": "Working with a project in RStudio",
+    "text": "Working with a project in RStudio\nYou’ll see in the bottom right window of RStudio you’ll now see the files from your Github project.\n\nLet’s edit the README file by clicking on README.md in that file pane and you’ll be able to edit it in the top-left pane. Change the header from # gov-50-problem-set0 to # Introduction and save the file (⌘+S or Ctrl+S). If you click on the “Git” tab in the top right panel, you will a list of the changes you’ve made to the repo since the last commit (you can think of a commit as a more permanent type of saving work to the git repo).\n\nOne thing you’ll notice here is that git thinks that gov50-problem-set0.Rproj is a file that maybe should go into the repo. But this file is just for our local copy of RStudio and shouldn’t really go into the repo. To prevent git from bothering us about it every time we open something, we can modify the .gitignore file to tell git to ignore certain files. Open .gitignore and add a new line with *.Rproj on it to tell git to ignore any file with the extension .Rproj. Make sure to save the file.\n\nIf you go back to the Git tab in the top right and refresh (little circular arrow in the top right corner), you see that gov50-problem-set0.Rproj is removed from our list. Now we are ready to commit our changes. Click the “Staged” box for .gitignore and README.md and hit the “Commit” button just above the file list. You’ll see a window with the changes that you are about to commit.\n\nYou can click on different files to see what exactly you are changing. Add a short but informative commit message that describes what you are committing and hit “Commit”. Once this completes, you can hit the “Push” button in the top right to push that commit back to Github.\n\nIf you go back to your repo’s homepage on Github and refresh the page, you’ll see the updates to your README file and the new .gitignore.\n\nAnd you’re done! You’ve just created your first repo."
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html",
+    "href": "assignments/01_hw_data_viz.html",
+    "title": "Problem Set 1: Data Visualization",
     "section": "",
-    "text": "Each class session has a set of required readings that you should complete before attempting the tutorials."
+    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#background",
+    "href": "assignments/01_hw_data_viz.html#background",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Background",
+    "text": "Background\nIn this problem set, you will get your bearings on how to produce an Rmarkdown report and how to produce data visualizations using ggplot. The data we will use is the Gapminder dataset, which gives some economic and demographic information about countries over time. The variables in this data are described below.\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\ncountry\nname of the country\n\n\ncontinent\nname of the country’s continent\n\n\nyear\nyear of the measurement, ranging from 1952 to 2007 in 5-year increments\n\n\nlifeExp\nlife expectancy at birth, in years\n\n\npop\npopulation\n\n\ngdpPercap\nGDP per capita (US dollars, inflation-adjusted)\n\n\n\n\n\n\n\nNOTE: In the template you’ll get from GitHub Classroom, the default settings for chunks is to only show the output of the chunk, not the code that generated it (echo = FALSE). This is to give your answers a clean look and to highlight the output rather than the source coe. The template also has a part that will dump all of the R code at the end so that we can look at it if needed."
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-1-5-points",
+    "href": "assignments/01_hw_data_viz.html#question-1-5-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 1 (5 points)",
+    "text": "Question 1 (5 points)\nMake sure that you load the gapminder and tidyverse packages in the setup chunk (right after the header). For this question, use the glimpse function to show basic information about the gapminder dataset. In the main text (that is, outside of a code chunk), tell us how many rows and columns there are in the data set and which of the variables are factors.\nRubric: 2 write-up points for using the glimpse function; 2 points for reporting the dimension of the data; 1 point for identifying factors."
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-2-10-points",
+    "href": "assignments/01_hw_data_viz.html#question-2-10-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 2 (10 points)",
+    "text": "Question 2 (10 points)\nLet’s investigate how life expectancy varies across the continents. Using ggplot, we want you to recreate the following figure:\n\nThese are boxplots of the distribution of life expectancy in each continent. Please make sure that you include the labels as shown in this figure. For the autograder to be able to process your plot, you should assign your the output of your ggplot call to plot_q2 and then evaluate plot_q2 to ensure that the plot is produced in the output. That is, your code should look like this:\n\nplot_q2 <- ggplot(<arguments>) +\n  geom_<type>(<arguments>) +\n  ...\n\nplot_q2\n\nRubric: 10 autograder points."
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-3-5-points",
+    "href": "assignments/01_hw_data_viz.html#question-3-5-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 3 (5 points)",
+    "text": "Question 3 (5 points)\nLooking at the previous plot, which continent has the highest median life expectancy? Which part of the boxplot can we determine this from?\nRubric: 5 write up points (2 for identifying the correct continent, 3 for correctly identifying how to find this on the boxplot)"
+  },
+  {
+    "objectID": "assignments/01_hw_data_viz.html#question-4-15-points",
+    "href": "assignments/01_hw_data_viz.html#question-4-15-points",
+    "title": "Problem Set 1: Data Visualization",
+    "section": "Question 4 (15 points)",
+    "text": "Question 4 (15 points)\nThe previous boxplot groups all the years together into one boxplot, but what if we want to understand how life expectancy is changing over time? Next, we will recreate the following plot:\n\nThe plot shows each country’s life expectancy trajectory over time, broken out by continent with smoothed average lines overlayed for each continent. To get started, we’ll give you a few clues about what we’ve done here:\n\nThe lines for each country use the color \"gray70\".\nThe size of the smoothed line is 1.1 and the method used is the loess smoother. We also have turned off the standard errors.\nMake sure that the facets are all on one row. Look at the facet_wrap documentation if need help with this.\nMake sure that the labels are correctly specified.\nUse the chunk options fig.width = 11 and fig.height = 4 to shrink the font size so the year labels will not overlap.\n\nFinally, assign the output of your ggplot call to plot_q4 and then evaluate plot_q4 (similarly to what you did in Question 2).\nRubric: 15 autograder points; 0 PDF points."
+  },
+  {
+    "objectID": "assignments/index.html",
+    "href": "assignments/index.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Tutorial Instructions\nSubmission guide for problem sets\nProblem set 0: Setting up R, RStudio, and GitHub\nProblem set 1: Data Visualization"
+  },
+  {
+    "objectID": "assignments/problem-sets.html",
+    "href": "assignments/problem-sets.html",
+    "title": "Problem Sets and Exams",
+    "section": "",
+    "text": "For both problem sets and exams, you will end up producing two types of documents:"
+  },
+  {
+    "objectID": "assignments/problem-sets.html#problem-set-workflow",
+    "href": "assignments/problem-sets.html#problem-set-workflow",
+    "title": "Problem Sets and Exams",
+    "section": "Problem set workflow",
+    "text": "Problem set workflow\nThe text of the problem sets will be posted here on the course website. We will distribute templates and data for the problem sets via Github. To get started, follow these steps:\n\nGo to the Ed Board and find the pinned thread with the GitHub Classroom links for each assignment.\nClick on the Github Classroom link for the assignment in question. You’ll be presented with a page that asks you to accept the assignment. Click “Accept this assignment”.\nGo to this new problem set repository on GitHub. Click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).\n\n\n\nNow, switch to RStudio. Go to the menu bar and hit “File > New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. Because this is a private repository, you will be prompted to enter your GitHub username and password. Go ahead and do this.\nAs you make changes to your file, make sure to commit those changes. Every commit is a point that you can always go back to if your code stops working for some reason. So doing this often will make sure that you have access to that great feature of git. At an absolute minimum, you should do this every time you complete a question, though you may want to do it more often than that. Committing often means you also don’t have to constantly create new versions of the same file because you’re afraid of making some change. Also, make sure to use informative commit messages so you know what’s changing.\nAt some point, you’ll want to push your changes back to GitHub so the teaching staff can see your work (if you need help) or so that you can submit to Gradescope."
+  },
+  {
+    "objectID": "assignments/problem-sets.html#submitting-your-assignments",
+    "href": "assignments/problem-sets.html#submitting-your-assignments",
+    "title": "Problem Sets and Exams",
+    "section": "Submitting your assignments",
+    "text": "Submitting your assignments\n\nStep 1: Download your GitHub repo as a zip file\n\nOnce you are think you have completed the assignment, make sure to push your commits to GitHub and then go to the repository website and download the repo as a .zip file under the green “Code” button. It’s important to use the default name for the zip file, so you may have to delete an older zip file if you have already downloaded it to the same location. In general, it will have the structure problem-set-X-username-main.zip where X is the problem set number and username is your GitHub username.\n\n\nStep 2: Submit the zip file to Gradescope\nOn Gradescope, you’ll find two entries for each assignment. One will be labelled “Zip File” and the other “PDF”. Click on the Zip File entry and drag/select your zip into the box. Click “Upload.”\n\n\n\nStep 3: Check autograder output\nWhen you submit the zip file, Gradescope will run a series of tests on your code to see if it runs and to check that you have completed the coding tasks asked of you in the assignment. You’ll see a list of test results and an overall score.\n\nCheck the messages on any questions you got wrong for hints about how to fix them. You may then re-upload the zip file again once you have fixed the code. You should repeat this process as many times as needed before you get a perfect score.\nIf you get an autograder error saying “The autograder failed to execute correctly” and you are using the Safari browser on macOS, check to see if Safari is unzipping the zip file automatically upon download. If it is, you can turn off this setting by following these instructions.\n\n\nStep 4: Upload PDF\nOnce you are satisfied with your autograding, then you should produce your final PDF report by hitting the “Knit” button at the top of the RStudio editor. This should produce a PDF output that you can then upload to Gradescope. In Gradescope, there will be an assignment labelled “Problem Set X: PDF”. There, you will be prompted to upload your final PDF report. You’ll be asked to indicate on which page each answer is. Label the PDF with where those answers are (being sure to mark two different pages if an answer continues on two pages)."
+  },
+  {
+    "objectID": "assignments/problem-sets.html#checklist",
+    "href": "assignments/problem-sets.html#checklist",
+    "title": "Problem Sets and Exams",
+    "section": "Checklist",
+    "text": "Checklist\n\nAccept GitHub Classroom invite.\nUse RStudio to “Clone with HTTPS” this repo to your computer.\nMake progress editing the .Rmd file.\n\nAs you do, commit and push to GitHub regularly.\nYou can check your answers with the autograder at any point.\nMake sure to name your code chunks.\nAdd the names of anyone you discuss the problem set with on your write-up.\n\nPush final version to GitHub and download the .zip file.\nUpload the .zip file to the Gradescope autograder.\nUpload final .pdf file to Gradescope."
+  },
+  {
+    "objectID": "assignments/problem-sets.html#writing-good-code",
+    "href": "assignments/problem-sets.html#writing-good-code",
+    "title": "Problem Sets and Exams",
+    "section": "Writing good code",
+    "text": "Writing good code\nYou’ll be writing code to do the analyses in this class. Code, like any language, provides many different ways of saying the same thing. One good practice of coding is to have what’s called good coding style. This refers to how you format the code that you so that it is (a) easy for you and others to read, and (b) less prone to making mistakes. Here are some general guidelines for writing R code and Rmd file.\n\nWhen writing R code and unless we tell you otherwise, follow the tidyverse style guide. For this class, the relevant parts of this document are the first couple of chapters. If you are ever uncertain about how to name something or how to write some code, see this document and it will likely help you quite a bit.\nMake sure the code chunks in the Rmd file have blank lines above and below them. If you don’t have this, it can sometimes cause problems with compilation.\nTry to keep your lines of code shorter than 80 characters since this makes reading code much easier. Usually this means writing some function arguments on a different line. See the style guide (section 2.5) for more on this.\nInclude comments in your code and format them nicely as in section 3.4 of the style guide. These comments should explain why you wrote the code you wrote and any notes you had about how you came to this solution. This might include, say, other approaches you tried but didn’t work or approaches you might want to try if you ever revisit this. Look at our code and examples to get a sense of how to use comments. In RStudio, you can nicely format a comment by hitting Control-Shift-\\."
+  },
+  {
+    "objectID": "assignments/tutorials.html",
+    "href": "assignments/tutorials.html",
+    "title": "Gov 50 R Tutorials Instructions",
+    "section": "",
+    "text": "Once you have completed the tutorial you will see a screen that prompts you to enter your name (as it appears on Gradescope) and produce a submission report. Clicking “Download” should place a report into the folder of your choosing. Find that PDF and upload it to Gradescope (see the link at the top of every page).\n\nNote that we do not grade these reports on correctness, just that you attempted the tutorial. That said, going slowly and making sure that you understand each question and its answer is a good practice to ensure you are mastering the course material."
+  },
+  {
+    "objectID": "assignments/tutorials.html#installing-the-gov-50-tutorials-package",
+    "href": "assignments/tutorials.html#installing-the-gov-50-tutorials-package",
+    "title": "Gov 50 R Tutorials Instructions",
+    "section": "Installing the Gov 50 tutorials package",
+    "text": "Installing the Gov 50 tutorials package\nOur tutorials will be hosted on an external website so that you should not have to install any packages on your own computer. However, occasionally the server will become slow or unresponsive when there are many students trying to complete the tutorial at once. When this happens, you can install the tutorials locally to your RStudio. To install the package that contains the tutorials for the class run the following lines of code, each entered separately. Note that you may be asked to update packages when you enter this code. You can select 1 for “All” to perform any updates.\n\nremotes::install_github(\"kosukeimai/qss-package\", build_vignettes = TRUE)\nremotes::install_github(\"rstudio/learnr\")\nremotes::install_github(\"rstudio-education/gradethis\")\nremotes::install_github(\"mattblackwell/gov50tutor\")\n\nAfter the package has been installed, you should be able to find all of the tutorials for the course in the “Tutorials” tab in the top-right pane of RStudio. Scroll down to find a Gov 50 tutorial and click “Start Tutorial” to launch a tutorial:\n\nIf you do not see any QSS tutorials after scrolling to the bottom, try to restart RStudio, and check again. If you still don’t see any tutorials, confirm that you have installed the package by running library(gov50tutor). If you get an error about the package not being installed, try the above installation procedure again and note any error messages you receive before reaching out to the teaching staff for assistance."
+  },
+  {
+    "objectID": "assignments/tutorials.html#faqs",
+    "href": "assignments/tutorials.html#faqs",
+    "title": "Gov 50 R Tutorials Instructions",
+    "section": "FAQs",
+    "text": "FAQs\n\nWhat if I receive an error about pdflatex and the submission report doesn’t download?\nTo generate the reports, you need something called LaTeX. You should have installed this with Problem Set 0, but the following command will install it:\n\ninstall.packages('tinytex')\ntinytex::install_tinytex()  # install TinyTeX\n\n\n\nWhat if I don’t see a Tutorial tab in RStudio?\nMake sure that you have RStudio version 1.3 or higher installed on your computer. On a Mac, you can check the version by going to the top left of the menu bar (next to the Apple logo) and clicking on “RStudio” then “About RStudio”. On a Windows PC, you can find the same item under File > About.\n\n\nWhat if my submission report misses some of my attempts?\nThe submission report isn’t perfect and will sometimes say you didn’t attempt a question when you actually did. We do not grade strictly on this and are mostly looking for a confirmation that you made a good-faith effort to complete the tutorial."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gov 50",
+    "section": "",
+    "text": "Instructor\n\n   Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\nCourse details\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack\n\n\n\nContacting me\nGeneral questions about the course should be posted to either the course Ed Discussion board or the course Slack. Someone on the teaching staff will attempt to respond to these messages within 25 hours, but also remember that life can be busy and chaotic for everyone (including me!), so if I don’t respond right away, don’t worry! For other issues (absences, etc), feel free to email me or send me a direct message on Slack."
   },
   {
     "objectID": "materials/01_intro.html",
@@ -35,18 +154,67 @@
     "text": "Slides\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "materials/02_r_data_viz.html",
+    "href": "materials/02_r_data_viz.html",
+    "title": "R Introduction, Data Visualization",
     "section": "",
-    "text": "About this site"
+    "text": "Chapter 1 of Modern Dive\nReview and try to start Problem Set 0"
+  },
+  {
+    "objectID": "materials/02_r_data_viz.html#slides",
+    "href": "materials/02_r_data_viz.html#slides",
+    "title": "R Introduction, Data Visualization",
+    "section": "Slides",
+    "text": "Slides\n\nTuesday (9/6) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/8) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nRmd file from lecture"
+  },
+  {
+    "objectID": "materials/index.html",
+    "href": "materials/index.html",
+    "title": "Readings, lectures, and videos",
+    "section": "",
+    "text": "Each class session has a set of required readings that you should complete before attempting the tutorials."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Getting Software Set Up\nR Tutorials Instructions (for running locally in RStudio)\nProblem Sets and Exams Instructions"
+  },
+  {
+    "objectID": "resources.html#r-tutorials",
+    "href": "resources.html#r-tutorials",
+    "title": "Resources",
+    "section": "R Tutorials",
+    "text": "R Tutorials\n\nHands On Programming with R\nR for Data Science"
+  },
+  {
+    "objectID": "resources.html#r-markdown",
+    "href": "resources.html#r-markdown",
+    "title": "Resources",
+    "section": "R Markdown",
+    "text": "R Markdown\n\nR Markdown Tutorial\nR Markdown: The Definitive Guide"
+  },
+  {
+    "objectID": "resources.html#git-and-github-resources",
+    "href": "resources.html#git-and-github-resources",
+    "title": "Resources",
+    "section": "Git and GitHub Resources",
+    "text": "Git and GitHub Resources\n\nHappy Git with R"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "watch the lecture videos (if any) and complete the readings by Monday;\ncomplete the tutorials by Monday evening at 11:59pm; and\nsubmit the problem set or exam by Wednesday at 11:59pm.\n\nHere’s a guide to the schedule:\n\nMaterials (): This page contains the readings, slides, and recorded lectures (if any) for the topic. Read/watch these first.\nTutorial (): A link to the tutorial for that week.\nAssignment (): This page contains the instructions for each assignment. Assignments are due by 11:59 PM on the day they’re listed.\n\nThe readings refer to following texts:\n\nQSS: Quantitative Social Science: An Introduction in tidyverse by Kosuke Imai and Nora Webb Williams\nMD: Statistical Inference via Data Science: A ModernDive into R and the Tidyverse by Chester Ismay and Albert Y. Kim\nIMS: Introduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin.\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading\n\n\nMaterials\n\n\nTutorial\n\n\nAssignment\n\n\n\n\n\n\nWeek 0\n\n\n\n\nSeptember 1\n\n\nIntroduction to the course\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\nSeptember 6\n\n\nR, Rstudio, and data visualization\n\n\nMD Ch 1-2\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 7\n\n\nTutorial 1  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 8\n\n\nData visualization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\nSeptember 12\n\n\nTutorial 2  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 13\n\n\nData wrangling\n\n\nMD Ch 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 14\n\n\nProblem Set 1  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 15\n\n\nData wrangling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\nSeptember 19\n\n\nTutorial 3  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 20\n\n\nCausal inference and randomized experiments\n\n\nQSS Ch 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 21\n\n\nProblem Set 2  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 22\n\n\nCausal inference and observational studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\nSeptember 16\n\n\nTutorial 4  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 27\n\n\nSummarizing data\n\n\nQSS Ch 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 28\n\n\nProblem Set 3  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 29\n\n\nSurvey sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\nOctober 3\n\n\nTutorial 4  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 4\n\n\nSummarizing relationships in our data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 5\n\n\nProblem Set 4  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 6\n\n\nImporting and joining data\n\n\nMD Ch 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\nOctober 11\n\n\nPrediction & Iteration\n\n\nQSS Ch 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 12\n\n\nTutorial 5  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 13\n\n\nRegression\n\n\nMD Ch 5\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 13–October 16\n\n\nExam 1  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n\n\nOctober 18\n\n\nMultiple regression\n\n\nMD Ch 6\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 20\n\n\nInterpreting regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n\n\nOctober 24\n\n\nTutorial 6  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 25\n\n\nSampling\n\n\nMD Ch 7\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 26\n\n\nProblem Set 5  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 27\n\n\nSampling distributions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n\n\nOctober 31\n\n\nTutorial 7  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 1\n\n\nThe bootstrap and confidence intervals\n\n\nMD Ch 8/IMS Ch 12\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 2\n\n\nProblem Set 6  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 3\n\n\nThe bootstrap and confidence intervals\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n\n\nNovember 8\n\n\nMathematical models of uncertainty\n\n\nIMS Ch 13\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 9\n\n\nProblem Set 7  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 10\n\n\nMathematical models of uncertainty II\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\n\n\n\n\nNovember 15\n\n\nHypothesis testing\n\n\nMD Ch 9/IMS Ch 11\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 16\n\n\nProblem Set 8  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 17\n\n\nHypothesis testing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\n\n\n\n\nNovember 22\n\n\nHypothesis testing\n\n\nQSS Ch 7.2\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\n\n\n\n\nNovember 29\n\n\nUncertainty in regression\n\n\nQSS Ch 7.3\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 1\n\n\nWrapping up\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 1–December 4\n\n\nExam 2  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 14\n\n\n\n\nDecember 10\n\n\nFinal Project due  (submit by noon)"
   },
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\n\n\n Angelo Dagonel\n Dorothy Manevich\n Sooahn Shin\n Dominic Valentino\n\n\n\n\n\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack"
+    "text": "Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\n\n\n Dominic Valentino (Head TF)\n Angelo Dagonel\n Dorothy Manevich\n Sooahn Shin\n Dan Baissa\n\n\n\n\n\n\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack\n\n\n\n\n\n Reem Ali\n Autumn Dorsey\n Felicia Roman\n Dominic Skinnon\n Angie Shin\n Andy Wang"
   },
   {
     "objectID": "syllabus.html#course-objectives",
@@ -96,173 +264,5 @@
     "title": "Syllabus",
     "section": "Accessibility",
     "text": "Accessibility\nHarvard University values inclusive excellence and providing equal educational opportunities for all students. Our goal is to remove barriers for disabled students related to inaccessible elements of instruction or design in this course. If reasonable accommodations are necessary to provide access, please contact the Disability Access Office (DAO). Accommodations do not alter fundamental requirements of the course and are not retroactive. Students should request accommodations as early as possible, since they may take time to implement. Students should notify DAO at any time during the semester if adjustments to their communicated accommodation plan are needed."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Gov 50",
-    "section": "",
-    "text": "Instructor\n\n   Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\nCourse details\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack\n\n\n\nContacting me\nGeneral questions about the course should be posted to either the course Ed Discussion board or the course Slack. Someone on the teaching staff will attempt to respond to these messages within 25 hours, but also remember that life can be busy and chaotic for everyone (including me!), so if I don’t respond right away, don’t worry! For other issues (absences, etc), feel free to email me or send me a direct message on Slack."
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Getting Software Set Up\nR Tutorials Instructions (for running locally in RStudio)\nProblem Sets and Exams Instructions"
-  },
-  {
-    "objectID": "resources.html#r-tutorials",
-    "href": "resources.html#r-tutorials",
-    "title": "Resources",
-    "section": "R Tutorials",
-    "text": "R Tutorials\n\nHands On Programming with R\nR for Data Science"
-  },
-  {
-    "objectID": "resources.html#r-markdown",
-    "href": "resources.html#r-markdown",
-    "title": "Resources",
-    "section": "R Markdown",
-    "text": "R Markdown\n\nR Markdown Tutorial\nR Markdown: The Definitive Guide"
-  },
-  {
-    "objectID": "resources.html#git-and-github-resources",
-    "href": "resources.html#git-and-github-resources",
-    "title": "Resources",
-    "section": "Git and GitHub Resources",
-    "text": "Git and GitHub Resources\n\nHappy Git with R"
-  },
-  {
-    "objectID": "assignments/01_hw_data_viz.html",
-    "href": "assignments/01_hw_data_viz.html",
-    "title": "Problem Set 1: Data Visualization",
-    "section": "",
-    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
-  },
-  {
-    "objectID": "assignments/01_hw_data_viz.html#background",
-    "href": "assignments/01_hw_data_viz.html#background",
-    "title": "Problem Set 1: Data Visualization",
-    "section": "Background",
-    "text": "Background\nIn this problem set, you will get your bearings on how to produce an Rmarkdown report and how to produce data visualizations using ggplot. The data we will use is the Gapminder dataset, which gives some economic and demographic information about countries over time. The variables in this data are described below.\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\ncountry\nname of the country\n\n\ncontinent\nname of the country’s continent\n\n\nyear\nyear of the measurement, ranging from 1952 to 2007 in 5-year increments\n\n\nlifeExp\nlife expectancy at birth, in years\n\n\npop\npopulation\n\n\ngdpPercap\nGDP per capita (US dollars, inflation-adjusted)\n\n\n\n\n\n\n\nNOTE: In the template you’ll get from GitHub Classroom, the default settings for chunks is to only show the output of the chunk, not the code that generated it (echo = FALSE). This is to give your answers a clean look and to highlight the output rather than the source coe. The template also has a part that will dump all of the R code at the end so that we can look at it if needed."
-  },
-  {
-    "objectID": "assignments/01_hw_data_viz.html#question-1-5-points",
-    "href": "assignments/01_hw_data_viz.html#question-1-5-points",
-    "title": "Problem Set 1: Data Visualization",
-    "section": "Question 1 (5 points)",
-    "text": "Question 1 (5 points)\nMake sure that you load the gapminder and tidyverse packages in the setup chunk (right after the header). For this question, use the glimpse function to show basic information about the gapminder dataset. In the main text (that is, outside of a code chunk), tell us how many rows and columns there are in the data set and which of the variables are factors.\nRubric: 2 write-up points for using the glimpse function; 2 points for reporting the dimension of the data; 1 point for identifying factors."
-  },
-  {
-    "objectID": "assignments/01_hw_data_viz.html#question-2-10-points",
-    "href": "assignments/01_hw_data_viz.html#question-2-10-points",
-    "title": "Problem Set 1: Data Visualization",
-    "section": "Question 2 (10 points)",
-    "text": "Question 2 (10 points)\nLet’s investigate how life expectancy varies across the continents. Using ggplot, we want you to recreate the following figure:\n\nThese are boxplots of the distribution of life expectancy in each continent. Please make sure that you include the labels as shown in this figure. For the autograder to be able to process your plot, you should assign your the output of your ggplot call to plot_q2 and then evaluate plot_q2 to ensure that the plot is produced in the output. That is, your code should look like this:\n\nplot_q2 <- ggplot(<arguments>) +\n  geom_<type>(<arguments>) +\n  ...\n\nplot_q2\n\nRubric: 10 autograder points."
-  },
-  {
-    "objectID": "assignments/01_hw_data_viz.html#question-3-5-points",
-    "href": "assignments/01_hw_data_viz.html#question-3-5-points",
-    "title": "Problem Set 1: Data Visualization",
-    "section": "Question 3 (5 points)",
-    "text": "Question 3 (5 points)\nLooking at the previous plot, which continent has the highest median life expectancy? Which part of the boxplot can we determine this from?\nRubric: 5 write up points (2 for identifying the correct continent, 3 for correctly identifying how to find this on the boxplot)"
-  },
-  {
-    "objectID": "assignments/01_hw_data_viz.html#question-4-15-points",
-    "href": "assignments/01_hw_data_viz.html#question-4-15-points",
-    "title": "Problem Set 1: Data Visualization",
-    "section": "Question 4 (15 points)",
-    "text": "Question 4 (15 points)\nThe previous boxplot groups all the years together into one boxplot, but what if we want to understand how life expectancy is changing over time? Next, we will recreate the following plot:\n\nThe plot shows each country’s life expectancy trajectory over time, broken out by continent with smoothed average lines overlayed for each continent. To get started, we’ll give you a few clues about what we’ve done here:\n\nThe lines for each country use the color \"gray70\".\nThe size of the smoothed line is 1.1 and the method used is the loess smoother. We also have turned off the standard errors.\nMake sure that the facets are all on one row. Look at the facet_wrap documentation if need help with this.\nMake sure that the labels are correctly specified.\nUse the chunk options fig.width = 11 and fig.height = 4 to shrink the font size so the year labels will not overlap.\n\nFinally, assign the output of your ggplot call to plot_q4 and then evaluate plot_q4 (similarly to what you did in Question 2).\nRubric: 15 autograder points; 0 PDF points."
-  },
-  {
-    "objectID": "assignments/problem-sets.html",
-    "href": "assignments/problem-sets.html",
-    "title": "Problem Sets and Exams",
-    "section": "",
-    "text": "For both problem sets and exams, you will end up producing two types of documents:"
-  },
-  {
-    "objectID": "assignments/problem-sets.html#problem-set-workflow",
-    "href": "assignments/problem-sets.html#problem-set-workflow",
-    "title": "Problem Sets and Exams",
-    "section": "Problem set workflow",
-    "text": "Problem set workflow\nThe text of the problem sets will be posted here on the course website. We will distribute templates and data for the problem sets via Github. To get started, follow these steps:\n\nGo to the Ed Board and find the pinned thread with the GitHub Classroom links for each assignment.\nClick on the Github Classroom link for the assignment in question. You’ll be presented with a page that asks you to accept the assignment. Click “Accept this assignment”.\nGo to this new problem set repository on GitHub. Click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).\n\n\n\nNow, switch to RStudio. Go to the menu bar and hit “File > New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. Because this is a private repository, you will be prompted to enter your GitHub username and password. Go ahead and do this.\nAs you make changes to your file, make sure to commit those changes. Every commit is a point that you can always go back to if your code stops working for some reason. So doing this often will make sure that you have access to that great feature of git. At an absolute minimum, you should do this every time you complete a question, though you may want to do it more often than that. Committing often means you also don’t have to constantly create new versions of the same file because you’re afraid of making some change. Also, make sure to use informative commit messages so you know what’s changing.\nAt some point, you’ll want to push your changes back to GitHub so the teaching staff can see your work (if you need help) or so that you can submit to Gradescope."
-  },
-  {
-    "objectID": "assignments/problem-sets.html#submitting-your-assignments",
-    "href": "assignments/problem-sets.html#submitting-your-assignments",
-    "title": "Problem Sets and Exams",
-    "section": "Submitting your assignments",
-    "text": "Submitting your assignments\n\nStep 1: Download your GitHub repo as a zip file\n\nOnce you are think you have completed the assignment, make sure to push your commits to GitHub and then go to the repository website and download the repo as a .zip file under the green “Code” button. It’s important to use the default name for the zip file, so you may have to delete an older zip file if you have already downloaded it to the same location. In general, it will have the structure problem-set-X-username-main.zip where X is the problem set number and username is your GitHub username.\n\n\nStep 2: Submit the zip file to Gradescope\nOn Gradescope, you’ll find two entries for each assignment. One will be labelled “Zip File” and the other “PDF”. Click on the Zip File entry and drag/select your zip into the box. Click “Upload.”\n\n\n\nStep 3: Check autograder output\nWhen you submit the zip file, Gradescope will run a series of tests on your code to see if it runs and to check that you have completed the coding tasks asked of you in the assignment. You’ll see a list of test results and an overall score.\n\nCheck the messages on any questions you got wrong for hints about how to fix them. You may then re-upload the zip file again once you have fixed the code. You should repeat this process as many times as needed before you get a perfect score.\nIf you get an autograder error saying “The autograder failed to execute correctly” and you are using the Safari browser on macOS, check to see if Safari is unzipping the zip file automatically upon download. If it is, you can turn off this setting by following these instructions.\n\n\nStep 4: Upload PDF\nOnce you are satisfied with your autograding, then you should produce your final PDF report by hitting the “Knit” button at the top of the RStudio editor. This should produce a PDF output that you can then upload to Gradescope. In Gradescope, there will be an assignment labelled “Problem Set X: PDF”. There, you will be prompted to upload your final PDF report. You’ll be asked to indicate on which page each answer is. Label the PDF with where those answers are (being sure to mark two different pages if an answer continues on two pages)."
-  },
-  {
-    "objectID": "assignments/problem-sets.html#checklist",
-    "href": "assignments/problem-sets.html#checklist",
-    "title": "Problem Sets and Exams",
-    "section": "Checklist",
-    "text": "Checklist\n\nAccept GitHub Classroom invite.\nUse RStudio to “Clone with HTTPS” this repo to your computer.\nMake progress editing the .Rmd file.\n\nAs you do, commit and push to GitHub regularly.\nYou can check your answers with the autograder at any point.\nMake sure to name your code chunks.\nAdd the names of anyone you discuss the problem set with on your write-up.\n\nPush final version to GitHub and download the .zip file.\nUpload the .zip file to the Gradescope autograder.\nUpload final .pdf file to Gradescope."
-  },
-  {
-    "objectID": "assignments/problem-sets.html#writing-good-code",
-    "href": "assignments/problem-sets.html#writing-good-code",
-    "title": "Problem Sets and Exams",
-    "section": "Writing good code",
-    "text": "Writing good code\nYou’ll be writing code to do the analyses in this class. Code, like any language, provides many different ways of saying the same thing. One good practice of coding is to have what’s called good coding style. This refers to how you format the code that you so that it is (a) easy for you and others to read, and (b) less prone to making mistakes. Here are some general guidelines for writing R code and Rmd file.\n\nWhen writing R code and unless we tell you otherwise, follow the tidyverse style guide. For this class, the relevant parts of this document are the first couple of chapters. If you are ever uncertain about how to name something or how to write some code, see this document and it will likely help you quite a bit.\nMake sure the code chunks in the Rmd file have blank lines above and below them. If you don’t have this, it can sometimes cause problems with compilation.\nTry to keep your lines of code shorter than 80 characters since this makes reading code much easier. Usually this means writing some function arguments on a different line. See the style guide (section 2.5) for more on this.\nInclude comments in your code and format them nicely as in section 3.4 of the style guide. These comments should explain why you wrote the code you wrote and any notes you had about how you came to this solution. This might include, say, other approaches you tried but didn’t work or approaches you might want to try if you ever revisit this. Look at our code and examples to get a sense of how to use comments. In RStudio, you can nicely format a comment by hitting Control-Shift-\\."
-  },
-  {
-    "objectID": "assignments/index.html",
-    "href": "assignments/index.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Tutorial Instructions\nSubmission guide for problem sets\nProblem set 0: Setting up R, RStudio, and GitHub\nProblem set 1: Data Visualization"
-  },
-  {
-    "objectID": "assignments/tutorials.html",
-    "href": "assignments/tutorials.html",
-    "title": "Gov 50 R Tutorials Instructions",
-    "section": "",
-    "text": "Once you have completed the tutorial you will see a screen that prompts you to enter your name (as it appears on Gradescope) and produce a submission report. Clicking “Download” should place a report into the folder of your choosing. Find that PDF and upload it to Gradescope (see the link at the top of every page).\n\nNote that we do not grade these reports on correctness, just that you attempted the tutorial. That said, going slowly and making sure that you understand each question and its answer is a good practice to ensure you are mastering the course material."
-  },
-  {
-    "objectID": "assignments/tutorials.html#installing-the-gov-50-tutorials-package",
-    "href": "assignments/tutorials.html#installing-the-gov-50-tutorials-package",
-    "title": "Gov 50 R Tutorials Instructions",
-    "section": "Installing the Gov 50 tutorials package",
-    "text": "Installing the Gov 50 tutorials package\nOur tutorials will be hosted on an external website so that you should not have to install any packages on your own computer. However, occasionally the server will become slow or unresponsive when there are many students trying to complete the tutorial at once. When this happens, you can install the tutorials locally to your RStudio. To install the package that contains the tutorials for the class run the following lines of code, each entered separately. Note that you may be asked to update packages when you enter this code. You can select 1 for “All” to perform any updates.\n\nremotes::install_github(\"kosukeimai/qss-package\", build_vignettes = TRUE)\nremotes::install_github(\"rstudio/learnr\")\nremotes::install_github(\"rstudio-education/gradethis\")\nremotes::install_github(\"mattblackwell/gov50tutor\")\n\nAfter the package has been installed, you should be able to find all of the tutorials for the course in the “Tutorials” tab in the top-right pane of RStudio. Scroll down to find a Gov 50 tutorial and click “Start Tutorial” to launch a tutorial:\n\nIf you do not see any QSS tutorials after scrolling to the bottom, try to restart RStudio, and check again. If you still don’t see any tutorials, confirm that you have installed the package by running library(gov50tutor). If you get an error about the package not being installed, try the above installation procedure again and note any error messages you receive before reaching out to the teaching staff for assistance."
-  },
-  {
-    "objectID": "assignments/tutorials.html#faqs",
-    "href": "assignments/tutorials.html#faqs",
-    "title": "Gov 50 R Tutorials Instructions",
-    "section": "FAQs",
-    "text": "FAQs\n\nWhat if I receive an error about pdflatex and the submission report doesn’t download?\nTo generate the reports, you need something called LaTeX. You should have installed this with Problem Set 0, but the following command will install it:\n\ninstall.packages('tinytex')\ntinytex::install_tinytex()  # install TinyTeX\n\n\n\nWhat if I don’t see a Tutorial tab in RStudio?\nMake sure that you have RStudio version 1.3 or higher installed on your computer. On a Mac, you can check the version by going to the top left of the menu bar (next to the Apple logo) and clicking on “RStudio” then “About RStudio”. On a Windows PC, you can find the same item under File > About.\n\n\nWhat if my submission report misses some of my attempts?\nThe submission report isn’t perfect and will sometimes say you didn’t attempt a question when you actually did. We do not grade strictly on this and are mostly looking for a confirmation that you made a good-faith effort to complete the tutorial."
-  },
-  {
-    "objectID": "assignments/00-problem-set.html",
-    "href": "assignments/00-problem-set.html",
-    "title": "Getting Started with R, R Studio, Git, and Github",
-    "section": "",
-    "text": "In this problem set, we’re going to get R, RStudio, and R Markdown set up on your computer. To get started, follow these steps:\n\nDownload and install the most recent version of R. There are versions available for the Windows, Mac, and Linux operating systems. On a Windows machine, you will want to install using the R-x.y.z-win.exe file where x.y.z is a version number. On a Mac, you will want to install using the R-x.y.z.pkg file that is notarized and signed.\nWith R installed, download and install RStudio. RStudio is a type of “integrated development environment” or IDE designed for R. It makes working with R considerably easier and is available for most platforms. It is also free.\nInstall the packages we will use throughout the semester. To do this, either type or copy and paste each of the following lines of code into the “Console” in RStudio (lower left panel by default). Make sure you do this separately for each line. If you are asked if you want to install any packages from source, type “no”. Note that the symbols next to my_package are a less than sign < followed by a minus sign - with no space between them. (Don’t be worried if you see some red text here. Those are usually just messages telling you information about the packages you are installing. Unless you see the word Error you should be fine.)\n\n\nmy_packages <- c(\"tidyverse\", \"usethis\", \"devtools\", \"learnr\",\n                 \"tinytex\", \"gitcreds\")\ninstall.packages(my_packages, repos = \"http://cran.rstudio.com\")\nremotes::install_github(\"kosukeimai/qss-package\", build_vignettes = TRUE)\n\n\nFor some things in the course, we’ll need produce PDFs from R and that requires something called LaTeX. If you’ve never heard of that, it’s completely fine and you should just run the following two lines of R code:\n\n\ninstall.packages('tinytex')\ntinytex::install_tinytex()  # install TinyTeX"
-  },
-  {
-    "objectID": "assignments/00-problem-set.html#installing-and-configuring-git",
-    "href": "assignments/00-problem-set.html#installing-and-configuring-git",
-    "title": "Getting Started with R, R Studio, Git, and Github",
-    "section": "Installing and configuring git",
-    "text": "Installing and configuring git\nGit is a version control program that helps organize the process of writing and maintaining code. It allows you to maintain a history of edits to your code without having to resort to a set of files like:\nmy_code.R\nmy_code_v1.R\nmy_code_v2_FINAL.R\nThere’s a lot to git and it will be harder to use in the beginning, but in the long term there are huge benefits of it. First, when you use git, you are much less likely to encounter a devastating data failure. All of your (committed) changes to your project are preserved, even when you make new changes or you revert old changes.\nGit is also a very useful way for people to collaborate. There is a huge community built up around it. And once your projects are publicly available on Github (a website for hosting git repositories), there are a host of ways that folks can collaborate with you.\n\nInstall git\nYou might already have git installed on your computer, especially if you have a Mac. To check, in RStudio, click on the Terminal tab in the bottom-left panel (next to the Console tab). Type git --version at the command prompt. If you get a response with a version number, great you are all set. If you get any kind of error message, you learn how to install git on your machine here.\n\n\nSetup a GitHub account\nNext, you can setup a GitHub account. You can think of GitHub as similar to Dropbox or Google Drive for your git projects (“repositories”) where everything is public by default. Since you might use this account to interact with potential employers in the future, you should probably pick a professional username.\nOnce you have a GitHub account, you can configure your local git program to interact with your account gracefully. Run the following two lines of code in the Terminal replacing \"John Harvard\" with your name and \"john@harvard.edu\" with your email address used to sign up for GitHub.\ngit config --global user.name \"John Harvard\"\ngit config --global user.email \"john@harvard.edu\"\n\n\nSet up RStudio to talk to GitHub\nWe also need to set up RStudio to be able to communicate with GitHub securely. This requires a bit of fidily configuration that we luckily only have to do once. Basically, we need to get a secret code from GitHub and store it in RStudio (kind of like a app-specific password when you’re using two-factor authentication). We can start the process from by doing:\n\nusethis::create_github_token()\n\nThis will open a page on GitHub asking you to create a “Personal Access Token” or PAT (this is the secret code). You’ll have to give the PAT a note that describes what it’s for and choose an expiration date. You can accept the default of 30 days but you will have to renew it a couple of times during the class. Alternatively, if you set it to a date after the semester ends, you shouldn’t have to touch this again. We recommend keeping the “scope” selections as they are and clicking the “Generate Token” button at the bottom of the page.\n\nYou will then see a new screen with a long sequence of letters. This is your token or secret code. You should treat it like a password and do not share it with anyone. If you use a password manager like 1Password or LastPass, you can put it in a secure note in those programs. Copy this by hitting the button with the two boxes.\n\nOnce you have copied the PAT, call gitcreds::gitcreds_set() from the RStudio console and paste the PAT when prompted. You should see the following:\n> gitcreds::gitcreds_set()\n? Enter password or token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n-> Adding new credentials...\n-> Removing credentials from cache...\n-> Done.\nOnce this is done, you should be all set for RStudio to communicate with GitHub. If you have any problems with the PAT process or want to know more about it, the Happy Git and GitHub for the useR book has a great chapter about it.\n\n\nCreating your first repo\nOnce you are logged into Github and at its homepage, you can now create a new repo (shorthand for “repository”). These repositories are like folders in Dropbox except a bit more structured. Create one by clicking on the green “New” button in the top-left of the screen next to “Repositories.” It should look like this:\n\nNow a new screen should pop up requesting some information for the new repo. Give this new Repository the name gov50-problem-set0 and set it to be a private repository. You can give it an informative description and check the “Initialize this repository with a README” checkbox. This latter option will add a README to the repository where you can add more information that will display nicely in the repository’s homepage. Your setup should look something like this:\n\nOnce you create your repo, you are ready to connect it to RStudio on your local computer. The easiest way to do this is go to the repo homepage (you’re already there if you’ve just created it) and click on the green “Code” button toward the top right of the page. When you click that, a popup will appear and you can copy the URL (you can click the little clipboard icon to copy this automatically).\n\nNow, switch to RStudio. Go to the menu bar and hit “File > New Project”. You can then choose what type of project to start. Since we’re importing from Github, we’ll use the “Version Control” option (it’s the bottom of the list). In the next menu, choose “Git”. Now, you can paste the URL in the “Repository URL” box. Choose a set of local directories to place this project and hit “Create Project”. And now you’ll have your project ready to go in RStudio."
-  },
-  {
-    "objectID": "assignments/00-problem-set.html#working-with-a-project-in-rstudio",
-    "href": "assignments/00-problem-set.html#working-with-a-project-in-rstudio",
-    "title": "Getting Started with R, R Studio, Git, and Github",
-    "section": "Working with a project in RStudio",
-    "text": "Working with a project in RStudio\nYou’ll see in the bottom right window of RStudio you’ll now see the files from your Github project.\n\nLet’s edit the README file by clicking on README.md in that file pane and you’ll be able to edit it in the top-left pane. Change the header from # gov-50-problem-set0 to # Introduction and save the file (⌘+S or Ctrl+S). If you click on the “Git” tab in the top right panel, you will a list of the changes you’ve made to the repo since the last commit (you can think of a commit as a more permanent type of saving work to the git repo).\n\nOne thing you’ll notice here is that git thinks that gov50-problem-set0.Rproj is a file that maybe should go into the repo. But this file is just for our local copy of RStudio and shouldn’t really go into the repo. To prevent git from bothering us about it every time we open something, we can modify the .gitignore file to tell git to ignore certain files. Open .gitignore and add a new line with *.Rproj on it to tell git to ignore any file with the extension .Rproj. Make sure to save the file.\n\nIf you go back to the Git tab in the top right and refresh (little circular arrow in the top right corner), you see that gov50-problem-set0.Rproj is removed from our list. Now we are ready to commit our changes. Click the “Staged” box for .gitignore and README.md and hit the “Commit” button just above the file list. You’ll see a window with the changes that you are about to commit.\n\nYou can click on different files to see what exactly you are changing. Add a short but informative commit message that describes what you are committing and hit “Commit”. Once this completes, you can hit the “Push” button in the top right to push that commit back to Github.\n\nIf you go back to your repo’s homepage on Github and refresh the page, you’ll see the updates to your README file and the new .gitignore.\n\nAnd you’re done! You’ve just created your first repo."
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "watch the lecture videos (if any) and complete the readings by Monday;\ncomplete the tutorials by Monday evening at 11:59pm; and\nsubmit the problem set or exam by Wednesday at 11:59pm.\n\nHere’s a guide to the schedule:\n\nMaterials (): This page contains the readings, slides, and recorded lectures (if any) for the topic. Read/watch these first.\nTutorial (): A link to the tutorial for that week.\nAssignment (): This page contains the instructions for each assignment. Assignments are due by 11:59 PM on the day they’re listed.\n\nThe readings refer to following texts:\n\nQSS: Quantitative Social Science: An Introduction in tidyverse by Kosuke Imai and Nora Webb Williams\nMD: Statistical Inference via Data Science: A ModernDive into R and the Tidyverse by Chester Ismay and Albert Y. Kim\nIMS: Introduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin.\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading\n\n\nMaterials\n\n\nTutorial\n\n\nAssignment\n\n\n\n\n\n\nWeek 0\n\n\n\n\nSeptember 1\n\n\nIntroduction to the course\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\nSeptember 6\n\n\nR, Rstudio, and data visualization\n\n\nMD Ch 1-2\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 7\n\n\nTutorial 1  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 8\n\n\nData visualization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\nSeptember 12\n\n\nTutorial 2  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 13\n\n\nData wrangling\n\n\nMD Ch 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 14\n\n\nProblem Set 1  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 15\n\n\nData wrangling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\nSeptember 19\n\n\nTutorial 3  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 20\n\n\nCausal inference and randomized experiments\n\n\nQSS Ch 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 21\n\n\nProblem Set 2  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 22\n\n\nCausal inference and observational studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\nSeptember 16\n\n\nTutorial 4  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 27\n\n\nSummarizing data\n\n\nQSS Ch 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 28\n\n\nProblem Set 3  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeptember 29\n\n\nSurvey sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\nOctober 3\n\n\nTutorial 4  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 4\n\n\nSummarizing relationships in our data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 5\n\n\nProblem Set 4  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 6\n\n\nImporting and joining data\n\n\nMD Ch 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\nOctober 11\n\n\nPrediction & Iteration\n\n\nQSS Ch 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 12\n\n\nTutorial 5  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 13\n\n\nRegression\n\n\nMD Ch 5\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 13–October 16\n\n\nExam 1  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n\n\nOctober 18\n\n\nMultiple regression\n\n\nMD Ch 6\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 20\n\n\nInterpreting regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n\n\nOctober 24\n\n\nTutorial 6  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 25\n\n\nSampling\n\n\nMD Ch 7\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 26\n\n\nProblem Set 5  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOctober 27\n\n\nSampling distributions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n\n\nOctober 31\n\n\nTutorial 7  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 1\n\n\nThe bootstrap and confidence intervals\n\n\nMD Ch 8/IMS Ch 12\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 2\n\n\nProblem Set 6  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 3\n\n\nThe bootstrap and confidence intervals\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n\n\nNovember 8\n\n\nMathematical models of uncertainty\n\n\nIMS Ch 13\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 9\n\n\nProblem Set 7  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 10\n\n\nMathematical models of uncertainty II\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\n\n\n\n\nNovember 15\n\n\nHypothesis testing\n\n\nMD Ch 9/IMS Ch 11\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 16\n\n\nProblem Set 8  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNovember 17\n\n\nHypothesis testing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\n\n\n\n\nNovember 22\n\n\nHypothesis testing\n\n\nQSS Ch 7.2\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\n\n\n\n\nNovember 29\n\n\nUncertainty in regression\n\n\nQSS Ch 7.3\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 1\n\n\nWrapping up\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecember 1–December 4\n\n\nExam 2  (submit by 11:59 PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 14\n\n\n\n\nDecember 10\n\n\nFinal Project due  (submit by noon)"
   }
 ]
