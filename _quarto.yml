@@ -1,5 +1,10 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "*.Rmd"
+    - "*.md"
+    - "!files/"
 
 website:
   title: "Gov 50"
@@ -34,6 +39,23 @@ website:
               file: materials/01_intro.qmd
             - text: "1: R, RMarkdown and Data Visualization"
               file: materials/02_r_data_viz.qmd
+              
+    - title: "Assignments"
+      style: "docked"
+      search: false
+      background: dark
+      contents:
+        - section: "Resources"
+          contents:
+            - assignments/index.qmd
+            - assignments/tutorials.qmd
+            - assignments/problem-sets.qmd
+        - section: "Assignments"
+          contents:
+            - text: "Problem Set 0"
+              file: assignments/00-problem-set.qmd
+            - text: "Problem Set 1"
+              file: assignments/01_hw_data_viz.qmd
 
 format:
   html:

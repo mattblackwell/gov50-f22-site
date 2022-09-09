@@ -1,0 +1,16 @@
+{
+  "hash": "a60e27c3963cee1190091974c278be9a",
+  "result": {
+    "markdown": "---\ntitle: \"Lecture 3 Notes\"\nauthor: \"Matt Blackwell\"\ndate: '2022-09-08'\noutput: pdf_document\n---\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](lecture-3_files/figure-html/first_scatter-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(data = midwest,  # hello \n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) + \n  geom_point(mapping = aes(color = state)) + \n  geom_smooth() +\n  scale_x_log10()  +\n  labs(x = \"Population Density\",\n       y = \"Percent in Poverty\",\n       title = \"Density vs Poverty in the Midwest\")\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n`geom_smooth()` using method = 'loess' and formula 'y ~ x'\n```\n:::\n\n::: {.cell-output-display}\n![](lecture-3_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(data = midwest,\n       mapping = aes(x = percbelowpoverty)) + \n  geom_histogram() +\n  facet_wrap(~ state, ncol = 3)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n```\n:::\n\n::: {.cell-output-display}\n![](lecture-3_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(data = midwest, \n       mapping = aes(x = state,\n                     y = percbelowpoverty)) + \n  geom_boxplot(fill=\"green\")\n```\n\n::: {.cell-output-display}\n![](lecture-3_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(gapminder)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(data = gapminder,\n       mapping = aes(x = year,\n                     y = gdpPercap)) +\n  geom_line(color = \"grey70\", mapping = aes(group = country)) +\n  scale_y_log10() +\n  geom_smooth()\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = \"cs\")'\n```\n:::\n\n::: {.cell-output-display}\n![](lecture-3_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "lecture-3_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

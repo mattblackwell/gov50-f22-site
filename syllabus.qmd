@@ -24,10 +24,12 @@ output:
 
 ### Teaching fellows
 
+- {{< fa user >}} Dominic Valentino (Head TF)
 - {{< fa user >}} Angelo Dagonel 
 - {{< fa user >}} Dorothy Manevich
 - {{< fa user >}} Sooahn Shin
-- {{< fa user >}} Dominic Valentino
+- {{< fa user >}} Dan Baissa 
+
 
 
 :::
@@ -40,14 +42,18 @@ output:
 - {{< fa clock >}} &nbsp; {{< var course.time >}}
 - {{< fa location-dot >}} &nbsp; {{< var course.location >}}
 - {{< fa brands slack >}} &nbsp; [Slack]({{< var course.slack >}})
-:::
+
+### Course assistants
+
+- {{< fa user >}} Reem Ali
+- {{< fa user >}} Autumn Dorsey
+- {{< fa user >}} Felicia Roman
+- {{< fa user >}} Dominic Skinnon
+- {{< fa user >}} Angie Shin
+- {{< fa user >}} Andy Wang
 
 :::
 
-
-::: {.callout-warning}
-## Work in Progress
-This syllabus is a work in progress. Details may change before term begins.
 :::
 
 
