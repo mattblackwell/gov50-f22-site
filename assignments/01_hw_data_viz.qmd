@@ -7,7 +7,7 @@ due_date: 2022-09-14
 
 You can find instructions for obtaining and submitting problem sets [here](/assignments/problem-sets.qmd).
 
-You can find the GitHub Classroom link to download the template repository on the [Ed Board](https://edstem.org/us/courses/24957/)
+You can find the GitHub Classroom link to download the template repository on the [Ed Board](https://edstem.org/us/courses/24957/resources)
 
 ## Background
 
