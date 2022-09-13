@@ -1,0 +1,21 @@
+---
+title: "Data Transformation and Wrangling"
+date: 2022-09-13
+---
+
+
+## Readings 
+
+- [Chapter 3 of Modern Dive](https://moderndive.com/3-wrangling.html)
+- Install the Gov 50 data package that has new data for this week:
+```{r}
+#| eval: false
+remotes::install_github("mattblackwell/gov50data")
+```
+
+## Slides
+
+- Tuesday (9/13) lecture: Data Wrangling
+  - [PDF of slides as I present them](/slides/04_data_wrangling.pdf)
+  - [PDF of handout version of slides](/slides/04_data_wrangling_handout.pdf) (no incremental slides)
+

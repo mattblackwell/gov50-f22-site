@@ -1,0 +1,14 @@
+{
+  "hash": "0b4eacb9ea9cf41b83ac128ad49f74b1",
+  "result": {
+    "markdown": "---\ntitle: \"Data Transformation and Wrangling\"\ndate: 2022-09-13\n---\n\n\n\n## Readings \n\n- [Chapter 3 of Modern Dive](https://moderndive.com/3-wrangling.html)\n- Install the Gov 50 data package that has new data for this week:\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"mattblackwell/gov50data\")\n```\n:::\n\n\n## Slides\n\n- Tuesday (9/13) lecture: Data Wrangling\n  - [PDF of slides as I present them](/slides/04_data_wrangling.pdf)\n  - [PDF of handout version of slides](/slides/04_data_wrangling_handout.pdf) (no incremental slides)\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
