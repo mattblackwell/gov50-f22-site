@@ -22,4 +22,4 @@ remotes::install_github("mattblackwell/gov50data")
 - Thursday (9/15) lecture: Data Wrangling and Barplots
   - [PDF of slides as I present them](/slides/05_data_wrangling.pdf)
   - [PDF of handout version of slides](/slides/05_data_wrangling_handout.pdf) (no incremental slides)
-
+  - [`news.Rmd`](/files/code/news.Rmd) I wrote during lectures
