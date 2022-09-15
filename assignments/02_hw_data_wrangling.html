@@ -175,10 +175,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-1-8-points" id="toc-question-1-8-points" class="nav-link" data-scroll-target="#question-1-8-points">Question 1 (8 points)</a></li>
+  <li><a href="#question-2-7-points" id="toc-question-2-7-points" class="nav-link" data-scroll-target="#question-2-7-points">Question 2 (7 points)</a></li>
+  <li><a href="#question-3-7-points" id="toc-question-3-7-points" class="nav-link" data-scroll-target="#question-3-7-points">Question 3 (7 points)</a></li>
+  <li><a href="#question-4-13-points" id="toc-question-4-13-points" class="nav-link" data-scroll-target="#question-4-13-points">Question 4 (13 points)</a></li>
   </ul>
 </nav>
     </div>
@@ -201,8 +201,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>You can find instructions for obtaining and submitting problem sets <a href="../assignments/problem-sets.html">here</a>.</p>
-<p>You can find the GitHub Classroom link to download the template repository on the <a href="https://edstem.org/us/courses/24957/resources">Ed Board</a></p>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>Political advertising has traditionally been focused on the medium of television, but in recent cycles, online advertising has become much more popular. In this problem set, you will explore a dataset that has information on Facebook ad spending by candidates in the 2018 election cycle in the United States. The variables in this data are described below.</p>
@@ -269,28 +267,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </section>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<section id="question-1-8-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-8-points">Question 1 (8 points)</h2>
 <p>Load the data using the <code>read_csv</code> function and save it as <code>fb_ads</code> (using this will automatically make <code>fb_ads</code> a tibble). In the text, describe how many candidates there are in the dataset.</p>
 <p>Use <code>dplyr</code> functions to create a table with the number of candidates in each type of office in the data set. Save this table output as <code>office_table</code> (for the autograder). Use the function <code>knitr::kable()</code> on this table to have a nicely formatted table produced in the knitted output.</p>
-<p><strong>Rubric</strong>:</p>
+<p><strong>Rubric</strong>: 2pt for loading the data (autograder); 1pt for describing the number of candidates (PDF); 3pts for creating the table (autograder); 2pt for using <code>kable()</code> to nicely format the output (PDF)</p>
 </section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<section id="question-2-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-7-points">Question 2 (7 points)</h2>
 <p>Create a tibble called <code>office_incumbent_attack</code> that has 4 rows that summarizes the average of <code>ad_tone_attack</code> for each combination of <code>office</code> and <code>incumbent</code>. Call the variable summarizing the attack variable as <code>attack_prop</code> and be sure to remove any missing values when computing the averages.</p>
 <p>Use <code>knitr::kable()</code> to produce a nicely formatted table. In this call, set the <code>digits</code> arguments to 3 and use the <code>col.names</code> argument to pass a nicer set of names. You can use the following as a template:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(my_table, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Variable 1"</span>, <span class="st">"Variable 2"</span>, ...))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the writeup, describe which type of candidate sponsored the most attack ads on average.</p>
+<p><strong>Rubric</strong>: 3pts for creating <code>office_incumbent_attack</code> correctly (autograder); 2pt for a nicely formatted table (PDF); 1pt for changing the column names of the output table (PDF); 1pt for correctly identifying the type of candidate with highest average (PDF)</p>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<section id="question-3-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-7-points">Question 3 (7 points)</h2>
 <p>Create a new variable called <code>spend_millions</code> that is the amount of money the candidate spent on Facebook ads in millions of dollars (as opposed to dollars). Make sure to save the resulting dataset back as <code>fb_ads</code>.</p>
 <p>Create a histogram of this variable for just the US Senate races. Save the ggplot output as <code>plot_q3</code> and also print it to produce a plot in the output. In the text, describe the shape of the histogram and tell the reader if most of the Senate candidates spent more or less than a million dollars on Facebook ads.</p>
+<p><strong>Rubric:</strong> 2pt for creating the new variable (autograder); 3pts for creating the histogram object (autograder); 2pts for answering the question about the histogram (PDF)</p>
 </section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<section id="question-4-13-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-4-13-points">Question 4 (13 points)</h2>
 <p>Let’s now recreate the following plot that shows the top 20 Senate candidates in terms of Facebook ad spending.</p>
 <p><img src="figures/senate-spenders.png" class="img-fluid" style="width:50.0%"></p>
 <p>You should save the <code>ggplot</code> output as <code>fb_top_plot</code>. The key features of this graph that you should replicate for the autograder are:</p>
@@ -301,6 +301,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The fill color of the bar plot should be mapped to the <code>party</code> variable (but not globally!).</li>
 </ul>
 <p>You do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the <code>scale_fill_manual(value = c(R = "red", D = "blue"))</code> function (where you can change the red and blue to whatever you want).</p>
+<p><strong>Rubric:</strong> 3pts for correct axes (autograder); 3pts for correct data fed into <code>ggplot</code> (autograder); 3pts for the correct ordering of the y-axis (autograder); 3pts for fill being mapped to <code>party</code> (autograder); 1pt for plot being in knitted output and having informative labels (PDF)</p>
 
 
 </section>
