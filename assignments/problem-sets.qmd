@@ -44,7 +44,9 @@ The text of the problem sets will be posted here on the course website. We will 
    Committing often means you also don't have to constantly create new
    versions of the same file because you're afraid of making some
    change. Also, make sure to use informative commit messages so you
-   know what's changing.
+   know what's changing. **Important: be sure to answer the questions
+   in the Rmd file provided by the template. This is what the
+   autograder will look for when you submit.**
 
 6. At some point, you'll want to push your changes back to GitHub so
    the teaching staff can see your work (if you need help) or so that
@@ -57,7 +59,7 @@ The text of the problem sets will be posted here on the course website. We will 
 
 ![](/files/img/github-zip.png){fig-alt="Downloading your repo as a zip file"}
 
-Once you are think you have completed the assignment, make sure to push your commits to GitHub and then go to the repository website and download the repo as a `.zip` file under the green "Code" button. It's important to use the default name for the zip file, so you may have to delete an older zip file if you have already downloaded it to the same location. In general, it will have the structure `problem-set-X-username-main.zip` where `X` is the problem set number and `username` is your GitHub username. 
+Once you are think you have completed the assignment, make sure to push your commits to GitHub and then go to the repository website and download the repo as a `.zip` file under the green "Code" button. It's important to use the default name for the zip file, so you may have to delete an older zip file if you have already downloaded it to the same location. In general, it will have the structure `problem-set-X-username-main.zip` where `X` is the problem set number and `username` is your GitHub username. **Note: do not add this zip file to your repository.**
 
 ### Step 2: Submit the zip file to Gradescope
 

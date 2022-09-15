@@ -39,6 +39,8 @@ website:
               file: materials/01_intro.qmd
             - text: "1: R, RMarkdown and Data Visualization"
               file: materials/02_r_data_viz.qmd
+            - text: "2: Data Wrangling"
+              file: materials/03_data_wrangling.qmd
               
     - title: "Assignments"
       style: "docked"
