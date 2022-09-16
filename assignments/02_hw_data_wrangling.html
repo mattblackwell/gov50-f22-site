@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.245">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -275,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="question-2-7-points" class="level2">
 <h2 class="anchored" data-anchor-id="question-2-7-points">Question 2 (7 points)</h2>
-<p>Create a tibble called <code>office_incumbent_attack</code> that has 6 rows that summarizes the average of <code>ad_tone_attack</code> for each combination of <code>office</code> and <code>incumbent</code>. Call the variable summarizing the attack variable as <code>attack_prop</code> and be sure to remove any missing values when computing the averages.</p>
+<p>Filter the data to just US House and US Senate races and use this to create a tibble called <code>office_incumbent_attack</code> that has 6 rows that summarizes the average of <code>ad_tone_attack</code> for each combination of <code>office</code> and <code>incumbent</code>. Call the variable summarizing the attack variable as <code>attack_prop</code> and be sure to remove any missing values when computing the averages.</p>
 <p>Use <code>knitr::kable()</code> to produce a nicely formatted table. In this call, set the <code>digits</code> arguments to 3 and use the <code>col.names</code> argument to pass a nicer set of names. You can use the following as a template:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(my_table, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Variable 1"</span>, <span class="st">"Variable 2"</span>, ...))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
