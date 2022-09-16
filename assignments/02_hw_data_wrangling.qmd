@@ -38,7 +38,7 @@ Use `dplyr` functions to create a table with the number of candidates in each ty
 
 ## Question 2 (7 points)
 
-Create a tibble called `office_incumbent_attack` that has 4 rows that summarizes the average of `ad_tone_attack` for each combination of `office` and `incumbent`. Call the variable summarizing the attack variable as `attack_prop` and be sure to remove any missing values when computing the averages. 
+Create a tibble called `office_incumbent_attack` that has 6 rows that summarizes the average of `ad_tone_attack` for each combination of `office` and `incumbent`. Call the variable summarizing the attack variable as `attack_prop` and be sure to remove any missing values when computing the averages. 
 
 Use `knitr::kable()` to produce a nicely formatted table. In this call, set the `digits` arguments to 3 and use the `col.names` argument to pass a nicer set of names. You can use the following as a template:
 
@@ -74,5 +74,5 @@ You should save the `ggplot` output as `fb_top_plot`. The key features of this g
 
 You do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the `scale_fill_manual(value = c(R = "red", D = "blue"))` function (where you can change the red and blue to whatever you want). 
 
- **Rubric:** 3pts for correct axes (autograder); 3pts for correct data fed into `ggplot` (autograder); 3pts for the correct ordering of the y-axis (autograder); 3pts for fill being mapped to `party` (autograder); 1pt for plot being in knitted output and having informative labels (PDF)
+ **Rubric:** 3pts for correct axes (autograder); 3pts for correct data fed into `ggplot` (autograder); 3pts for the correct ordering of the y-axis (PDF); 3pts for fill being mapped to `party` (autograder); 1pt for plot being in knitted output and having informative labels (PDF)
 
