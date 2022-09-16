@@ -275,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="question-2-7-points" class="level2">
 <h2 class="anchored" data-anchor-id="question-2-7-points">Question 2 (7 points)</h2>
-<p>Create a tibble called <code>office_incumbent_attack</code> that has 4 rows that summarizes the average of <code>ad_tone_attack</code> for each combination of <code>office</code> and <code>incumbent</code>. Call the variable summarizing the attack variable as <code>attack_prop</code> and be sure to remove any missing values when computing the averages.</p>
+<p>Create a tibble called <code>office_incumbent_attack</code> that has 6 rows that summarizes the average of <code>ad_tone_attack</code> for each combination of <code>office</code> and <code>incumbent</code>. Call the variable summarizing the attack variable as <code>attack_prop</code> and be sure to remove any missing values when computing the averages.</p>
 <p>Use <code>knitr::kable()</code> to produce a nicely formatted table. In this call, set the <code>digits</code> arguments to 3 and use the <code>col.names</code> argument to pass a nicer set of names. You can use the following as a template:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(my_table, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Variable 1"</span>, <span class="st">"Variable 2"</span>, ...))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -301,7 +301,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The fill color of the bar plot should be mapped to the <code>party</code> variable (but not globally!).</li>
 </ul>
 <p>You do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the <code>scale_fill_manual(value = c(R = "red", D = "blue"))</code> function (where you can change the red and blue to whatever you want).</p>
-<p><strong>Rubric:</strong> 3pts for correct axes (autograder); 3pts for correct data fed into <code>ggplot</code> (autograder); 3pts for the correct ordering of the y-axis (autograder); 3pts for fill being mapped to <code>party</code> (autograder); 1pt for plot being in knitted output and having informative labels (PDF)</p>
+<p><strong>Rubric:</strong> 3pts for correct axes (autograder); 3pts for correct data fed into <code>ggplot</code> (autograder); 3pts for the correct ordering of the y-axis (PDF); 3pts for fill being mapped to <code>party</code> (autograder); 1pt for plot being in knitted output and having informative labels (PDF)</p>
 
 
 </section>
