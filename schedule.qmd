@@ -36,7 +36,7 @@ The readings refer to following texts:
 - **MD**: [*Statistical Inference via Data Science: A ModernDive into R and the Tidyverse*](https://moderndive.com/index.html) by Chester Ismay and Albert Y. Kim
 - **IMS**: [*Introduction to Modern Statistics*](https://www.openintro.org/book/ims/) by Mine Çetinkaya-Rundel and Johanna Hardin.
 
-
+ 
 ```{r build-table, echo=FALSE, results="asis"}
 schedule <- schedule %>%  
     mutate(var_title = ifelse(!is.na(content),
