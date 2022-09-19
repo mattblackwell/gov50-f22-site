@@ -72,7 +72,7 @@ You should save the `ggplot` output as `fb_top_plot`. The key features of this g
 - The y-axis should be ordered in ascending values of `spend_millions` so that the lowest values are at the bottom. You may want to manipulate `cand_name_last` to achieve this. 
 - The fill color of the bar plot should be mapped to the `party` variable (but not globally!). 
 
-You do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the `scale_fill_manual(value = c(R = "red", D = "blue"))` function (where you can change the red and blue to whatever you want). 
+You do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the `scale_fill_manual(values = c(R = "red", D = "blue"))` function (where you can change the red and blue to whatever you want). 
 
  **Rubric:** 3pts for correct axes (autograder); 3pts for correct data fed into `ggplot` (autograder); 3pts for the correct ordering of the y-axis (PDF); 3pts for fill being mapped to `party` (autograder); 1pt for plot being in knitted output and having informative labels (PDF)
 
