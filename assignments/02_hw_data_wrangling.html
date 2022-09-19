@@ -300,7 +300,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The y-axis should be ordered in ascending values of <code>spend_millions</code> so that the lowest values are at the bottom. You may want to manipulate <code>cand_name_last</code> to achieve this.</li>
 <li>The fill color of the bar plot should be mapped to the <code>party</code> variable (but not globally!).</li>
 </ul>
-<p>You do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the <code>scale_fill_manual(value = c(R = "red", D = "blue"))</code> function (where you can change the red and blue to whatever you want).</p>
+<p>You do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the <code>scale_fill_manual(values = c(R = "red", D = "blue"))</code> function (where you can change the red and blue to whatever you want).</p>
 <p><strong>Rubric:</strong> 3pts for correct axes (autograder); 3pts for correct data fed into <code>ggplot</code> (autograder); 3pts for the correct ordering of the y-axis (PDF); 3pts for fill being mapped to <code>party</code> (autograder); 1pt for plot being in knitted output and having informative labels (PDF)</p>
 
 
