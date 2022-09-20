@@ -217,6 +217,20 @@
     "text": "Slides\n\nTuesday (9/13) lecture: Data Wrangling\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/15) lecture: Data Wrangling and Barplots\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nnews.Rmd I wrote during lectures"
   },
   {
+    "objectID": "materials/04_causality.html",
+    "href": "materials/04_causality.html",
+    "title": "Causality and Pivoting",
+    "section": "",
+    "text": "Chapter 2 of QSS\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")"
+  },
+  {
+    "objectID": "materials/04_causality.html#slides",
+    "href": "materials/04_causality.html#slides",
+    "title": "Causality and Pivoting",
+    "section": "Slides",
+    "text": "Slides\n\nTuesday (9/20) lecture: Causality\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+  },
+  {
     "objectID": "materials/index.html",
     "href": "materials/index.html",
     "title": "Readings, lectures, and videos",
