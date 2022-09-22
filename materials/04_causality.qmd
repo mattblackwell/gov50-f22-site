@@ -18,3 +18,7 @@ remotes::install_github("mattblackwell/gov50data")
 - Tuesday (9/20) lecture: Causality
   - [PDF of slides as I present them](/slides/06_causality.pdf)
   - [PDF of handout version of slides](/slides/06_causality_handout.pdf) (no incremental slides)
+
+- Tuesday (9/22) lecture: Observational Studies
+  - [PDF of slides as I present them](/slides/07_obs_studies.pdf)
+  - [PDF of handout version of slides](/slides/07_obs_studies_handout.pdf) (no incremental slides)
