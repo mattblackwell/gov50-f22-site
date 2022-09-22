@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Gov 50 - Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/img/gov50-icon-512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gov 50</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">Syllabus</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html">Schedule</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../materials/index.html">Materials</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../assignments/index.html" aria-current="page">Assignments</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://edstem.org/us/courses/24957/discussion/">Ed</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.gradescope.com/courses/415456">Gradescope</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Resources</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/index.html" class="sidebar-item-text sidebar-link">Assignments</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/tutorials.html" class="sidebar-item-text sidebar-link">Gov 50 R Tutorials Instructions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/problem-sets.html" class="sidebar-item-text sidebar-link">Problem Sets and Exams</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Assignments</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/00-problem-set.html" class="sidebar-item-text sidebar-link">Problem Set 0</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/01_hw_data_viz.html" class="sidebar-item-text sidebar-link">Problem Set 1</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/02_hw_data_wrangling.html" class="sidebar-item-text sidebar-link">Problem Set 2</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assignments/03_hw_causality.html" class="sidebar-item-text sidebar-link active">Problem Set 3</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#question-1-6-points" id="toc-question-1-6-points" class="nav-link" data-scroll-target="#question-1-6-points">Question 1 (6 points)</a></li>
+  <li><a href="#question-2-7-points" id="toc-question-2-7-points" class="nav-link" data-scroll-target="#question-2-7-points">Question 2 (7 points)</a></li>
+  <li><a href="#question-3-3-points" id="toc-question-3-3-points" class="nav-link" data-scroll-target="#question-3-3-points">Question 3 (3 points)</a></li>
+  <li><a href="#question-4-2-points" id="toc-question-4-2-points" class="nav-link" data-scroll-target="#question-4-2-points">Question 4 (2 points)</a></li>
+  <li><a href="#question-5-7-points" id="toc-question-5-7-points" class="nav-link" data-scroll-target="#question-5-7-points">Question 5 (7 points)</a></li>
+  <li><a href="#question-6-10-points" id="toc-question-6-10-points" class="nav-link" data-scroll-target="#question-6-10-points">Question 6 (10 points)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>You can find instructions for obtaining and submitting problem sets <a href="../assignments/problem-sets.html">here</a>.</p>
+<p>You can find the GitHub Classroom link to download the template repository on the <a href="https://edstem.org/us/courses/24957/resources">Ed Board</a></p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>A professor in the Government department here at Harvard, Ryan Enos, conducted a randomized field experiment assessing the extent to which exposure to demographic change affected the political views of individuals living in suburban communities around Boston, Massachusetts.</p>
+<blockquote class="blockquote">
+<p>This exercise is based on: Enos, R. D. 2014. “<a href="http://dx.doi.org/10.1073/pnas.1317670111">Causal Effect of Intergroup Contact on Exclusionary Attitudes.</a>” <em>Proceedings of the National Academy of Sciences</em> 111(10): 3699–3704.</p>
+</blockquote>
+<p>Subjects in the experiment were individuals riding on the commuter rail line and overwhelmingly white. Every morning, multiple trains pass through various stations in suburban communities that were used for this study. For pairs of trains leaving the same station at roughly the same time, one was randomly assigned to receive the treatment and one was designated as a control. By doing so all the benefits of randomization apply for this dataset.</p>
+<p>The treatment in this experiment was the presence of two native Spanish-speaking ‘confederates’ (a term used in experiments to indicate that these individuals worked for the researcher, unbeknownst to the subjects) on the platform each morning prior to the train’s arrival. The presence of these confederates, who would appear as Hispanic foreigners to the subjects, was intended to simulate the kind of demographic change anticipated for the United States in coming years. For those individuals in the control group, no such confederates were present on the platform. The treatment was administered for 10 days. Participants were asked questions related to immigration policy both before the experiment started and after the experiment had ended. The names and descriptions of variables in the data set <code>boston.csv</code> are:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>age</code></td>
+<td style="text-align: left;">Age of individual at time of experiment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>male</code></td>
+<td style="text-align: left;">Sex of individual, male (1) or female (0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>income</code></td>
+<td style="text-align: left;">Income group in dollars (not exact income)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>white</code></td>
+<td style="text-align: left;">Indicator variable for whether individual identifies as white (1) or not (0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>college</code></td>
+<td style="text-align: left;">Indicator variable for whether individual attended college (1) or not (0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>usborn</code></td>
+<td style="text-align: left;">Indicator variable for whether individual was born in the US (1) or not (0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>treatment</code></td>
+<td style="text-align: left;">Indicator variable for whether an individual was treated (1) or not (0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>ideology</code></td>
+<td style="text-align: left;">Self-placement on ideology spectrum from Very Liberal (1) through Moderate (3) to Very Conservative (5)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>numberim.pre</code></td>
+<td style="text-align: left;">Policy opinion on question about increasing the number immigrants allowed in the country from Increased (1) to Decreased (5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>numberim.post</code></td>
+<td style="text-align: left;">Same question as above, asked later</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>remain.pre</code></td>
+<td style="text-align: left;">Policy opinion on question about allowing the children of undocumented immigrants to remain in the country from Allow (1) to Not Allow (5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>remain.post</code></td>
+<td style="text-align: left;">Same question as above, asked later</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>english.pre</code></td>
+<td style="text-align: left;">Policy opinion on question about passing a law establishing English as the official language from Not Favor (1) to Favor (5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>english.post</code></td>
+<td style="text-align: left;">Same question as above, asked later</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="question-1-6-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-6-points">Question 1 (6 points)</h2>
+<p>The benefit of randomly assigning individuals to the treatment or control groups is that the two groups should be similar, on average, in terms of their covariates. This is referred to as ‘covariate balance.’</p>
+<p>Load the <code>tidyverse</code> package in the setup chunk. Read the data <code>"data/boston.csv"</code> into R using <code>read_csv</code> and call the resulting tibble <code>trains</code>. Using the <code>group_by</code> and <code>summarize</code> functions, create a tibble called <code>balance_table</code> that shows the sample average of the <code>age</code> and <code>male</code> variables by whether participants were in the treatment or control groups.</p>
+<p>Then use the <code>knitr::kable()</code> function to create a nice-looking table, including some informative column names. Briefly comment on the whether you think these variables appear balanced.</p>
+<p><strong>Rubric:</strong> 1pt for successful knitting (autograder); 3pts for correct <code>balance_table</code> object (autograder); 1pt for nicely formatted table (PDF); 1pt for brief comments (PDF)</p>
+</section>
+<section id="question-2-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-7-points">Question 2 (7 points)</h2>
+<p>Individuals in the experiment were asked a series of questions both at the beginning and the end of the experiment. One such question was “Do you think the number of immigrants from Mexico who are permitted to come to the United States to live should be increased, left the same, or decreased?”</p>
+<p>The response to this question prior to the experiment is in the variable <code>numberim.pre</code>. The response to this question after the experiment is in the variable <code>numberim.post</code>. In both cases the variable is coded on a 1 – 5 scale. Responses with values of 1 are inclusionary (‘pro-immigration’) and responses with values of 5 are exclusionary (‘anti-immigration’). Take the following steps:</p>
+<ul>
+<li>Create a new variable in the <code>trains</code> data called <code>change</code> and define it as the change in immigration attitudes between pre- and post-experiment (post minus pre). Be sure to assign the output of your data wrangling call back to <code>trains</code>.</li>
+<li>Calculate the average change in attitudes about immigration in the treated group and save this output as <code>trt_change</code>. This should be a 1 x 1 tibble.</li>
+<li>Calculate the average change in attitudes about immigration in the control group and save this output as <code>ctr_change</code>. This should be a 1 x 1 tibble.</li>
+<li>Compute the average treatment effect from these two objects and store it as <code>ate</code>. This should be a 1 x 1 tibble.</li>
+</ul>
+<p>Report these estimates in the main text (that is, outside the chunk) and describe what they mean substantively with respect to the study.</p>
+<p><strong>Rubric:</strong> 1pt for creating <code>change</code> variable (autograder); 2pts for <code>trt_change</code> object (autograder); 2pts for <code>ctr_change</code> object (autograder); 1pt for <code>ate</code> object (autograder); 1pt for write up about the results (PDF).</p>
+</section>
+<section id="question-3-3-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-3-points">Question 3 (3 points)</h2>
+<p>Describe, in words, what the potential outcomes for a particular person are in the analysis for the last problem. Substantively, what does the fundamental problem of causal inference refer to in this context? Make sure to refer to what treatment and control means in this experiment rather than just mention the “treatment” and “control” groups.</p>
+<p><strong>Rubric:</strong> 3pts for answer (PDF); no autograder points</p>
+</section>
+<section id="question-4-2-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-4-2-points">Question 4 (2 points)</h2>
+<p>In your data science group, two members have alternative ideas for what the outcome should have been instead of the change in attitudes on immigration between the beginning and end of the experiment. Jimmy Q. Boxplot thinks that you should have used <code>numberim.pre</code> as the outcome and Suzy T. Histogram thinks that you should have used <code>numberim.post</code>. Are either of these two valid and interesting outcomes to explore in this study? Briefly explain why or why not.</p>
+<p><strong>Rubric:</strong> 2pts for answer (PDF); no autograder points.</p>
+</section>
+<section id="question-5-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-5-7-points">Question 5 (7 points)</h2>
+<p>Does having attended college influence the effect of being exposed to ‘outsiders’ on exclusionary attitudes? Another way to ask the same question is this: is there evidence of a differential impact of treatment, conditional on attending college versus not attending college?</p>
+<p>Use <code>group_by</code>, <code>summarize</code>, <code>pivot_wider</code>, and <code>mutate</code> to create a tibble called <code>ate_college</code> where each row corresponds to a unique value of the <code>college</code> variable (so two rows total) and that has the following four columns:</p>
+<ul>
+<li><code>college</code>: the unique value of the college variable for this row, labelled as either “College Grad” or “Non-College Grad”.</li>
+<li><code>Treated</code>: the mean of the <code>change</code> variable for each unique value of college in the treated group.</li>
+<li><code>Control</code>: the mean of the <code>change</code> variable for each unique value of college in the control group.</li>
+<li><code>ATE</code>: the difference between the treatment and control means for this value of college.</li>
+</ul>
+<p>In the first step of building <code>ate_college</code>, you should pipe the data to a <code>mutate()</code> call that (a) modifies the <code>treatment</code> to be <code>"Treated"</code> when <code>treatment == 1</code> and <code>"Control"</code> when <code>treatment == 0</code> and (b) modifies the <code>college</code> variable to be <code>"College Grad"</code> when <code>college == 1</code> and <code>"Non-College Grad"</code> when <code>college == 0</code>. When you do this, be sure <strong>not</strong> to overwrite the <code>trains</code> data with these changes, simply pipe this to the next step.</p>
+<p>Pass the table to <code>knitr::kable()</code> to produce a nicely formatted table. Report the ATEs in text and comment on whether or not you see evidence of a differential effect of treatment.</p>
+<p><strong>Rubric:</strong> 5pts for <code>ate_college</code> object (autograder); 1pt for nicely formatted table (PDF); 1pt for brief write-up (PDF)</p>
+</section>
+<section id="question-6-10-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-6-10-points">Question 6 (10 points)</h2>
+<p>Repeat the same analysis as in the previous question but this time with respect to age. For age, use <code>case_when</code> and logical vectors to create a new variable <code>age_group</code> that has the following values:</p>
+<ul>
+<li><code>"25 and under"</code> when <code>age</code> is 25 and under,</li>
+<li><code>"26 - 40"</code> when <code>age</code> is between 26-40,</li>
+<li><code>"41 - 60"</code> when <code>age</code> is between 41-60, and</li>
+<li><code>"Over 60"</code> when <code>age</code> is 61 and over.</li>
+</ul>
+<p>Remember to save the output to the <code>trains</code> name. Use this variable along with the approach in the previous question to create a tibble called <code>ate_age</code> (replacing <code>college</code> with <code>age_group</code>) that has four rows corresponding to the four unique values of <code>age_group</code> and four columns: <code>age_group</code>, <code>Treated</code>, <code>Control</code>, and <code>ATE</code> (all defined similarly to the previous question).</p>
+<p>Use the the <code>ate_age</code> tibble to produce a barplot (using <code>ggplot</code>) of the ATE for each age group and assigning the plot to the name <code>age_plot</code>. Be sure to include informative labels for the x and y axes, along with a title.</p>
+<p>In the text, answer these question: Do there appear to be systematic relationships between the treatment effects and age? If so, what patterns do you see?</p>
+<p><strong>Rubric:</strong> 2pts for <code>age_group</code> variable (autograder); 5pts for <code>ate_age</code> object (autograder); 2pts for <code>age_plot</code> ggplot object (autograder); 1pt descriptions of the results (PDF)</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

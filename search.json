@@ -74,7 +74,14 @@
     "href": "assignments/02_hw_data_wrangling.html",
     "title": "Problem Set 2: Data Wrangling",
     "section": "",
-    "text": "Political advertising has traditionally been focused on the medium of television, but in recent cycles, online advertising has become much more popular. In this problem set, you will explore a dataset that has information on Facebook ad spending by candidates in the 2018 election cycle in the United States. The variables in this data are described below.\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\ncand_id\nunique identifier code for candidate\n\n\ncand_name\nfull name of the candidate\n\n\ncand_name_last\nlast name of the candidate\n\n\nparty\nparty affiliation of the candidate (R = Republican, D = Democrat)\n\n\noffice\noffice being sought by candidate\n\n\nstate\nstate in which the candidate is running\n\n\nincumbency\nincumbency status of candidate (incumbent, challenger, or open seat)\n\n\nspend\nestimated total spending on Facebook ads by candidate\n\n\nimpressions\nestimated total impressions of Facebook ads\n\n\nad_tone_attack\nproportion of FB ads that mention candidate’s opponent only\n\n\nad_tone_promote\nproportion of FB ads that mention candidate only\n\n\nad_tone_contrast\nproportion of FB ads that mention candidate and candidate’s opponent"
+    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
+  },
+  {
+    "objectID": "assignments/02_hw_data_wrangling.html#background",
+    "href": "assignments/02_hw_data_wrangling.html#background",
+    "title": "Problem Set 2: Data Wrangling",
+    "section": "Background",
+    "text": "Background\nPolitical advertising has traditionally been focused on the medium of television, but in recent cycles, online advertising has become much more popular. In this problem set, you will explore a dataset that has information on Facebook ad spending by candidates in the 2018 election cycle in the United States. The variables in this data are described below.\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\ncand_id\nunique identifier code for candidate\n\n\ncand_name\nfull name of the candidate\n\n\ncand_name_last\nlast name of the candidate\n\n\nparty\nparty affiliation of the candidate (R = Republican, D = Democrat)\n\n\noffice\noffice being sought by candidate\n\n\nstate\nstate in which the candidate is running\n\n\nincumbency\nincumbency status of candidate (incumbent, challenger, or open seat)\n\n\nspend\nestimated total spending on Facebook ads by candidate\n\n\nimpressions\nestimated total impressions of Facebook ads\n\n\nad_tone_attack\nproportion of FB ads that mention candidate’s opponent only\n\n\nad_tone_promote\nproportion of FB ads that mention candidate only\n\n\nad_tone_contrast\nproportion of FB ads that mention candidate and candidate’s opponent"
   },
   {
     "objectID": "assignments/02_hw_data_wrangling.html#question-1-8-points",
@@ -105,11 +112,67 @@
     "text": "Question 4 (13 points)\nLet’s now recreate the following plot that shows the top 20 Senate candidates in terms of Facebook ad spending.\n\nYou should save the ggplot output as fb_top_plot. The key features of this graph that you should replicate for the autograder are:\n\nThe barplot should have candidate last names on the y-axis and the spend_millions variable from question 3 on the x-axis.\nThe data feeding into the ggplot call should only have US Senate candidates and only the candidates with the highest 20 spend_millions values.\nThe y-axis should be ordered in ascending values of spend_millions so that the lowest values are at the bottom. You may want to manipulate cand_name_last to achieve this.\nThe fill color of the bar plot should be mapped to the party variable (but not globally!).\n\nYou do not need to exactly match the labels, but you should have informative labels. The color does not need to match, but if you want to change the fill colors, you can use the scale_fill_manual(values = c(R = \"red\", D = \"blue\")) function (where you can change the red and blue to whatever you want).\nRubric: 3pts for correct axes (autograder); 3pts for correct data fed into ggplot (autograder); 3pts for the correct ordering of the y-axis (PDF); 3pts for fill being mapped to party (autograder); 1pt for plot being in knitted output and having informative labels (PDF)"
   },
   {
+    "objectID": "assignments/03_hw_causality.html",
+    "href": "assignments/03_hw_causality.html",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "",
+    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
+  },
+  {
+    "objectID": "assignments/03_hw_causality.html#background",
+    "href": "assignments/03_hw_causality.html#background",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "Background",
+    "text": "Background\nA professor in the Government department here at Harvard, Ryan Enos, conducted a randomized field experiment assessing the extent to which exposure to demographic change affected the political views of individuals living in suburban communities around Boston, Massachusetts.\n\nThis exercise is based on: Enos, R. D. 2014. “Causal Effect of Intergroup Contact on Exclusionary Attitudes.” Proceedings of the National Academy of Sciences 111(10): 3699–3704.\n\nSubjects in the experiment were individuals riding on the commuter rail line and overwhelmingly white. Every morning, multiple trains pass through various stations in suburban communities that were used for this study. For pairs of trains leaving the same station at roughly the same time, one was randomly assigned to receive the treatment and one was designated as a control. By doing so all the benefits of randomization apply for this dataset.\nThe treatment in this experiment was the presence of two native Spanish-speaking ‘confederates’ (a term used in experiments to indicate that these individuals worked for the researcher, unbeknownst to the subjects) on the platform each morning prior to the train’s arrival. The presence of these confederates, who would appear as Hispanic foreigners to the subjects, was intended to simulate the kind of demographic change anticipated for the United States in coming years. For those individuals in the control group, no such confederates were present on the platform. The treatment was administered for 10 days. Participants were asked questions related to immigration policy both before the experiment started and after the experiment had ended. The names and descriptions of variables in the data set boston.csv are:\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nage\nAge of individual at time of experiment\n\n\nmale\nSex of individual, male (1) or female (0)\n\n\nincome\nIncome group in dollars (not exact income)\n\n\nwhite\nIndicator variable for whether individual identifies as white (1) or not (0)\n\n\ncollege\nIndicator variable for whether individual attended college (1) or not (0)\n\n\nusborn\nIndicator variable for whether individual was born in the US (1) or not (0)\n\n\ntreatment\nIndicator variable for whether an individual was treated (1) or not (0)\n\n\nideology\nSelf-placement on ideology spectrum from Very Liberal (1) through Moderate (3) to Very Conservative (5)\n\n\nnumberim.pre\nPolicy opinion on question about increasing the number immigrants allowed in the country from Increased (1) to Decreased (5)\n\n\nnumberim.post\nSame question as above, asked later\n\n\nremain.pre\nPolicy opinion on question about allowing the children of undocumented immigrants to remain in the country from Allow (1) to Not Allow (5)\n\n\nremain.post\nSame question as above, asked later\n\n\nenglish.pre\nPolicy opinion on question about passing a law establishing English as the official language from Not Favor (1) to Favor (5)\n\n\nenglish.post\nSame question as above, asked later"
+  },
+  {
+    "objectID": "assignments/03_hw_causality.html#question-1-6-points",
+    "href": "assignments/03_hw_causality.html#question-1-6-points",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "Question 1 (6 points)",
+    "text": "Question 1 (6 points)\nThe benefit of randomly assigning individuals to the treatment or control groups is that the two groups should be similar, on average, in terms of their covariates. This is referred to as ‘covariate balance.’\nLoad the tidyverse package in the setup chunk. Read the data \"data/boston.csv\" into R using read_csv and call the resulting tibble trains. Using the group_by and summarize functions, create a tibble called balance_table that shows the sample average of the age and male variables by whether participants were in the treatment or control groups.\nThen use the knitr::kable() function to create a nice-looking table, including some informative column names. Briefly comment on the whether you think these variables appear balanced.\nRubric: 1pt for successful knitting (autograder); 3pts for correct balance_table object (autograder); 1pt for nicely formatted table (PDF); 1pt for brief comments (PDF)"
+  },
+  {
+    "objectID": "assignments/03_hw_causality.html#question-2-7-points",
+    "href": "assignments/03_hw_causality.html#question-2-7-points",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "Question 2 (7 points)",
+    "text": "Question 2 (7 points)\nIndividuals in the experiment were asked a series of questions both at the beginning and the end of the experiment. One such question was “Do you think the number of immigrants from Mexico who are permitted to come to the United States to live should be increased, left the same, or decreased?”\nThe response to this question prior to the experiment is in the variable numberim.pre. The response to this question after the experiment is in the variable numberim.post. In both cases the variable is coded on a 1 – 5 scale. Responses with values of 1 are inclusionary (‘pro-immigration’) and responses with values of 5 are exclusionary (‘anti-immigration’). Take the following steps:\n\nCreate a new variable in the trains data called change and define it as the change in immigration attitudes between pre- and post-experiment (post minus pre). Be sure to assign the output of your data wrangling call back to trains.\nCalculate the average change in attitudes about immigration in the treated group and save this output as trt_change. This should be a 1 x 1 tibble.\nCalculate the average change in attitudes about immigration in the control group and save this output as ctr_change. This should be a 1 x 1 tibble.\nCompute the average treatment effect from these two objects and store it as ate. This should be a 1 x 1 tibble.\n\nReport these estimates in the main text (that is, outside the chunk) and describe what they mean substantively with respect to the study.\nRubric: 1pt for creating change variable (autograder); 2pts for trt_change object (autograder); 2pts for ctr_change object (autograder); 1pt for ate object (autograder); 1pt for write up about the results (PDF)."
+  },
+  {
+    "objectID": "assignments/03_hw_causality.html#question-3-3-points",
+    "href": "assignments/03_hw_causality.html#question-3-3-points",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "Question 3 (3 points)",
+    "text": "Question 3 (3 points)\nDescribe, in words, what the potential outcomes for a particular person are in the analysis for the last problem. Substantively, what does the fundamental problem of causal inference refer to in this context? Make sure to refer to what treatment and control means in this experiment rather than just mention the “treatment” and “control” groups.\nRubric: 3pts for answer (PDF); no autograder points"
+  },
+  {
+    "objectID": "assignments/03_hw_causality.html#question-4-2-points",
+    "href": "assignments/03_hw_causality.html#question-4-2-points",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "Question 4 (2 points)",
+    "text": "Question 4 (2 points)\nIn your data science group, two members have alternative ideas for what the outcome should have been instead of the change in attitudes on immigration between the beginning and end of the experiment. Jimmy Q. Boxplot thinks that you should have used numberim.pre as the outcome and Suzy T. Histogram thinks that you should have used numberim.post. Are either of these two valid and interesting outcomes to explore in this study? Briefly explain why or why not.\nRubric: 2pts for answer (PDF); no autograder points."
+  },
+  {
+    "objectID": "assignments/03_hw_causality.html#question-5-7-points",
+    "href": "assignments/03_hw_causality.html#question-5-7-points",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "Question 5 (7 points)",
+    "text": "Question 5 (7 points)\nDoes having attended college influence the effect of being exposed to ‘outsiders’ on exclusionary attitudes? Another way to ask the same question is this: is there evidence of a differential impact of treatment, conditional on attending college versus not attending college?\nUse group_by, summarize, pivot_wider, and mutate to create a tibble called ate_college where each row corresponds to a unique value of the college variable (so two rows total) and that has the following four columns:\n\ncollege: the unique value of the college variable for this row, labelled as either “College Grad” or “Non-College Grad”.\nTreated: the mean of the change variable for each unique value of college in the treated group.\nControl: the mean of the change variable for each unique value of college in the control group.\nATE: the difference between the treatment and control means for this value of college.\n\nIn the first step of building ate_college, you should pipe the data to a mutate() call that (a) modifies the treatment to be \"Treated\" when treatment == 1 and \"Control\" when treatment == 0 and (b) modifies the college variable to be \"College Grad\" when college == 1 and \"Non-College Grad\" when college == 0. When you do this, be sure not to overwrite the trains data with these changes, simply pipe this to the next step.\nPass the table to knitr::kable() to produce a nicely formatted table. Report the ATEs in text and comment on whether or not you see evidence of a differential effect of treatment.\nRubric: 5pts for ate_college object (autograder); 1pt for nicely formatted table (PDF); 1pt for brief write-up (PDF)"
+  },
+  {
+    "objectID": "assignments/03_hw_causality.html#question-6-10-points",
+    "href": "assignments/03_hw_causality.html#question-6-10-points",
+    "title": "Problem Set 3: Effect of Demographic Change on Exclusionary Attitudes",
+    "section": "Question 6 (10 points)",
+    "text": "Question 6 (10 points)\nRepeat the same analysis as in the previous question but this time with respect to age. For age, use case_when and logical vectors to create a new variable age_group that has the following values:\n\n\"25 and under\" when age is 25 and under,\n\"26 - 40\" when age is between 26-40,\n\"41 - 60\" when age is between 41-60, and\n\"Over 60\" when age is 61 and over.\n\nRemember to save the output to the trains name. Use this variable along with the approach in the previous question to create a tibble called ate_age (replacing college with age_group) that has four rows corresponding to the four unique values of age_group and four columns: age_group, Treated, Control, and ATE (all defined similarly to the previous question).\nUse the the ate_age tibble to produce a barplot (using ggplot) of the ATE for each age group and assigning the plot to the name age_plot. Be sure to include informative labels for the x and y axes, along with a title.\nIn the text, answer these question: Do there appear to be systematic relationships between the treatment effects and age? If so, what patterns do you see?\nRubric: 2pts for age_group variable (autograder); 5pts for ate_age object (autograder); 2pts for age_plot ggplot object (autograder); 1pt descriptions of the results (PDF)"
+  },
+  {
     "objectID": "assignments/index.html",
     "href": "assignments/index.html",
     "title": "Assignments",
     "section": "",
-    "text": "Tutorial Instructions\nSubmission guide for problem sets\nProblem set 0: Setting up R, RStudio, and GitHub\nProblem set 1: Data Visualization\nProblem set 2: Data Wrangling"
+    "text": "Tutorial Instructions\nSubmission guide for problem sets\nProblem set 0: Setting up R, RStudio, and GitHub\nProblem set 1: Data Visualization\nProblem set 2: Data Wrangling\nProblem set 3: Causality"
   },
   {
     "objectID": "assignments/problem-sets.html",
@@ -172,7 +235,7 @@
     "href": "index.html",
     "title": "Gov 50",
     "section": "",
-    "text": "Instructor\n\n   Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\nCourse details\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack\n\n\n\nContacting me\nGeneral questions about the course should be posted to either the course Ed Discussion board or the course Slack. Someone on the teaching staff will attempt to respond to these messages within 25 hours, but also remember that life can be busy and chaotic for everyone (including me!), so if I don’t respond right away, don’t worry! For other issues (absences, etc), feel free to email me or send me a direct message on Slack."
+    "text": "Instructor\n\n   Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\nCourse details\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack\n   Study Hall Schedule\n   Office Hours Schedule\n\n\n\nContacting me\nGeneral questions about the course should be posted to either the course Ed Discussion board or the course Slack. Someone on the teaching staff will attempt to respond to these messages within 25 hours, but also remember that life can be busy and chaotic for everyone (including me!), so if I don’t respond right away, don’t worry! For other issues (absences, etc), feel free to email me or send me a direct message on Slack."
   },
   {
     "objectID": "materials/01_intro.html",
@@ -238,32 +301,46 @@
     "text": "Each class session has a set of required readings that you should complete before attempting the tutorials."
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
+    "objectID": "resources/index.html",
+    "href": "resources/index.html",
     "title": "Resources",
     "section": "",
     "text": "Getting Software Set Up\nR Tutorials Instructions (for running locally in RStudio)\nProblem Sets and Exams Instructions"
   },
   {
-    "objectID": "resources.html#r-tutorials",
-    "href": "resources.html#r-tutorials",
+    "objectID": "resources/index.html#r-tutorials",
+    "href": "resources/index.html#r-tutorials",
     "title": "Resources",
     "section": "R Tutorials",
     "text": "R Tutorials\n\nHands On Programming with R\nR for Data Science"
   },
   {
-    "objectID": "resources.html#r-markdown",
-    "href": "resources.html#r-markdown",
+    "objectID": "resources/index.html#r-markdown",
+    "href": "resources/index.html#r-markdown",
     "title": "Resources",
     "section": "R Markdown",
     "text": "R Markdown\n\nR Markdown Tutorial\nR Markdown: The Definitive Guide"
   },
   {
-    "objectID": "resources.html#git-and-github-resources",
-    "href": "resources.html#git-and-github-resources",
+    "objectID": "resources/index.html#git-and-github-resources",
+    "href": "resources/index.html#git-and-github-resources",
     "title": "Resources",
     "section": "Git and GitHub Resources",
     "text": "Git and GitHub Resources\n\nHappy Git with R"
+  },
+  {
+    "objectID": "resources/office-hours.html",
+    "href": "resources/office-hours.html",
+    "title": "Office House Schedule",
+    "section": "",
+    "text": "CA Name\n\n\nDay\n\n\nTime\n\n\nLocation\n\n\n\n\n\n\nAngie\n\n\nSunday\n\n\n10am-12pm\n\n\nEliot Dining Hall\n\n\n\n\nOsvaldo\n\n\nSunday\n\n\n3-5pm\n\n\nAdams Dining Hall\n\n\n\n\nFelicia\n\n\nSunday\n\n\n8pm-10pm\n\n\nWinthrop Dining Hall\n\n\n\n\nDominic\n\n\nSunday\n\n\n8pm-10pm\n\n\nEliot Dining Hall\n\n\n\n\nAndy\n\n\nSunday\n\n\n10pm-12am\n\n\nWinthrop Beren Grill\n\n\n\n\nJason\n\n\nSunday\n\n\n8-10pm\n\n\nLeverett Dining Hall\n\n\n\n\nReem\n\n\nMonday\n\n\n7-9pm\n\n\nLeveritt JCR\n\n\n\n\nAutumn\n\n\nMonday\n\n\n8-10pm\n\n\nWinthrop Dining Hall\n\n\n\n\nSarah\n\n\nMonday\n\n\n8-10am\n\n\nCabot Dining Hall\n\n\n\n\nGroup Study Hall\n\n\nTuesday\n\n\n5:30-9:30pm\n\n\nCGIS Knafel Cafe (Fisher Family Commons)"
+  },
+  {
+    "objectID": "resources/study-halls.html",
+    "href": "resources/study-halls.html",
+    "title": "Study Hall Schedule",
+    "section": "",
+    "text": "CA Name\n\n\nDay\n\n\nTime\n\n\nLocation\n\n\n\n\n\n\nAngie\n\n\nSunday\n\n\n10am-12pm\n\n\nEliot Dining Hall\n\n\n\n\nOsvaldo\n\n\nSunday\n\n\n3-5pm\n\n\nAdams Dining Hall\n\n\n\n\nFelicia\n\n\nSunday\n\n\n8pm-10pm\n\n\nWinthrop Dining Hall\n\n\n\n\nDominic\n\n\nSunday\n\n\n8pm-10pm\n\n\nEliot Dining Hall\n\n\n\n\nAndy\n\n\nSunday\n\n\n10pm-12am\n\n\nWinthrop Beren Grill\n\n\n\n\nJason\n\n\nSunday\n\n\n8-10pm\n\n\nLeverett Dining Hall\n\n\n\n\nReem\n\n\nMonday\n\n\n7-9pm\n\n\nLeveritt JCR\n\n\n\n\nAutumn\n\n\nMonday\n\n\n8-10pm\n\n\nWinthrop Dining Hall\n\n\n\n\nSarah\n\n\nMonday\n\n\n8-10am\n\n\nCabot Dining Hall\n\n\n\n\nGroup Study Hall\n\n\nTuesday\n\n\n5:30-9:30pm\n\n\nCGIS Knafel Cafe (Fisher Family Commons)"
   },
   {
     "objectID": "schedule.html",
@@ -277,7 +354,7 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\n\n\n Dominic Valentino (Head TF)\n Angelo Dagonel\n Dorothy Manevich\n Sooahn Shin\n Dan Baissa\n\n\n\n\n\n\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack\n\n\n\n\n\n Reem Ali\n Autumn Dorsey\n Felicia Roman\n Dominic Skinnon\n Angie Shin\n Andy Wang"
+    "text": "Prof. Matt Blackwell\n   CGIS Knafel 305\n   mblackwell@gov.harvard.edu\n   matt_blackwell\n   Schedule an appointment\n\n\n\n\n\n Dominic Valentino (Head TF)\n Angelo Dagonel\n Dorothy Manevich\n Sooahn Shin\n Dan Baissa\n\n\n\n\n\n\n\n   Tue/Thu\n   September 1st-December 20th, 2022\n   12:00–1:15 PM\n   Emerson 210\n   Slack\n\n\n\n\n\n Reem Ali\n Autumn Dorsey\n Osvaldo Mendoza\n Sarah Ramberran\n Felicia Roman\n Dominic Skinnon\n Angie Shin\n Andy Wang\n Jason Wang"
   },
   {
     "objectID": "syllabus.html#course-objectives",
