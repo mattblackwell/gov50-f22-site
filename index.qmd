@@ -37,7 +37,7 @@ course-logo: /files/img/gov50-icon-512.png
 - {{< fa location-dot >}} &nbsp; {{< var course.location >}}
 - {{< fa brands slack >}} &nbsp; [Slack]({{< var course.slack >}})
 - {{< fa wrench >}} &nbsp; [Study Hall Schedule](resources/study-halls.qmd)
-- {{< fa person-circle-question >}} &nbsp; Office Hours Schedule
+- {{< fa person-circle-question >}} &nbsp; [Office Hours Schedule](resources/office-hours.qmd)
 :::
 
 ::: {.g-col-12 .g-col-md-4 .contact-policy}
