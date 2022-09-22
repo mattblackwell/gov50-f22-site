@@ -19,6 +19,8 @@ website:
         file: materials/index.qmd
       - text: "Assignments"
         file: assignments/index.qmd
+      - text: "Resources"
+        file: resources/index.qmd
       - text: "Ed"
         href: https://edstem.org/us/courses/24957/discussion/
       - text: "Gradescope"
@@ -60,6 +62,10 @@ website:
               file: assignments/00-problem-set.qmd
             - text: "Problem Set 1"
               file: assignments/01_hw_data_viz.qmd
+            - text: "Problem Set 2"
+              file: assignments/02_hw_data_wrangling.qmd
+            - text: "Problem Set 3"
+              file: assignments/03_hw_causality.qmd
 
 format:
   html:

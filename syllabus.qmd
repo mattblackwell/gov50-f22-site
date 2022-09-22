@@ -47,10 +47,13 @@ output:
 
 - {{< fa user >}} Reem Ali
 - {{< fa user >}} Autumn Dorsey
+- {{< fa user >}} Osvaldo Mendoza
+- {{< fa user >}} Sarah Ramberran
 - {{< fa user >}} Felicia Roman
 - {{< fa user >}} Dominic Skinnon
 - {{< fa user >}} Angie Shin
 - {{< fa user >}} Andy Wang
+- {{< fa user >}} Jason Wang
 
 :::
 

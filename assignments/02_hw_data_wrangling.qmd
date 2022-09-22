@@ -4,6 +4,11 @@ due_date: 2022-09-14
 
 ---
 
+
+You can find instructions for obtaining and submitting problem sets [here](/assignments/problem-sets.qmd).
+
+You can find the GitHub Classroom link to download the template repository on the [Ed Board](https://edstem.org/us/courses/24957/resources)
+
 ## Background
 
 Political advertising has traditionally been focused on the medium of television, but in recent cycles, online advertising has become much more popular. In this problem set, you will explore a dataset that has information on Facebook ad spending by candidates in the 2018 election cycle in the United States. The variables in this data are described below. 
