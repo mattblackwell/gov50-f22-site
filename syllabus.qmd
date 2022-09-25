@@ -191,8 +191,8 @@ The data collection and cleaning must be meaningful---it's not sufficient to sim
 
 | Milestone      | Due Date                 |
 |:---------------|:-------------------------|
-| Proposal       | Wed, Oct 28th 11:59pm ET |
-| Draft Analyses | Wed, Nov 18th 11:59pm ET |
+| Proposal       | Fri, Oct 28th 11:59pm ET |
+| Draft Analyses | Fri, Nov 18th 11:59pm ET |
 | Final Report   | Mon, Dec 14th 11:59pm ET |
 
 
