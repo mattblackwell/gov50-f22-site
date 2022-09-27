@@ -1,0 +1,14 @@
+{
+  "hash": "02a9669ae9bf7ceb14a96c19fb7a1824",
+  "result": {
+    "markdown": "---\ntitle: \"Measuring and Summarizing Data\"\ndate: 2022-09-27\n---\n\n\n\n## Readings \n\n- [Chapter 3 of QSS](https://press.princeton.edu/books/hardcover/9780691222271/quantitative-social-science) (though 3.6)\n- Reinstall the Gov 50 data package that has new data for this week:\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"mattblackwell/gov50data\")\n```\n:::\n\n\n## Slides\n\n- Tuesday (9/27) lecture: Summarizing data\n  - [PDF of slides as I present them](/slides/08_summarizing_data.pdf)\n  - [PDF of handout version of slides](/slides/08_summarizing_data_handout.pdf) (no incremental slides)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

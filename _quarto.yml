@@ -45,6 +45,8 @@ website:
               file: materials/03_data_wrangling.qmd
             - text: "3: Causality"
               file: materials/04_causality.qmd
+            - text: "4: Summarizing and Measurement"
+              file: materials/05_measurement.qmd
               
     - title: "Assignments"
       style: "docked"
