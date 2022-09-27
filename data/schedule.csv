@@ -8,15 +8,15 @@
 2,2022-09-14,,Problem Set 1,11:59 PM,,,,/assignments/01_hw_data_viz
 2,2022-09-15,,Data wrangling,,,"/materials/03_data_wrangling",,
 3,2022-09-19,,Tutorial 3,11:59 PM,,,https://mblackwell.shinyapps.io/03-causality/,
-3,2022-09-20,,Causal inference and randomized experiments,,QSS Ch 2,"/materials/04_causality",,
+3,2022-09-20,,Causal inference and randomized experiments,,QSS Ch 2.1-2.5,"/materials/04_causality",,
 3,2022-09-21,,Problem Set 2,11:59 PM,,,,/assignments/02_hw_data_wrangling
 3,2022-09-22,,Causal inference and observational studies,,,"/materials/04_causality",,
 4,2022-09-26,,Tutorial 4,11:59 PM,,,https://mblackwell.shinyapps.io/04-summarizing-data/,
-4,2022-09-27,,Summarizing data,,QSS Ch 3,,,
+4,2022-09-27,,Summarizing data,,QSS Ch 2.6-3.4,,,
 4,2022-09-28,,Problem Set 3,11:59 PM,,,,/assignments/03_hw_causality
 4,2022-09-29,,Survey sampling,,,,,
 5,2022-10-03,,Tutorial 4,11:59 PM,,,,
-5,2022-10-04,,Summarizing relationships in our data,,,,,
+5,2022-10-04,,Summarizing relationships in our data,,QSS Ch 3.5-3.6,,,
 5,2022-10-05,,Problem Set 4,11:59 PM,,,,
 5,2022-10-06,,Importing and joining data,,MD Ch 4,,,
 6,2022-10-11,,Prediction & Iteration,,QSS Ch 4,,,
