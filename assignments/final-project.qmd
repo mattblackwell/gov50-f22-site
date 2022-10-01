@@ -24,6 +24,8 @@ Follow [the instructions](https://rstudio.github.io/distill/publish_article.html
 install.packages("distill")
 ```
 
+You should change the metadata on your article and write a few sentences in the main text about you might be interested in writing about. You will submit a link to the public article (not the github repository) to Canvas (not Gradescope). 
+
 ## Milestone 2: Finding data and writing a proposal (due 10/28)
 
 ### Finding a data source 
@@ -76,10 +78,9 @@ For instance, this would be a comprehensive paragraph that address each of these
 
 Your group's paragraph might be less detailed and may not refer to the political science literature, but it should address the above items. 
 
-Note that you are not fully committing to any specific question or data in this exercise. If you want to change data or questions later, that is fine. This is just a milestone to keep you on track. **This proposal is due on Friday, October 28th, 2022 at 11:59pm ET.** You should upload the PDF of your proposal to Gradescope, where you can indicate your group. 
+Note that you are not fully committing to any specific question or data in this exercise. If you want to change data or questions later, that is fine. This is just a milestone to keep you on track. You can write this proposal on your `index.Rmd` file in the public article. You will submit a link to the rendered article with the proposal on **Friday, October 28th, 2022 at 11:59pm ET.** 
 
-You can find a template Rmd file for the proposal here: [final-project-proposal.Rmd](/files/code/final-project-proposal.Rmd)
-
+Note that you will eventually remove this proposal with the actual article. If down the road you don't want this proposal to be part of the public history of the repository, you can always create a new repository for the final report. 
 
 
 ## Milestone 3: One data visualization (due 11/11)
