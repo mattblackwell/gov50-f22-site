@@ -8,17 +8,27 @@ summary: "A guide for the final project in Gov 50."
 
 The final project is a data analysis project about whatever data excites you. That could be public opinion in U.S. elections, United Nations voting patterns, patterns of racial discrimination in police behavior, the distribution of salaries in basketball, or the economics of the Marvel Cinematic Universe. No matter the topic, you will formula a key research question, find data on that question, answer the question using the tools of the course, and present those results for public consumption. 
 
-- Write your current thoughts in an Rmd file and submit. (10/7)
-- Create a new public GitHub repository the article [Instructions](https://rstudio.github.io/distill/publish_article.html) (10/21)
-- Find a data source and write a short proposal on your research question (10/28)
-- Add one polished data visualization on your distill article (11/11?)
-- Add results from one set of analyses (11/18)
+Here is a list of milestones that we will have to keep you on track:
+
+- Milestone 1: Create a new public GitHub repository that will host the article (10/21)
+- Milestone 2: Find a data source and write a short proposal on your research question (10/28)
+- Milestone 3: Add one polished data visualization on your distill article (11/11)
+- Milestone 4: Add results from one set of analyses (11/18)
 - Final project due (12/14)
 
+## Milestone 1: Create public GitHub repository (due 10/21)
 
-## Step 1: Finding a data source
+Follow [the instructions](https://rstudio.github.io/distill/publish_article.html#github-pages) on how to create a repository and add a Distill article. For step 4 on creating a Distill article, you can find how to do that from the [Distill website](https://rstudio.github.io/distill/basics.html#creating-an-article). To do this you will have to install the distill pacakge with:
 
-The biggest part of the final project in Gov 51 is finding a data source. You are, of course, free to use any of the data from the QSS book (found in the `qss` package you have installed). Here are some other resources and repositories with data sets:
+```{r eval=FALSE}
+install.packages("distill")
+```
+
+## Milestone 2: Finding data and writing a proposal (due 10/28)
+
+### Finding a data source 
+
+The biggest part of the final project in Gov 50 is finding a data source. Here are some other resources and repositories with data sets:
 
 - [List of links to political science data sets](https://github.com/erikgahner/PolData) 
 - [Harvard Dataverse - Social Science](https://dataverse.harvard.edu/dataverse/harvard?q=&fq0=subject_ss%3A%22Social+Sciences%22&types=dataverses%3Adatasets&sort=dateSort&order=desc)
@@ -49,10 +59,10 @@ We also have the following specific datasets available to use:
 - Data from experiments is usually simple to analyze, since the analysis commonly involves simple comparisons of group means.
 
 
-## Step 2: Proposal 
+### Writing a proposal
 
 
-You (or your group) should write a one-paragraph note to describe what data set you will use and what your tentative research question is. Your research question should ask how one dependent variable is related to one or more independent variables. That is, your research question should be able to be answered by a regression analysis. In this paragraph, you should do the following:
+You should write a one-paragraph note to describe what data set you will use and what your tentative research question is. Your research question should ask how one dependent variable is related to one or more independent variables. That is, your research question should be able to be answered by a regression analysis. In this paragraph, you should do the following:
 
 1. State your research question.
 2. Formulate a hypothesis related to the research question. This hypothesis should be rooted in some sort of theory. In other words, you need to present a plausible story why the hypothesis might be true. Often, this is in the form of a behaviorial or institutional explanation. As social scientists, we are not interested in idiosyncratic or personality driven explanations; we want to understand systematic patterns and relationships!
@@ -66,24 +76,27 @@ For instance, this would be a comprehensive paragraph that address each of these
 
 Your group's paragraph might be less detailed and may not refer to the political science literature, but it should address the above items. 
 
-Note that you are not fully committing to any specific question or data in this exercise. If you want to change data or questions later, that is fine. This is just a milestone to keep you on track. **This proposal is due on Wednesday, October 28th, 2020 at 11:59pm ET.** You should upload the PDF of your proposal to Gradescope, where you can indicate your group. 
+Note that you are not fully committing to any specific question or data in this exercise. If you want to change data or questions later, that is fine. This is just a milestone to keep you on track. **This proposal is due on Friday, October 28th, 2022 at 11:59pm ET.** You should upload the PDF of your proposal to Gradescope, where you can indicate your group. 
 
-You can find a template Rmd file for the proposal here: [final-project-proposal.Rmd](/resources/final-project-proposal.Rmd)
-
-
-
-## Step 3: Produce analyses
+You can find a template Rmd file for the proposal here: [final-project-proposal.Rmd](/files/code/final-project-proposal.Rmd)
 
 
-The next step will be to create an Rmarkdown file that loads the data you have selected, runs any preprocessing that you need to conduct (i.e., prepares your data for analysis), produces summary statistics (or plots) of the relevant dependent and independent variables, and conducts the main regression of interest for the project. 
 
-**The Rmd file and the resulting knitted PDF should be uploaded to Gradescope by Wednesday, November 18th at 11:59pm ET.** Note that these analyses do not have to be final. You may change them between this milestone and the final report. We just want to make sure you are making some progress. 
-
-
-## Step 4: Write up final report
+## Milestone 3: One data visualization (due 11/11)
 
 
-The final report will include the following sections: (1) an introduction where you introduce the research question and hypothesis and briefly describe why it is interesting; (2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; (3) a results section that contains a scatterplot of the main relationship of interest and output for the main regression of interest; and (4) a brief (one paragraph) concluding section that summarizes your results, assesses the extent to which you find support for your hypothesis, describes limitations of your analysis and threats to inference, and states how your analysis could be improved (e.g., improved data that would be useful to collect). 
+The next milestone will require that your Distill article  loads the data you have selected and produces one interesting and polished data visualization. This could either show the distribution of one variable or the relationship between two variables. 
+
+
+## Milestone 4: Add one results from one analysis (due 11/18)
+
+By this time, your article should contain one visualization and one analysis that attempts to answer your research question. There does not need to be a long discussion, but the results should be presented in either a second visualization or a nicely formatted table. 
+
+
+## Final step: Write up final report
+
+
+The final report will include the following sections: (1) an introduction where you introduce the research question and hypothesis and briefly describe why it is interesting; (2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; (3) a results section that contains a scatterplot, barplot, or boxplot of the main relationship of interest and output for the main regression of interest; and (4) a brief (one paragraph) concluding section that summarizes your results, assesses the extent to which you find support for your hypothesis, describes limitations of your analysis and threats to inference, and states how your analysis could be improved (e.g., improved data that would be useful to collect). 
 
 For the data section, you should note if your research design is cross-sectional (most projects will be of this type) or one of the other designs we discussed (randomized experiment, before-and-after, differences-in-differences). For the results section, you should interpret (in plain English** the main coefficient of interest in your regression. You should also comment on the statistical significance of the estimated coefficient and whether or not you believe the coefficient to represent a causal effect. 
 
@@ -91,4 +104,4 @@ For the data section, you should note if your research design is cross-sectional
 
 
 
-**This final report will be due on December 14th, 2020 at 11:59pm ET**
+**This final report will be due on Monday, December 14th, 2022 at 11:59pm ET**
