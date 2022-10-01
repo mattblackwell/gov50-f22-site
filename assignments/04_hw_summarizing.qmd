@@ -1,13 +1,13 @@
 ---
 title: "Problem Set 4: Sources of Empathy in the Circuit Courts "
-due_date: 2022-10-05
+author: Your Name Here
+
 ---
 
 
-You can find instructions for obtaining and submitting problem sets [here](/assignments/problem-sets.qmd).
-
-You can find the GitHub Classroom link to download the template repository on the [Ed Board](https://edstem.org/us/courses/24957/resources)
-
+```{r setup, include = FALSE}
+options(width = 100)
+```
 
 ## Background
 
@@ -98,7 +98,7 @@ In the main text, describe which group has a higher average progressive vote and
 
 ## Question 4 (9 points)
 
-Given that the number of children might be a confounder for the relationship between number of girls and voting, let's estimate the average treatment effects using statistical control for the number of children among judges that have one to three children (that is, first filter to judges that only have between 1 and 3 children, inclusive). Your final table should be called `ate_nkids` and should be a tibble that has two columns: one with the number of children (1, 2, and 3) and the other with the estimated ATEs for each of those levels. Print out this table using the `knitr::kable()` command.
+Given that the number of children might be a confounder for the relationship between number of girls and voting, let's estimate the average treatment effects of having girls using statistical control for the number of children among judges that have one to three children (that is, first filter to judges that only have between 1 and 3 children, inclusive). Your final table should be called `ate_nkids` and should be a tibble that has two columns: one with the number of children (1, 2, and 3) and the other with the estimated ATEs of `any_girls` for each of those levels. Print out this table using the `knitr::kable()` command.
 
 Are these estimated effects largely similar or largely different than what you found using all of the data? What assumption do you need to make to interpret these effects causally? Do you think it is plausible in this case?
 
