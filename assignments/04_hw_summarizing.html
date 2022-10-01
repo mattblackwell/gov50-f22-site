@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Your Name Here">
 
 <title>Gov 50 - Problem Set 4: Sources of Empathy in the Circuit Courts</title>
 <style>
@@ -209,6 +210,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name Here </p>
+          </div>
+  </div>
     
     
   </div>
@@ -216,8 +223,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>You can find instructions for obtaining and submitting problem sets <a href="../assignments/problem-sets.html">here</a>.</p>
-<p>You can find the GitHub Classroom link to download the template repository on the <a href="https://edstem.org/us/courses/24957/resources">Ed Board</a></p>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>In this problem set, we will analyze the relationship between the gender composition among a judge’s children and voting behavior among circuit court judges. In a recent paper, Adam N. Glynn and Maya Sen argue that having a female child causes circuit court judges to make more pro-feminist decisions. The paper can be found at:</p>
@@ -338,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="question-4-9-points" class="level2">
 <h2 class="anchored" data-anchor-id="question-4-9-points">Question 4 (9 points)</h2>
-<p>Given that the number of children might be a confounder for the relationship between number of girls and voting, let’s estimate the average treatment effects using statistical control for the number of children among judges that have one to three children (that is, first filter to judges that only have between 1 and 3 children, inclusive). Your final table should be called <code>ate_nkids</code> and should be a tibble that has two columns: one with the number of children (1, 2, and 3) and the other with the estimated ATEs for each of those levels. Print out this table using the <code>knitr::kable()</code> command.</p>
+<p>Given that the number of children might be a confounder for the relationship between number of girls and voting, let’s estimate the average treatment effects of having girls using statistical control for the number of children among judges that have one to three children (that is, first filter to judges that only have between 1 and 3 children, inclusive). Your final table should be called <code>ate_nkids</code> and should be a tibble that has two columns: one with the number of children (1, 2, and 3) and the other with the estimated ATEs of <code>any_girls</code> for each of those levels. Print out this table using the <code>knitr::kable()</code> command.</p>
 <p>Are these estimated effects largely similar or largely different than what you found using all of the data? What assumption do you need to make to interpret these effects causally? Do you think it is plausible in this case?</p>
 <p><strong>Rubric:</strong> 6pts for <code>ate_nkids</code> (autograder); 1pt for nicely formatted table (PDF); 2pts for discussion (PDF)</p>
 </section>
