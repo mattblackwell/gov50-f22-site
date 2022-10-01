@@ -21,6 +21,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -115,13 +178,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#step-1-finding-a-data-source" id="toc-step-1-finding-a-data-source" class="nav-link active" data-scroll-target="#step-1-finding-a-data-source">Step 1: Finding a data source</a>
+  <li><a href="#milestone-1-create-public-github-repository-due-1021" id="toc-milestone-1-create-public-github-repository-due-1021" class="nav-link active" data-scroll-target="#milestone-1-create-public-github-repository-due-1021">Milestone 1: Create public GitHub repository (due 10/21)</a></li>
+  <li><a href="#milestone-2-finding-data-and-writing-a-proposal-due-1028" id="toc-milestone-2-finding-data-and-writing-a-proposal-due-1028" class="nav-link" data-scroll-target="#milestone-2-finding-data-and-writing-a-proposal-due-1028">Milestone 2: Finding data and writing a proposal (due 10/28)</a>
   <ul class="collapse">
+  <li><a href="#finding-a-data-source" id="toc-finding-a-data-source" class="nav-link" data-scroll-target="#finding-a-data-source">Finding a data source</a></li>
   <li><a href="#general-advice-for-choosing-data-sources" id="toc-general-advice-for-choosing-data-sources" class="nav-link" data-scroll-target="#general-advice-for-choosing-data-sources">General advice for choosing data sources</a></li>
+  <li><a href="#writing-a-proposal" id="toc-writing-a-proposal" class="nav-link" data-scroll-target="#writing-a-proposal">Writing a proposal</a></li>
   </ul></li>
-  <li><a href="#step-2-proposal" id="toc-step-2-proposal" class="nav-link" data-scroll-target="#step-2-proposal">Step 2: Proposal</a></li>
-  <li><a href="#step-3-produce-analyses" id="toc-step-3-produce-analyses" class="nav-link" data-scroll-target="#step-3-produce-analyses">Step 3: Produce analyses</a></li>
-  <li><a href="#step-4-write-up-final-report" id="toc-step-4-write-up-final-report" class="nav-link" data-scroll-target="#step-4-write-up-final-report">Step 4: Write up final report</a></li>
+  <li><a href="#milestone-3-one-data-visualization-due-1111" id="toc-milestone-3-one-data-visualization-due-1111" class="nav-link" data-scroll-target="#milestone-3-one-data-visualization-due-1111">Milestone 3: One data visualization (due 11/11)</a></li>
+  <li><a href="#milestone-4-add-one-results-from-one-analysis-due-1118" id="toc-milestone-4-add-one-results-from-one-analysis-due-1118" class="nav-link" data-scroll-target="#milestone-4-add-one-results-from-one-analysis-due-1118">Milestone 4: Add one results from one analysis (due 11/18)</a></li>
+  <li><a href="#final-step-write-up-final-report" id="toc-final-step-write-up-final-report" class="nav-link" data-scroll-target="#final-step-write-up-final-report">Final step: Write up final report</a></li>
   </ul>
 </nav>
     </div>
@@ -151,17 +217,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>The final project is a data analysis project about whatever data excites you. That could be public opinion in U.S. elections, United Nations voting patterns, patterns of racial discrimination in police behavior, the distribution of salaries in basketball, or the economics of the Marvel Cinematic Universe. No matter the topic, you will formula a key research question, find data on that question, answer the question using the tools of the course, and present those results for public consumption.</p>
+<p>Here is a list of milestones that we will have to keep you on track:</p>
 <ul>
-<li>Write your current thoughts in an Rmd file and submit. (10/7)</li>
-<li>Create a new public GitHub repository the article <a href="https://rstudio.github.io/distill/publish_article.html">Instructions</a> (10/21)</li>
-<li>Find a data source and write a short proposal on your research question (10/28)</li>
-<li>Add one polished data visualization on your distill article (11/11?)</li>
-<li>Add results from one set of analyses (11/18)</li>
+<li>Milestone 1: Create a new public GitHub repository that will host the article (10/21)</li>
+<li>Milestone 2: Find a data source and write a short proposal on your research question (10/28)</li>
+<li>Milestone 3: Add one polished data visualization on your distill article (11/11)</li>
+<li>Milestone 4: Add results from one set of analyses (11/18)</li>
 <li>Final project due (12/14)</li>
 </ul>
-<section id="step-1-finding-a-data-source" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-finding-a-data-source">Step 1: Finding a data source</h2>
-<p>The biggest part of the final project in Gov 51 is finding a data source. You are, of course, free to use any of the data from the QSS book (found in the <code>qss</code> package you have installed). Here are some other resources and repositories with data sets:</p>
+<section id="milestone-1-create-public-github-repository-due-1021" class="level2">
+<h2 class="anchored" data-anchor-id="milestone-1-create-public-github-repository-due-1021">Milestone 1: Create public GitHub repository (due 10/21)</h2>
+<p>Follow <a href="https://rstudio.github.io/distill/publish_article.html#github-pages">the instructions</a> on how to create a repository and add a Distill article. For step 4 on creating a Distill article, you can find how to do that from the <a href="https://rstudio.github.io/distill/basics.html#creating-an-article">Distill website</a>. To do this you will have to install the distill pacakge with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"distill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="milestone-2-finding-data-and-writing-a-proposal-due-1028" class="level2">
+<h2 class="anchored" data-anchor-id="milestone-2-finding-data-and-writing-a-proposal-due-1028">Milestone 2: Finding data and writing a proposal (due 10/28)</h2>
+<section id="finding-a-data-source" class="level3">
+<h3 class="anchored" data-anchor-id="finding-a-data-source">Finding a data source</h3>
+<p>The biggest part of the final project in Gov 50 is finding a data source. Here are some other resources and repositories with data sets:</p>
 <ul>
 <li><a href="https://github.com/erikgahner/PolData">List of links to political science data sets</a></li>
 <li><a href="https://dataverse.harvard.edu/dataverse/harvard?q=&amp;fq0=subject_ss%3A%22Social+Sciences%22&amp;types=dataverses%3Adatasets&amp;sort=dateSort&amp;order=desc">Harvard Dataverse - Social Science</a></li>
@@ -181,6 +256,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Fox News rollout: <a href="https://www.dropbox.com/s/i1n16wng61tq02x/foxnews.csv?dl=0">Data</a> <a href="https://www.dropbox.com/s/8a8lspgey9sx1pa/foxnews.pdf?dl=0">Codebook</a></li>
 <li>Afrobarometer: <a href="https://www.dropbox.com/s/f4n778feixbvz4r/afrobarometer2016.RData?dl=0">Data</a> <a href="https://www.dropbox.com/s/4uhrdeylzc8r6ib/merged_round_6_codebook_20161.pdf?dl=0">Codebook</a></li>
 </ul>
+</section>
 <section id="general-advice-for-choosing-data-sources" class="level3">
 <h3 class="anchored" data-anchor-id="general-advice-for-choosing-data-sources">General advice for choosing data sources</h3>
 <ul>
@@ -191,10 +267,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Data from experiments is usually simple to analyze, since the analysis commonly involves simple comparisons of group means.</li>
 </ul>
 </section>
-</section>
-<section id="step-2-proposal" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-proposal">Step 2: Proposal</h2>
-<p>You (or your group) should write a one-paragraph note to describe what data set you will use and what your tentative research question is. Your research question should ask how one dependent variable is related to one or more independent variables. That is, your research question should be able to be answered by a regression analysis. In this paragraph, you should do the following:</p>
+<section id="writing-a-proposal" class="level3">
+<h3 class="anchored" data-anchor-id="writing-a-proposal">Writing a proposal</h3>
+<p>You should write a one-paragraph note to describe what data set you will use and what your tentative research question is. Your research question should ask how one dependent variable is related to one or more independent variables. That is, your research question should be able to be answered by a regression analysis. In this paragraph, you should do the following:</p>
 <ol type="1">
 <li>State your research question.</li>
 <li>Formulate a hypothesis related to the research question. This hypothesis should be rooted in some sort of theory. In other words, you need to present a plausible story why the hypothesis might be true. Often, this is in the form of a behaviorial or institutional explanation. As social scientists, we are not interested in idiosyncratic or personality driven explanations; we want to understand systematic patterns and relationships!</li>
@@ -207,19 +282,23 @@ ul.task-list li input[type="checkbox"] {
 <p>Does unified government enhance legislative productivity? In this study, I plan to examine the extent to which periods of unified government produce more landmark laws. I hypothesize that legislative productivity increases during periods of unified government in which one party controls both Houses of Congress and the presidency relative to periods of divided government. During periods of unified government, I expect that it is more likely for major bills to pass both Houses and gain the president’s signature. During periods of divided government, it is more difficult to reach a consensus around legislation that can pass each House and gain the president’s approval. My sample is comprised of each of the 79th (1945-1946) through 103rd (1993-1994) Congresses. My unit of analysis is a Congress (e.g., the 88th Congress). The explanatory variable of interest is whether there is unified government (both Houses and the presidency are controlled by the same party) or divided government. The variable is coded =1 for unified government and =0 for divided government. My outcome variable is the count of landmark pieces of legislation passed in a given Congress. For instance, if the variable were coded =11, it would mean that 11 pieces of landmark legislation were signed into law in that Congress. This variable is measured from David Mayhew’s data set on landmark legislation and relies on Mayhew’s expert knowledge to classify legislation as “landmark.” If I observe greater landmark legislative productivity under unified government relative to divided government, this would provide support for my hypothesis. If, on the other hand, I observe less productivity or the same level of productivity under unified government, this would provide evidence against my hypothesis. When I run my regression of the count of landmark legislation on the unified government indicator variable, a positive, significant coefficient would indicate support for my hypothesis.</p>
 </blockquote>
 <p>Your group’s paragraph might be less detailed and may not refer to the political science literature, but it should address the above items.</p>
-<p>Note that you are not fully committing to any specific question or data in this exercise. If you want to change data or questions later, that is fine. This is just a milestone to keep you on track. <strong>This proposal is due on Wednesday, October 28th, 2020 at 11:59pm ET.</strong> You should upload the PDF of your proposal to Gradescope, where you can indicate your group.</p>
-<p>You can find a template Rmd file for the proposal here: <a href="../resources/final-project-proposal.Rmd">final-project-proposal.Rmd</a></p>
+<p>Note that you are not fully committing to any specific question or data in this exercise. If you want to change data or questions later, that is fine. This is just a milestone to keep you on track. <strong>This proposal is due on Friday, October 28th, 2022 at 11:59pm ET.</strong> You should upload the PDF of your proposal to Gradescope, where you can indicate your group.</p>
+<p>You can find a template Rmd file for the proposal here: <a href="../files/code/final-project-proposal.Rmd">final-project-proposal.Rmd</a></p>
 </section>
-<section id="step-3-produce-analyses" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-produce-analyses">Step 3: Produce analyses</h2>
-<p>The next step will be to create an Rmarkdown file that loads the data you have selected, runs any preprocessing that you need to conduct (i.e., prepares your data for analysis), produces summary statistics (or plots) of the relevant dependent and independent variables, and conducts the main regression of interest for the project.</p>
-<p><strong>The Rmd file and the resulting knitted PDF should be uploaded to Gradescope by Wednesday, November 18th at 11:59pm ET.</strong> Note that these analyses do not have to be final. You may change them between this milestone and the final report. We just want to make sure you are making some progress.</p>
 </section>
-<section id="step-4-write-up-final-report" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-write-up-final-report">Step 4: Write up final report</h2>
-<p>The final report will include the following sections: (1) an introduction where you introduce the research question and hypothesis and briefly describe why it is interesting; (2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; (3) a results section that contains a scatterplot of the main relationship of interest and output for the main regression of interest; and (4) a brief (one paragraph) concluding section that summarizes your results, assesses the extent to which you find support for your hypothesis, describes limitations of your analysis and threats to inference, and states how your analysis could be improved (e.g., improved data that would be useful to collect).</p>
+<section id="milestone-3-one-data-visualization-due-1111" class="level2">
+<h2 class="anchored" data-anchor-id="milestone-3-one-data-visualization-due-1111">Milestone 3: One data visualization (due 11/11)</h2>
+<p>The next milestone will require that your Distill article loads the data you have selected and produces one interesting and polished data visualization. This could either show the distribution of one variable or the relationship between two variables.</p>
+</section>
+<section id="milestone-4-add-one-results-from-one-analysis-due-1118" class="level2">
+<h2 class="anchored" data-anchor-id="milestone-4-add-one-results-from-one-analysis-due-1118">Milestone 4: Add one results from one analysis (due 11/18)</h2>
+<p>By this time, your article should contain one visualization and one analysis that attempts to answer your research question. There does not need to be a long discussion, but the results should be presented in either a second visualization or a nicely formatted table.</p>
+</section>
+<section id="final-step-write-up-final-report" class="level2">
+<h2 class="anchored" data-anchor-id="final-step-write-up-final-report">Final step: Write up final report</h2>
+<p>The final report will include the following sections: (1) an introduction where you introduce the research question and hypothesis and briefly describe why it is interesting; (2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; (3) a results section that contains a scatterplot, barplot, or boxplot of the main relationship of interest and output for the main regression of interest; and (4) a brief (one paragraph) concluding section that summarizes your results, assesses the extent to which you find support for your hypothesis, describes limitations of your analysis and threats to inference, and states how your analysis could be improved (e.g., improved data that would be useful to collect).</p>
 <p>For the data section, you should note if your research design is cross-sectional (most projects will be of this type) or one of the other designs we discussed (randomized experiment, before-and-after, differences-in-differences). For the results section, you should interpret (in plain English** the main coefficient of interest in your regression. You should also comment on the statistical significance of the estimated coefficient and whether or not you believe the coefficient to represent a causal effect.</p>
-<p><strong>This final report will be due on December 14th, 2020 at 11:59pm ET</strong></p>
+<p><strong>This final report will be due on Monday, December 14th, 2022 at 11:59pm ET</strong></p>
 
 
 </section>
