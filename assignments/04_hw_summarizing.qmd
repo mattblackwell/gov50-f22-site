@@ -71,7 +71,7 @@ In your write-up, answer the following questions:
 
 - How many judges are in this data set?
 - What proportion of the judges are men? (hint: use `mean`)
-- From your table, is the party composition different for male and female judges?
+- From your table, is the gender breakdown different for judges appointed by Democratic vs Republican presidents?
 
  **Rubric:** 2pts for creating `Gender` and `Party` (autograder); 5pts for `gender_party_table` (autograder); 1pt for properly formatted table (PDF); 2pts for answering question (PDF).
 
