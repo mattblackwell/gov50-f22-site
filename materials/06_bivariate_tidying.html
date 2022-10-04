@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-09-13">
+<meta name="dcterms.date" content="2022-10-04">
 
-<title>Gov 50 - Data Transformation and Wrangling</title>
+<title>Gov 50 - Summarizing Relationships and Importing and Tidying Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -170,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Data Transformation and Wrangling</h1>
+      <h1 class="quarto-secondary-nav-title">Summarizing Relationships and Importing and Tidying Data</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -218,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/03_data_wrangling.html" class="sidebar-item-text sidebar-link active">2: Data Wrangling</a>
+  <a href="../materials/03_data_wrangling.html" class="sidebar-item-text sidebar-link">2: Data Wrangling</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -233,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/06_bivariate_tidying.html" class="sidebar-item-text sidebar-link">5: Relationships, Functions, and Importing/Tidying Data</a>
+  <a href="../materials/06_bivariate_tidying.html" class="sidebar-item-text sidebar-link active">5: Relationships, Functions, and Importing/Tidying Data</a>
   </div>
 </li>
       </ul>
@@ -257,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data Transformation and Wrangling</h1>
+<h1 class="title d-none d-lg-block">Summarizing Relationships and Importing and Tidying Data</h1>
 </div>
 
 
@@ -268,7 +268,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 13, 2022</p>
+      <p class="date">October 4, 2022</p>
     </div>
   </div>
     
@@ -280,26 +280,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
 <ul>
-<li><a href="https://moderndive.com/3-wrangling.html">Chapter 3 of Modern Dive</a></li>
-<li>Install the Gov 50 data package that has new data for this week:</li>
+<li>Reinstall the Gov 50 data package that has new data for this week:</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"mattblackwell/gov50data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>If you cannot install the package, you can download the data locally at <a href="../files/data/covid_votes.csv"><code>covid_votes.csv</code></a> to the same directory as your Rmd file and load it using:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>covid_votes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"covid_votes.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
 <ul>
-<li>Tuesday (9/13) lecture: Data Wrangling
+<li>Tuesday (10/4) lecture: Summarizing relationships and writing our own functions
 <ul>
-<li><a href="../slides/04_data_wrangling.pdf">PDF of slides as I present them</a></li>
-<li><a href="../slides/04_data_wrangling_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
-</ul></li>
-<li>Thursday (9/15) lecture: Data Wrangling and Barplots
-<ul>
-<li><a href="../slides/05_data_wrangling.pdf">PDF of slides as I present them</a></li>
-<li><a href="../slides/05_data_wrangling_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
-<li><a href="../files/code/news.Rmd"><code>news.Rmd</code></a> I wrote during lectures</li>
+<li><a href="../slides/10_bivariate.pdf">PDF of slides as I present them</a></li>
+<li><a href="../slides/10_bivariate_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
 </ul></li>
 </ul>
 
