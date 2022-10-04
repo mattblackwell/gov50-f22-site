@@ -1,0 +1,14 @@
+{
+  "hash": "442a932947959b42770ba19b600ec3b0",
+  "result": {
+    "markdown": "---\ntitle: \"Summarizing Relationships and Importing and Tidying Data\"\ndate: 2022-10-04\n---\n\n\n\n## Readings \n\n\n- Reinstall the Gov 50 data package that has new data for this week:\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"mattblackwell/gov50data\")\n```\n:::\n\n\n- If you cannot install the package, you can download the data locally at [`covid_votes.csv`](/files/data/covid_votes.csv)  to the same directory as your Rmd file and load it using:\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\ncovid_votes <- read_csv(\"covid_votes.csv\")\n```\n:::\n\n\n\n## Slides\n\n- Tuesday (10/4) lecture: Summarizing relationships and writing our own functions\n  - [PDF of slides as I present them](/slides/10_bivariate.pdf)\n  - [PDF of handout version of slides](/slides/10_bivariate_handout.pdf) (no incremental slides)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

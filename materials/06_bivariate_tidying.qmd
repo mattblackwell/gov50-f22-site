@@ -1,0 +1,28 @@
+---
+title: "Summarizing Relationships and Importing and Tidying Data"
+date: 2022-10-04
+---
+
+
+## Readings 
+
+
+- Reinstall the Gov 50 data package that has new data for this week:
+```{r}
+#| eval: false
+remotes::install_github("mattblackwell/gov50data")
+```
+
+- If you cannot install the package, you can download the data locally at [`covid_votes.csv`](/files/data/covid_votes.csv)  to the same directory as your Rmd file and load it using:
+```{r}
+#| eval: false
+library(tidyverse)
+covid_votes <- read_csv("covid_votes.csv")
+```
+
+
+## Slides
+
+- Tuesday (10/4) lecture: Summarizing relationships and writing our own functions
+  - [PDF of slides as I present them](/slides/10_bivariate.pdf)
+  - [PDF of handout version of slides](/slides/10_bivariate_handout.pdf) (no incremental slides)
