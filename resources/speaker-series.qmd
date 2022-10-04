@@ -1,0 +1,26 @@
+---
+title: "Gov 50 Speaker Series"
+slug: speaker-series
+toc: false
+sidebar: false
+page-layout: full
+---
+
+
+## October 14: David Sparks 
+
+[David Sparks](https://twitter.com/dsparks?lang=en) is the Director of Basketball Analytics at the Boston Celtics. This talk will be via Zoom. 
+
+
+## October 21: Asmae Toumi
+
+
+[Asmae Toumi](https://www.linkedin.com/in/asmae-toumi-46a661200) is the Director of Analytics at PursueCare, which is a telemedicine treatment company that offers virtual evidence-based addiction treatment for substance use disorders. This talk will be in person. 
+
+## November 4: Solomon Messing
+
+[Solomon Messing](https://solomonmg.github.io/) is a Senior Engineering Manager Applied Sciences at Twitter and has previously held positions at Facebook, ACRONYM, and the Pew Research Center. This talk will be via Zoom. 
+
+## November 11: Meg Schwenzfeier
+
+[Meg Schwenzfeier](https://schwenzfeier.github.io/) is currently the Data and Analytics Director for the Democratic Senatorial Campaign Committee. Previously she was the data science director at Biden for President, and worked as a data scientist at Hillary for America. This talk will be via Zoom. 
