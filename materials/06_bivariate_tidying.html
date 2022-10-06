@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2022-10-04">
 
-<title>Gov 50 - Summarizing Relationships and Importing and Tidying Data</title>
+<title>Gov 50 - Summarizing Relationships, Tidying and Joining Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -170,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Summarizing Relationships and Importing and Tidying Data</h1>
+      <h1 class="quarto-secondary-nav-title">Summarizing Relationships, Tidying and Joining Data</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -248,6 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#readings" id="toc-readings" class="nav-link active" data-scroll-target="#readings">Readings</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
   </ul>
 </nav>
@@ -257,7 +258,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Summarizing Relationships and Importing and Tidying Data</h1>
+<h1 class="title d-none d-lg-block">Summarizing Relationships, Tidying and Joining Data</h1>
 </div>
 
 
@@ -280,6 +281,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
 <ul>
+<li>For summarizing relationships, see QSS 3.6 and MD 5.1.1.</li>
+<li>For pivoting and tidy data, see MD Ch 4.</li>
+<li>For more on joins, see the <a href="https://r4ds.hadley.nz/joins.html">chapter 20</a> in R for Data Science.</li>
+</ul>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<ul>
 <li>Reinstall the Gov 50 data package that has new data for this week:</li>
 </ul>
 <div class="cell">
@@ -292,6 +301,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>covid_votes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"covid_votes.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li>For Thursday lecture, we added to additional data sets to <code>gov50data</code>. If you cannot install that package, then you can download them: <a href="../files/data/mortality.csv"><code>mortality.csv</code></a> and <a href="../files/data/spotify.csv"><code>spotify.csv</code></a>. Put them in the same folder as your Rmd file and use these commands to load:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mortality <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"mortality.csv"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>spotify <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"spotify.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>We will also use data from the <code>nycflights13</code> package that you can install with:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"nycflights13"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
@@ -300,6 +323,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="../slides/10_bivariate.pdf">PDF of slides as I present them</a></li>
 <li><a href="../slides/10_bivariate_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
+</ul></li>
+<li>Thursday (10/6) lecture: Causality review, pivoting longer, joining data.
+<ul>
+<li><a href="../slides/11_tidy_joins.pdf">PDF of slides as I present them</a></li>
+<li><a href="../slides/11_tidy_joins_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
 </ul></li>
 </ul>
 
