@@ -7,13 +7,16 @@ date: 2022-09-13
 ## Readings 
 
 - [Chapter 3 of Modern Dive](https://moderndive.com/3-wrangling.html)
+
+## Data
+
 - Install the Gov 50 data package that has new data for this week:
 ```{r}
 #| eval: false
 remotes::install_github("mattblackwell/gov50data")
 ```
 
-## Slides
+## Slides and Code
 
 - Tuesday (9/13) lecture: Data Wrangling
   - [PDF of slides as I present them](/slides/04_data_wrangling.pdf)
@@ -22,4 +25,4 @@ remotes::install_github("mattblackwell/gov50data")
 - Thursday (9/15) lecture: Data Wrangling and Barplots
   - [PDF of slides as I present them](/slides/05_data_wrangling.pdf)
   - [PDF of handout version of slides](/slides/05_data_wrangling_handout.pdf) (no incremental slides)
-  - [`news.Rmd`](/files/code/news.Rmd) I wrote during lectures
+  - Code: [`news.Rmd`](/files/code/news.Rmd) 
