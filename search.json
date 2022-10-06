@@ -343,53 +343,74 @@
     "text": "Chapter 1 of Modern Dive\nReview and try to start Problem Set 0"
   },
   {
-    "objectID": "materials/02_r_data_viz.html#slides",
-    "href": "materials/02_r_data_viz.html#slides",
+    "objectID": "materials/02_r_data_viz.html#slides-and-code",
+    "href": "materials/02_r_data_viz.html#slides-and-code",
     "title": "R Introduction, Data Visualization",
-    "section": "Slides",
-    "text": "Slides\n\nTuesday (9/6) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/8) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nRmd file from lecture"
+    "section": "Slides and Code",
+    "text": "Slides and Code\n\nTuesday (9/6) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/8) lecture:\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: lecture-3.Rmd"
   },
   {
     "objectID": "materials/03_data_wrangling.html",
     "href": "materials/03_data_wrangling.html",
     "title": "Data Transformation and Wrangling",
     "section": "",
-    "text": "Chapter 3 of Modern Dive\nInstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")"
+    "text": "Chapter 3 of Modern Dive"
   },
   {
-    "objectID": "materials/03_data_wrangling.html#slides",
-    "href": "materials/03_data_wrangling.html#slides",
+    "objectID": "materials/03_data_wrangling.html#data",
+    "href": "materials/03_data_wrangling.html#data",
     "title": "Data Transformation and Wrangling",
-    "section": "Slides",
-    "text": "Slides\n\nTuesday (9/13) lecture: Data Wrangling\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/15) lecture: Data Wrangling and Barplots\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nnews.Rmd I wrote during lectures"
+    "section": "Data",
+    "text": "Data\n\nInstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")"
+  },
+  {
+    "objectID": "materials/03_data_wrangling.html#slides-and-code",
+    "href": "materials/03_data_wrangling.html#slides-and-code",
+    "title": "Data Transformation and Wrangling",
+    "section": "Slides and Code",
+    "text": "Slides and Code\n\nTuesday (9/13) lecture: Data Wrangling\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/15) lecture: Data Wrangling and Barplots\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: news.Rmd"
   },
   {
     "objectID": "materials/04_causality.html",
     "href": "materials/04_causality.html",
     "title": "Causality and Pivoting",
     "section": "",
-    "text": "Chapter 2 of QSS\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")"
+    "text": "Chapter 2 of QSS"
   },
   {
-    "objectID": "materials/04_causality.html#slides",
-    "href": "materials/04_causality.html#slides",
+    "objectID": "materials/04_causality.html#data",
+    "href": "materials/04_causality.html#data",
     "title": "Causality and Pivoting",
-    "section": "Slides",
-    "text": "Slides\n\nTuesday (9/20) lecture: Causality\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nTuesday (9/22) lecture: Observational Studies\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+    "section": "Data",
+    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")"
+  },
+  {
+    "objectID": "materials/04_causality.html#slides-and-code",
+    "href": "materials/04_causality.html#slides-and-code",
+    "title": "Causality and Pivoting",
+    "section": "Slides and Code",
+    "text": "Slides and Code\n\nTuesday (9/20) lecture: Causality\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: transphobia.Rmd\n\nTuesday (9/22) lecture: Observational Studies\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
   },
   {
     "objectID": "materials/05_measurement.html",
     "href": "materials/05_measurement.html",
     "title": "Measuring and Summarizing Data",
     "section": "",
-    "text": "Chapter 3 of QSS (though 3.6)\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")"
+    "text": "Chapter 3 of QSS (though 3.6)"
   },
   {
-    "objectID": "materials/05_measurement.html#slides",
-    "href": "materials/05_measurement.html#slides",
+    "objectID": "materials/05_measurement.html#data",
+    "href": "materials/05_measurement.html#data",
     "title": "Measuring and Summarizing Data",
-    "section": "Slides",
-    "text": "Slides\n\nTuesday (9/27) lecture: Summarizing data\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/29) lecture: Survey Sampling\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+    "section": "Data",
+    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")"
+  },
+  {
+    "objectID": "materials/05_measurement.html#slides-and-code",
+    "href": "materials/05_measurement.html#slides-and-code",
+    "title": "Measuring and Summarizing Data",
+    "section": "Slides and Code",
+    "text": "Slides and Code\n\nTuesday (9/27) lecture: Summarizing data\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (9/29) lecture: Survey Sampling\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: cces.Rmd"
   },
   {
     "objectID": "materials/06_bivariate_tidying.html",
@@ -406,11 +427,11 @@
     "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")\n\n\nIf you cannot install the package, you can download the data locally at covid_votes.csv to the same directory as your Rmd file and load it using:\n\n\nlibrary(tidyverse)\ncovid_votes <- read_csv(\"covid_votes.csv\")\n\n\nFor Thursday lecture, we added to additional data sets to gov50data. If you cannot install that package, then you can download them: mortality.csv and spotify.csv. Put them in the same folder as your Rmd file and use these commands to load:\n\n\nlibrary(tidyverse)\nmortality <- read_csv(\"mortality.csv\")\nspotify <- read_csv(\"spotify.csv\")\n\n\nWe will also use data from the nycflights13 package that you can install with:\n\n\ninstall.packages(\"nycflights13\")"
   },
   {
-    "objectID": "materials/06_bivariate_tidying.html#slides",
-    "href": "materials/06_bivariate_tidying.html#slides",
+    "objectID": "materials/06_bivariate_tidying.html#slides-and-code",
+    "href": "materials/06_bivariate_tidying.html#slides-and-code",
     "title": "Summarizing Relationships, Tidying and Joining Data",
-    "section": "Slides",
-    "text": "Slides\n\nTuesday (10/4) lecture: Summarizing relationships and writing our own functions\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (10/6) lecture: Causality review, pivoting longer, joining data.\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+    "section": "Slides and Code",
+    "text": "Slides and Code\n\nTuesday (10/4) lecture: Summarizing relationships and writing our own functions\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: covid_votes.Rmd\n\nThursday (10/6) lecture: Causality review, pivoting longer, joining data.\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: lecture-11.Rmd"
   },
   {
     "objectID": "materials/index.html",
