@@ -490,6 +490,27 @@
     "text": "Slides and Code\n\nTuesday (10/4) lecture: Summarizing relationships and writing our own functions\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: covid_votes.Rmd\n\nThursday (10/6) lecture: Causality review, pivoting longer, joining data.\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\nCode: lecture-11.Rmd"
   },
   {
+    "objectID": "materials/07_prediction.html",
+    "href": "materials/07_prediction.html",
+    "title": "Prediction: Elections and Regression",
+    "section": "",
+    "text": "For prediction and loops, see QSS 4.1 (you can skip 4.1.1)\nFor regression, see either MD Ch 5 or QSS 4.2 (you can skip 4.2.5)."
+  },
+  {
+    "objectID": "materials/07_prediction.html#data",
+    "href": "materials/07_prediction.html#data",
+    "title": "Prediction: Elections and Regression",
+    "section": "Data",
+    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")\n\n\nIf you cannot install the package, you can download the data locally at\n\npoll20.csv\npres20.csv\nnational_poll20.csv\n\n\n\nlibrary(tidyverse)\npolls20 <- read_csv(\"polls20.csv\")\npres20 <- read_csv(\"pres20.csv\")\nnational_polls20 <- read_csv(\"national_polls20.csv\")\n\n\nYou may need to install the lubridate package if it’s not installed:\n\n\ninstall.packages(\"lubridate\")"
+  },
+  {
+    "objectID": "materials/07_prediction.html#slides-and-code",
+    "href": "materials/07_prediction.html#slides-and-code",
+    "title": "Prediction: Elections and Regression",
+    "section": "Slides and Code",
+    "text": "Slides and Code\n\nTuesday (10/11) lecture: Prediction and loops\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+  },
+  {
     "objectID": "materials/index.html",
     "href": "materials/index.html",
     "title": "Readings, lectures, and videos",
