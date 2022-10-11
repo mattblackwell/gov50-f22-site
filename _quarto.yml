@@ -49,6 +49,8 @@ website:
               file: materials/05_measurement.qmd
             - text: "5: Relationships, Functions, and Importing/Tidying Data"
               file: materials/06_bivariate_tidying.qmd
+            - text: "6: Prediction and Regression"
+              file: materials/07_prediction.qmd
               
     - title: "Assignments"
       style: "docked"
