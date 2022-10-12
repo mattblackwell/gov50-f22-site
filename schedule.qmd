@@ -74,9 +74,10 @@ tbl <- schedule |>
   select(-Week) |>
   kbl(escap = FALSE, align = "rllccccc", table.attr = 'class="schedule-table"') |>
   kable_styling() |>
-  column_spec(1, width = "20%", extra_css = "padding-right: 20px;") %>% 
-  column_spec(2, width = "50%") %>% 
-  column_spec(c(3:5), width = "10%") |>
+  column_spec(1, width = "20%", extra_css = "padding-right: 20px;") |>  
+  column_spec(2, width = "45%") |>  
+  column_spec(3, width = "20%") |>  
+  column_spec(c(4:6), width = "5%") |>
   pack_rows(index = week_index,
               label_row_css = "border-bottom: 2px solid #000000;")
 
