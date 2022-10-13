@@ -501,14 +501,14 @@
     "href": "materials/07_prediction.html#data",
     "title": "Prediction: Elections and Regression",
     "section": "Data",
-    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")\n\n\nIf you cannot install the package, you can download the data locally at\n\npoll20.csv\npres20.csv\nnational_poll20.csv\n\n\n\nlibrary(tidyverse)\npolls20 <- read_csv(\"polls20.csv\")\npres20 <- read_csv(\"pres20.csv\")\nnational_polls20 <- read_csv(\"national_polls20.csv\")\n\n\nYou may need to install the lubridate package if it’s not installed:\n\n\ninstall.packages(\"lubridate\")"
+    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")\n\n\nIf you cannot install the package, you can download the data locally at\n\npoll20.csv\npres20.csv\nnational_poll20.csv\n\n\n\nlibrary(tidyverse)\npolls20 <- read_csv(\"polls20.csv\")\npres20 <- read_csv(\"pres20.csv\")\nnational_polls20 <- read_csv(\"national_polls20.csv\")\n\n\nYou may need to install the lubridate package if it’s not installed:\n\n\ninstall.packages(\"lubridate\")\n\n\nFor Thursday, you may want to reinstall the gov50date package and install the broom package:\n\n\ninstall.packages(\"broom\")"
   },
   {
     "objectID": "materials/07_prediction.html#slides-and-code",
     "href": "materials/07_prediction.html#slides-and-code",
     "title": "Prediction: Elections and Regression",
     "section": "Slides and Code",
-    "text": "Slides and Code\n\nTuesday (10/11) lecture: Prediction and loops\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+    "text": "Slides and Code\n\nTuesday (10/11) lecture: Prediction and loops\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nTuesday (10/13) lecture: Regression\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
   },
   {
     "objectID": "materials/index.html",
