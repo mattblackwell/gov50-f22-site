@@ -36,6 +36,12 @@ national_polls20 <- read_csv("national_polls20.csv")
 install.packages("lubridate")
 ```
 
+- For Thursday, you may want to reinstall the `gov50date` package and install the `broom` package:
+```{r}
+#| eval: false
+install.packages("broom")
+```
+
 
 
 
@@ -44,3 +50,7 @@ install.packages("lubridate")
 - Tuesday (10/11) lecture: Prediction and loops
   - [PDF of slides as I present them](/slides/12_prediction_loops.pdf)
   - [PDF of handout version of slides](/slides/12_prediction_loops_handout.pdf) (no incremental slides)
+
+- Tuesday (10/13) lecture: Regression
+  - [PDF of slides as I present them](/slides/13_regression.pdf)
+  - [PDF of handout version of slides](/slides/13_regression_handout.pdf) (no incremental slides)
