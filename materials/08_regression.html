@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-09-13">
+<meta name="dcterms.date" content="2022-10-17">
 
-<title>Gov 50 - Data Transformation and Wrangling</title>
+<title>Gov 50 - Prediction: More Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -170,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Data Transformation and Wrangling</h1>
+      <h1 class="quarto-secondary-nav-title">Prediction: More Regression</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -218,7 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/03_data_wrangling.html" class="sidebar-item-text sidebar-link active">2: Data Wrangling</a>
+  <a href="../materials/03_data_wrangling.html" class="sidebar-item-text sidebar-link">2: Data Wrangling</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -243,7 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/08_regression.html" class="sidebar-item-text sidebar-link">7: More Regression</a>
+  <a href="../materials/08_regression.html" class="sidebar-item-text sidebar-link active">7: More Regression</a>
   </div>
 </li>
       </ul>
@@ -259,7 +259,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#readings" id="toc-readings" class="nav-link active" data-scroll-target="#readings">Readings</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#slides-and-code" id="toc-slides-and-code" class="nav-link" data-scroll-target="#slides-and-code">Slides and Code</a></li>
   </ul>
 </nav>
     </div>
@@ -268,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data Transformation and Wrangling</h1>
+<h1 class="title d-none d-lg-block">Prediction: More Regression</h1>
 </div>
 
 
@@ -279,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 13, 2022</p>
+      <p class="date">October 17, 2022</p>
     </div>
   </div>
     
@@ -291,33 +290,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
 <ul>
-<li><a href="https://moderndive.com/3-wrangling.html">Chapter 3 of Modern Dive</a></li>
+<li>For model fit, see QSS 4.2.6 or IMS 7.2.5</li>
+<li>For multiple regression, IMS 8.1-8.3, MD 6.1-6.2, or QSS 4.3.1-4.3.2</li>
 </ul>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <ul>
-<li>Install the Gov 50 data package that has new data for this week:</li>
+<li>Reinstall the Gov 50 data package that has new data for this week:</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"mattblackwell/gov50data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="slides-and-code" class="level2">
-<h2 class="anchored" data-anchor-id="slides-and-code">Slides and Code</h2>
-<ul>
-<li>Tuesday (9/13) lecture: Data Wrangling
-<ul>
-<li><a href="../slides/04_data_wrangling.pdf">PDF of slides as I present them</a></li>
-<li><a href="../slides/04_data_wrangling_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
-</ul></li>
-<li>Thursday (9/15) lecture: Data Wrangling and Barplots
-<ul>
-<li><a href="../slides/05_data_wrangling.pdf">PDF of slides as I present them</a></li>
-<li><a href="../slides/05_data_wrangling_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
-<li>Code: <a href="../files/code/news.Rmd"><code>news.Rmd</code></a></li>
-</ul></li>
-</ul>
 
 
 </section>
