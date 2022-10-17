@@ -1,0 +1,14 @@
+{
+  "hash": "449bfa4ca5c77017a61d6fff2ace8743",
+  "result": {
+    "markdown": "---\ntitle: \"Prediction: More Regression\"\ndate: 2022-10-17\n---\n\n\n\n## Readings \n\n- For model fit, see QSS 4.2.6 or IMS 7.2.5\n- For multiple regression, IMS 8.1-8.3, MD 6.1-6.2, or QSS 4.3.1-4.3.2\n\n\n## Data\n\n- Reinstall the Gov 50 data package that has new data for this week:\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"mattblackwell/gov50data\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,20 @@
+---
+title: "Prediction: More Regression"
+date: 2022-10-17
+---
+
+
+## Readings 
+
+- For model fit, see QSS 4.2.6 or IMS 7.2.5
+- For multiple regression, IMS 8.1-8.3, MD 6.1-6.2, or QSS 4.3.1-4.3.2
+
+
+## Data
+
+- Reinstall the Gov 50 data package that has new data for this week:
+```{r}
+#| eval: false
+remotes::install_github("mattblackwell/gov50data")
+```
+
