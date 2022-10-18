@@ -18,12 +18,7 @@ Here is a list of milestones that we will have to keep you on track:
 
 ## Milestone 1: Create public GitHub repository (due 10/21)
 
-Follow [the instructions](https://rstudio.github.io/distill/publish_article.html#github-pages) on how to create a repository and add a Distill article. For step 4 on creating a Distill article, you can find how to do that from the [Distill website](https://rstudio.github.io/distill/basics.html#creating-an-article). To do this you will have to install the distill package with:
-
-```{r eval=FALSE}
-install.packages("distill")
-```
-
+Follow [the instructions](/assignments/distill.qmd) on how to create a repository for your final project.
 You should change the metadata on your article and write a few sentences in the main text about what you might be interested in writing about. You will submit a link to the public article (not the github repository) to Canvas (not Gradescope). 
 
 ## Milestone 2: Finding data and writing a proposal (due 10/28)
@@ -76,7 +71,7 @@ For instance, this would be a comprehensive paragraph that address each of these
 
 > Does unified government enhance legislative productivity? In this study, I plan to examine the extent to which periods of unified government produce more landmark laws. I hypothesize that legislative productivity increases during periods of unified government in which one party controls both Houses of Congress and the presidency relative to periods of divided government. During periods of unified government, I expect that it is more likely for major bills to pass both Houses and gain the president's signature. During periods of divided government, it is more difficult to reach a consensus around legislation that can pass each House and gain the president's approval. My sample is comprised of each of the 79th (1945-1946) through 103rd (1993-1994) Congresses. My unit of analysis is a Congress (e.g., the 88th Congress). The explanatory variable of interest is whether there is unified government (both Houses and the presidency are controlled by the same party) or divided government. The variable is coded =1 for unified government and =0 for divided government. My outcome variable is the count of landmark pieces of legislation passed in a given Congress. For instance, if the variable were coded =11, it would mean that 11 pieces of landmark legislation were signed into law in that Congress. This variable is measured from David Mayhew's data set on landmark legislation and relies on Mayhew's expert knowledge to classify legislation as "landmark." If I observe greater landmark legislative productivity under unified government relative to divided government, this would provide support for my hypothesis. If, on the other hand, I observe less productivity or the same level of productivity under unified government, this would provide evidence against my hypothesis. When I run my regression of the count of landmark legislation on the unified government indicator variable, a positive, significant coefficient would indicate support for my hypothesis.
 
-Your group's paragraph might be less detailed and may not refer to the political science literature, but it should address the above items. 
+Your paragraph might be less detailed and may not refer to any academic literature, but it should address the above items. 
 
 Note that you are not fully committing to any specific question or data in this exercise. If you want to change data or questions later, that is fine. This is just a milestone to keep you on track. You can write this proposal on your `index.Rmd` file in the public article. You will submit a link to the rendered article with the proposal on **Friday, October 28th, 2022 at 11:59pm ET.** 
 

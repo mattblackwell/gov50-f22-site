@@ -2,14 +2,26 @@
 title: "Assignments"
 ---
 
+## Tutorials
+
 - [Tutorial Instructions](/assignments/tutorials.qmd)
+
+## Problem Sets
+
 - [Submission guide for problem sets](/assignments/problem-sets.html)
 - [Problem set 0: Setting up R, RStudio, and GitHub](/assignments/00-problem-set.html)
 - [Problem set 1: Data Visualization](/assignments/01_hw_data_viz.qmd) 
 - [Problem set 2: Data Wrangling](/assignments/02_hw_data_wrangling.qmd) 
 - [Problem set 3: Causality](/assignments/03_hw_causality.qmd) 
 - [Problem set 4: Summarizing Data](/assignments/04_hw_summarizing.qmd) 
+
+## Exams
+
 - [Practice Exam 1: The Effects of the Draft](/assignments/05_prex_draft.qmd)
 - [Exam 1: The Effects of the European Refugee Crisis (Ed page with GH Classroom Link)](https://edstem.org/us/courses/24957/resources)
 
+
+## Final Project 
+
 - [Final project information](/assignments/final-project.html)
+- [Final project milestone 1: Creating a repo](/assignments/distill.qmd)
