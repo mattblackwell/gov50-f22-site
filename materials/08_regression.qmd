@@ -18,3 +18,11 @@ date: 2022-10-17
 remotes::install_github("mattblackwell/gov50data")
 ```
 
+- CSV files for the data from this week if you cannot install the package:
+  - [`midterms.csv`](/files/data/midterms.csv)
+
+## Slides and Code
+
+- Tuesday (10/18) lecture: Model fit and multiple regression
+  - [PDF of slides as I present them](/slides/14_regression_ii.pdf)
+  - [PDF of handout version of slides](/slides/14_regression_ii_handout.pdf) (no incremental slides)
