@@ -1,0 +1,43 @@
+---
+title: "Gov 50 Cheat Sheet"
+slug: cheatsheet
+---
+
+```{r}
+#| label: packages
+library(tidyverse)
+library(gov50data)
+```
+
+
+## Week 1: R Basics and Data Visualization
+
+### Creating a vector 
+
+
+
+```{r}
+## Any R code that begins with the # character is a comment
+## Comments are ignored by R
+
+my_numbers <- c(4, 8, 15, 16, 23, 42) # Anything after # is also a
+# comment
+my_numbers
+```
+
+
+### Installing and loading a package
+
+You can install a package with the `install.packages` function, passing the name of the package to be installed as a string (that is, in quotes):
+
+```{r}
+#| eval = FALSE
+install.packages("ggplot2")
+```
+
+You can load a package into the R environment by calling `library()` with the name of package without quotes. You should only have one package per library call. 
+
+```{r}
+library(ggplot2)
+```
+

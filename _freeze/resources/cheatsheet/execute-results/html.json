@@ -1,0 +1,14 @@
+{
+  "hash": "1fe0136e50d28066918d3aed5e46460a",
+  "result": {
+    "markdown": "---\ntitle: \"Gov 50 Cheat Sheet\"\nslug: cheatsheet\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6      ✔ purrr   0.3.5 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n```\n:::\n\n```{.r .cell-code}\nlibrary(gov50data)\n```\n:::\n\n\n\n## Week 1: R Basics and Data Visualization\n\n### Creating a vector \n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n## Any R code that begins with the # character is a comment\n## Comments are ignored by R\n\nmy_numbers <- c(4, 8, 15, 16, 23, 42) # Anything after # is also a\n# comment\nmy_numbers\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1]  4  8 15 16 23 42\n```\n:::\n:::\n\n\n\n### Installing and loading a package\n\nYou can install a package with the `install.packages` function, passing the name of the package to be installed as a string (that is, in quotes):\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"ggplot2\")\n```\n:::\n\n\nYou can load a package into the R environment by calling `library()` with the name of package without quotes. You should only have one package per library call. \n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
