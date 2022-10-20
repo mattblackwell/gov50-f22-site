@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Gov 50 - Problem Set 5: Co-ethnic Candidates and Voter Turnout</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/img/gov50-icon-512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gov 50</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">Syllabus</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html">Schedule</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../materials/index.html">Materials</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignments/index.html">Assignments</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://edstem.org/us/courses/24957/discussion/">Ed</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.gradescope.com/courses/415456">Gradescope</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#question-1-3-points" id="toc-question-1-3-points" class="nav-link" data-scroll-target="#question-1-3-points">Question 1 (3 points)</a></li>
+  <li><a href="#question-2-7-points" id="toc-question-2-7-points" class="nav-link" data-scroll-target="#question-2-7-points">Question 2 (7 points)</a></li>
+  <li><a href="#question-3-7-points" id="toc-question-3-7-points" class="nav-link" data-scroll-target="#question-3-7-points">Question 3 (7 points)</a></li>
+  <li><a href="#question-4-7-points" id="toc-question-4-7-points" class="nav-link" data-scroll-target="#question-4-7-points">Question 4 (7 points)</a></li>
+  <li><a href="#question-5-6-points" id="toc-question-5-6-points" class="nav-link" data-scroll-target="#question-5-6-points">Question 5 (6 points)</a></li>
+  <li><a href="#question-6-2-points" id="toc-question-6-2-points" class="nav-link" data-scroll-target="#question-6-2-points">Question 6 (2 points)</a></li>
+  <li><a href="#question-7-3-points" id="toc-question-7-3-points" class="nav-link" data-scroll-target="#question-7-3-points">Question 7 (3 points)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem Set 5: Co-ethnic Candidates and Voter Turnout</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>You can find instructions for obtaining and submitting problem sets <a href="../assignments/problem-sets.html">here</a>.</p>
+<p>You can find the GitHub Classroom link to download the template repository on the <a href="https://edstem.org/us/courses/24957/resources">Ed Board</a></p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>For this problem set, we will analyze data from the following article:</p>
+<p>Fraga, Bernard. (2015) <a href="http://dx.doi.org/10.1111/ajps.12172">“Candidates or Districts? Reevaluating the Role of Race in Voter Turnout,”</a> <em>American Journal of Political Science</em>, Vol. 60, No.&nbsp;1, pp.&nbsp;97–122.</p>
+<p>Fraga assesses the theory that minority voters are more likely to vote in elections featuring co-ethnic candidates. He shows that the association between minority voter turnout and co-ethnic candidates disappears once we take into account district-level racial composition. In particular, he demonstrates that in districts where Black people make up a greater share of the voting-age population, Black voters in that district are more likely to vote in elections <em>regardless</em> of candidate race. Although the main analyses he carries out are a bit more complicated than what have learned in the course, we can replicate his substantive findings using the multiple regression approach we’ve learned.</p>
+<p>A description of the variables is listed below:</p>
+<table class="table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>year</code></td>
+<td style="text-align: left;">Year the election was held</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>state</code></td>
+<td style="text-align: left;">State in which the election was held</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>district</code></td>
+<td style="text-align: left;">District in which the election was held (unique within state but not across states)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>turnout</code></td>
+<td style="text-align: left;">The proportion of the Black voting-age population in a district that votes in the general election</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>CVAP</code></td>
+<td style="text-align: left;">The proportion of a district’s voting-age population that is Black</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>candidate</code></td>
+<td style="text-align: left;">Binary variable coded “1” when the election includes a Black candidate; “0” when the election does not include a Black candidate</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="question-1-3-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-3-points">Question 1 (3 points)</h2>
+<p>Fraga analyzes turnout data for four different racial and ethnic groups, but for this analysis we will focus on the data for Black voters. Load <code>data/blackturnout.csv</code> and save it as <code>blackturnout</code>.</p>
+<p>In the write up, indicate which years are included in the dataset and how many different states are included in the dataset.</p>
+<p><strong>Rubric:</strong> 1pt for Rmd file compiling (autograder); 1pt for loading data (autograder); 1pt for indicating years in the data and number of states (PDF).</p>
+</section>
+<section id="question-2-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-7-points">Question 2 (7 points)</h2>
+<p>Create a boxplot that compares Black turnout in elections with and without a co-ethnic candidate and save the plot as <code>turnout_box</code>. Your plot should look like this:</p>
+<p><img src="figures/turnout_box.png" class="img-fluid"></p>
+<p>To create the x-axis variable that is nicely labeled, use <code>mutate()</code> to create a variable that is <code>"Yes"</code> when <code>candidate</code> is 1 and <code>"No"</code> otherwise (it does not matter what this variable is called to the autograder, but don’t overwrite your <code>candidate</code> variable!). Be sure to use informative labels, though they do not have to match the text exactly.</p>
+<p>In the write-up, report what the plot tells us about how turnout varies by the presence of a co-ethnic candidate.</p>
+<p><strong>Rubric:</strong> 4pts for boxplot (autograder); 1pt for informative labels on plot (PDF); 2pts for written description of relationship (PDF).</p>
+</section>
+<section id="question-3-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-7-points">Question 3 (7 points)</h2>
+<p>Run a linear regression with Black voter turnout as your outcome variable and candidate co-ethnicity as your predictor. Save this regression as <code>fit_1</code> and report the coefficients using a nicely formatted table with the following code (you may need to install the <code>broom</code> package to have this work):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fit_1 <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  broom<span class="sc">::</span><span class="fu">tidy</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(term, estimate) <span class="sc">|&gt;</span>  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Interpret both of these coefficients. Do not merely comment on the direction of the association (i.e., whether the slope is positive or negative). Explain what the value of the coefficients mean in terms of the units in which each variable is measured. Are these results consistent with the prediction that Black voters turn out at higher rates when a co-ethnic candidate is running?</p>
+<p><strong>Rubric:</strong> 3pts for correct <code>lm</code> output (autograder); 1pt for coefficient table (PDF); 2pt for interpretation of coefficients (PDF); 1pt for conclusions (PDF).</p>
+</section>
+<section id="question-4-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-4-7-points">Question 4 (7 points)</h2>
+<p>You decide to investigate the results of the previous question a bit more carefully because the elections with co-ethnic candidates may differ from the elections without co-ethnic candidates in other ways. Create a scatter plot where the x-axis is the proportion of voting-age population that is Black and the y-axis is Black voter turnout. Color your points according to candidate co-ethnicity. That is, make the points for elections featuring co-ethnic candidates one color, and make the points for elections featuring no co-ethnic candidates a different color. You plot should look like this:</p>
+<p><img src="figures/turnout_scatter.png" class="img-fluid"></p>
+<p>You should save this plot as <code>turnout_scatter</code> and to create better labels for the color of the points, use <code>mutate()</code> in a similar way to question 2.</p>
+<p>Answer these questions in the write-up: What does this graph seem to imply about the relationship between Black voting-age population and Black turnout? What does it tell us about the relationship between Black voting-age population and the presence of a Black candidate?</p>
+<p><strong>Rubric:</strong> 5pts for scatter plot (autograder); 2pts for written conclusions about the plots (PDF).</p>
+</section>
+<section id="question-5-6-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-5-6-points">Question 5 (6 points)</h2>
+<p>Run a linear regression with Black turnout as your outcome variable and with candidate co-ethnicity and co-ethnic voting-age population as your predictors. Save the output of this regression as <code>fit_2</code> and report the coefficients using a nicely formatted table with the following code (you may need to install the <code>broom</code> package to have this work):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fit_2 <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  broom<span class="sc">::</span><span class="fu">tidy</span>() <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(term, estimate) <span class="sc">|&gt;</span>  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In the main text, interpret the coefficients on the two predictors, ignoring the intercept for now (you will interpret the intercept in the next question). Explain what each coefficient represents in terms of the units of the relevant variables.</p>
+<p><strong>Rubric:</strong> 3pts for correct <code>lm</code> output (autograder); 1pt for the coefficient table (PDF); 2pts for correct interpretation of the coefficients (PDF).</p>
+</section>
+<section id="question-6-2-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-6-2-points">Question 6 (2 points)</h2>
+<p>Now interpret the intercept from the regression model with two predictors. Is this intercept a substantively important or interesting quantity? Why or why not?</p>
+<p><strong>Rubric:</strong> 1pt for correct interpretation (PDF); 1pt for argument about substantive importance (PDF).</p>
+</section>
+<section id="question-7-3-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-7-3-points">Question 7 (3 points)</h2>
+<p>Comparing the two regression models you have fit, what do you conclude about the relationship between co-ethnic candidates and Black voter turnout? Do they come to similar or different conclusions about this relationship? Which model do you prefer and why? (Please ignore issues of statistical significance for this question given that it will be covered later in the course.)</p>
+<p><strong>Rubric:</strong> 3pts for discussion (PDF).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

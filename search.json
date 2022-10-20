@@ -210,6 +210,69 @@
     "text": "Question 5 (EXTRA CREDIT, 5 points)\nThis problem is optional. Any points earned on this problem can be applied to lost points on other parts of the problem set. You cannot earn more than the maximum score on the problem set. There will be no autograder for this question.\nLet’s consider the design of this study. The original authors assume that, conditional on the number of children a judge has, the number of daughters is random (as we did in the previous question). If this is true, half of a judge’s children should be female, on average. A deviation from this proportion could indicate that a gender preference among judges due a stopping rule such as “have children until we get one girl,” which would violate the randomization assumption.\nTo check this assumption, group the data by the number of children and calculate the proportion of children in each group that are girls. Create a barplot that these proportions on the y-axis with the number of children on the x-axis. This barplot should have (a) informative labels on each axis, (b) a y-axis range that runs from 0 to 1, and (c) a horizontal line at 0.5 to compare against. Does it appear that there is strong gender preference/selection happening among judges?"
   },
   {
+    "objectID": "assignments/05_hw_regression.html",
+    "href": "assignments/05_hw_regression.html",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "",
+    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#background",
+    "href": "assignments/05_hw_regression.html#background",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Background",
+    "text": "Background\nFor this problem set, we will analyze data from the following article:\nFraga, Bernard. (2015) “Candidates or Districts? Reevaluating the Role of Race in Voter Turnout,” American Journal of Political Science, Vol. 60, No. 1, pp. 97–122.\nFraga assesses the theory that minority voters are more likely to vote in elections featuring co-ethnic candidates. He shows that the association between minority voter turnout and co-ethnic candidates disappears once we take into account district-level racial composition. In particular, he demonstrates that in districts where Black people make up a greater share of the voting-age population, Black voters in that district are more likely to vote in elections regardless of candidate race. Although the main analyses he carries out are a bit more complicated than what have learned in the course, we can replicate his substantive findings using the multiple regression approach we’ve learned.\nA description of the variables is listed below:\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nyear\nYear the election was held\n\n\nstate\nState in which the election was held\n\n\ndistrict\nDistrict in which the election was held (unique within state but not across states)\n\n\nturnout\nThe proportion of the Black voting-age population in a district that votes in the general election\n\n\nCVAP\nThe proportion of a district’s voting-age population that is Black\n\n\ncandidate\nBinary variable coded “1” when the election includes a Black candidate; “0” when the election does not include a Black candidate"
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#question-1-3-points",
+    "href": "assignments/05_hw_regression.html#question-1-3-points",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Question 1 (3 points)",
+    "text": "Question 1 (3 points)\nFraga analyzes turnout data for four different racial and ethnic groups, but for this analysis we will focus on the data for Black voters. Load data/blackturnout.csv and save it as blackturnout.\nIn the write up, indicate which years are included in the dataset and how many different states are included in the dataset.\nRubric: 1pt for Rmd file compiling (autograder); 1pt for loading data (autograder); 1pt for indicating years in the data and number of states (PDF)."
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#question-2-7-points",
+    "href": "assignments/05_hw_regression.html#question-2-7-points",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Question 2 (7 points)",
+    "text": "Question 2 (7 points)\nCreate a boxplot that compares Black turnout in elections with and without a co-ethnic candidate and save the plot as turnout_box. Your plot should look like this:\n\nTo create the x-axis variable that is nicely labeled, use mutate() to create a variable that is \"Yes\" when candidate is 1 and \"No\" otherwise (it does not matter what this variable is called to the autograder, but don’t overwrite your candidate variable!). Be sure to use informative labels, though they do not have to match the text exactly.\nIn the write-up, report what the plot tells us about how turnout varies by the presence of a co-ethnic candidate.\nRubric: 4pts for boxplot (autograder); 1pt for informative labels on plot (PDF); 2pts for written description of relationship (PDF)."
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#question-3-7-points",
+    "href": "assignments/05_hw_regression.html#question-3-7-points",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Question 3 (7 points)",
+    "text": "Question 3 (7 points)\nRun a linear regression with Black voter turnout as your outcome variable and candidate co-ethnicity as your predictor. Save this regression as fit_1 and report the coefficients using a nicely formatted table with the following code (you may need to install the broom package to have this work):\n\nfit_1 |>\n  broom::tidy() |>\n  select(term, estimate) |>  \n  knitr::kable(digits = 2)\n\nInterpret both of these coefficients. Do not merely comment on the direction of the association (i.e., whether the slope is positive or negative). Explain what the value of the coefficients mean in terms of the units in which each variable is measured. Are these results consistent with the prediction that Black voters turn out at higher rates when a co-ethnic candidate is running?\nRubric: 3pts for correct lm output (autograder); 1pt for coefficient table (PDF); 2pt for interpretation of coefficients (PDF); 1pt for conclusions (PDF)."
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#question-4-7-points",
+    "href": "assignments/05_hw_regression.html#question-4-7-points",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Question 4 (7 points)",
+    "text": "Question 4 (7 points)\nYou decide to investigate the results of the previous question a bit more carefully because the elections with co-ethnic candidates may differ from the elections without co-ethnic candidates in other ways. Create a scatter plot where the x-axis is the proportion of voting-age population that is Black and the y-axis is Black voter turnout. Color your points according to candidate co-ethnicity. That is, make the points for elections featuring co-ethnic candidates one color, and make the points for elections featuring no co-ethnic candidates a different color. You plot should look like this:\n\nYou should save this plot as turnout_scatter and to create better labels for the color of the points, use mutate() in a similar way to question 2.\nAnswer these questions in the write-up: What does this graph seem to imply about the relationship between Black voting-age population and Black turnout? What does it tell us about the relationship between Black voting-age population and the presence of a Black candidate?\nRubric: 5pts for scatter plot (autograder); 2pts for written conclusions about the plots (PDF)."
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#question-5-6-points",
+    "href": "assignments/05_hw_regression.html#question-5-6-points",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Question 5 (6 points)",
+    "text": "Question 5 (6 points)\nRun a linear regression with Black turnout as your outcome variable and with candidate co-ethnicity and co-ethnic voting-age population as your predictors. Save the output of this regression as fit_2 and report the coefficients using a nicely formatted table with the following code (you may need to install the broom package to have this work):\n\nfit_2 |>\n  broom::tidy() |>\n  select(term, estimate) |>  \n  knitr::kable(digits = 2)\n\nIn the main text, interpret the coefficients on the two predictors, ignoring the intercept for now (you will interpret the intercept in the next question). Explain what each coefficient represents in terms of the units of the relevant variables.\nRubric: 3pts for correct lm output (autograder); 1pt for the coefficient table (PDF); 2pts for correct interpretation of the coefficients (PDF)."
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#question-6-2-points",
+    "href": "assignments/05_hw_regression.html#question-6-2-points",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Question 6 (2 points)",
+    "text": "Question 6 (2 points)\nNow interpret the intercept from the regression model with two predictors. Is this intercept a substantively important or interesting quantity? Why or why not?\nRubric: 1pt for correct interpretation (PDF); 1pt for argument about substantive importance (PDF)."
+  },
+  {
+    "objectID": "assignments/05_hw_regression.html#question-7-3-points",
+    "href": "assignments/05_hw_regression.html#question-7-3-points",
+    "title": "Problem Set 5: Co-ethnic Candidates and Voter Turnout",
+    "section": "Question 7 (3 points)",
+    "text": "Question 7 (3 points)\nComparing the two regression models you have fit, what do you conclude about the relationship between co-ethnic candidates and Black voter turnout? Do they come to similar or different conclusions about this relationship? Which model do you prefer and why? (Please ignore issues of statistical significance for this question given that it will be covered later in the course.)\nRubric: 3pts for discussion (PDF)."
+  },
+  {
     "objectID": "assignments/05_prex_draft.html",
     "href": "assignments/05_prex_draft.html",
     "title": "Practice Exam 1: Vietnam Draft and Political Attitudes and Behavior",
@@ -592,7 +655,7 @@
     "href": "materials/08_regression.html#slides-and-code",
     "title": "Prediction: More Regression",
     "section": "Slides and Code",
-    "text": "Slides and Code\n\nTuesday (10/18) lecture: Model fit and multiple regression\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+    "text": "Slides and Code\n\nTuesday (10/18) lecture: Model fit and multiple regression\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (10/20) lecture: Multiple regression and categorical independent variables\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
   },
   {
     "objectID": "materials/index.html",
@@ -606,14 +669,21 @@
     "href": "resources/cheatsheet.html",
     "title": "Gov 50 Cheat Sheet",
     "section": "",
-    "text": "library(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6      ✔ purrr   0.3.5 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(gov50data)"
+    "text": "library(tidyverse)\nlibrary(gov50data)"
   },
   {
-    "objectID": "resources/cheatsheet.html#week-1-r-basics-and-data-visualization",
-    "href": "resources/cheatsheet.html#week-1-r-basics-and-data-visualization",
+    "objectID": "resources/cheatsheet.html#r-basics-week-1",
+    "href": "resources/cheatsheet.html#r-basics-week-1",
     "title": "Gov 50 Cheat Sheet",
-    "section": "Week 1: R Basics and Data Visualization",
-    "text": "Week 1: R Basics and Data Visualization\n\nCreating a vector\n\n## Any R code that begins with the # character is a comment\n## Comments are ignored by R\n\nmy_numbers <- c(4, 8, 15, 16, 23, 42) # Anything after # is also a\n# comment\nmy_numbers\n\n[1]  4  8 15 16 23 42\n\n\n\n\nInstalling and loading a package\nYou can install a package with the install.packages function, passing the name of the package to be installed as a string (that is, in quotes):\n\ninstall.packages(\"ggplot2\")\n\nYou can load a package into the R environment by calling library() with the name of package without quotes. You should only have one package per library call.\n\nlibrary(ggplot2)"
+    "section": "R Basics (Week 1)",
+    "text": "R Basics (Week 1)\n\nCreating a vector\nYou can create a vector using the c function:\n\n## Any R code that begins with the # character is a comment\n## Comments are ignored by R\n\nmy_numbers <- c(4, 8, 15, 16, 23, 42) # Anything after # is also a\n# comment\nmy_numbers\n\n[1]  4  8 15 16 23 42\n\n\n\n\nInstalling and loading a package\nYou can install a package with the install.packages function, passing the name of the package to be installed as a string (that is, in quotes):\n\ninstall.packages(\"ggplot2\")\n\nYou can load a package into the R environment by calling library() with the name of package without quotes. You should only have one package per library call.\n\nlibrary(ggplot2)\n\n\n\nCalling functions from specific packages\nWe can also use the mypackage:: prefix to access package functions without loading:\n\nknitr::kable(head(mtcars))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1"
+  },
+  {
+    "objectID": "resources/cheatsheet.html#data-visualization-week-1",
+    "href": "resources/cheatsheet.html#data-visualization-week-1",
+    "title": "Gov 50 Cheat Sheet",
+    "section": "Data Visualization (week 1)",
+    "text": "Data Visualization (week 1)\n\nScatter plot\nYou can produce a scatter plot with using the x and y aesthetics along with the geom_point() function.\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) +\n  geom_point()\n\n\n\n\n\n\nSmoothed curves\nYou can add a smoothed curve that summarizes the relationship between two variables with the geom_smooth() function. By default, it uses a loess smoother to estimated the conditional mean of the y-axis variable as a function of the x-axis variable.\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) +\n  geom_point() + geom_smooth()\n\n`geom_smooth()` using method = 'loess' and formula 'y ~ x'\n\n\n\n\n\n\n\nAdding a regression line\ngeom_smooth can also add a regression line by setting the argument method = \"lm\" and we can turn off the shaded regions around the line with se = FALSE\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) +\n  geom_point() + geom_smooth(method = \"lm\", se = FALSE)\n\n`geom_smooth()` using formula 'y ~ x'\n\n\n\n\n\n\n\nChanging the scale of the axes\nIf we want the scale of the x-axis to be logged to stretch out the data we can use the scale_x_log10():\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  scale_x_log10()\n\n`geom_smooth()` using formula 'y ~ x'\n\n\n\n\n\n\n\nAdding informative labels to a plot\nUse the labs() to add informative labels to the plot:\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) +\n  geom_point() +\n  geom_smooth(method = \"loess\", se = FALSE) +\n  scale_x_log10() +\n  labs(x = \"Population Density\",\n       y = \"Percent of County Below Poverty Line\",\n       title = \"Poverty and Population Density\",\n       subtitle = \"Among Counties in the Midwest\",\n       source = \"US Census, 2000\")\n\n`geom_smooth()` using formula 'y ~ x'\n\n\n\n\n\n\n\nMapping aesthetics to variables\nIf you would like to map an aesthetic to a variable for all geoms in the plot, you can put it in the aes call in the ggplot() function:\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty,\n                     color = state,\n                     fill = state)) +\n  geom_point() +\n  geom_smooth() +\n  scale_x_log10()\n\n`geom_smooth()` using method = 'loess' and formula 'y ~ x'\n\n\n\n\n\n\n\nMapping aesthetics for a single geom\nYou can also map aesthetics for a specific geom using the mapping argument to that function:\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) +\n  geom_point(mapping = aes(color = state)) +\n  geom_smooth(color = \"black\") +\n  scale_x_log10()\n\n`geom_smooth()` using method = 'loess' and formula 'y ~ x'\n\n\n\n\n\n\n\nSetting the aesthetics for all observations\nIf you would like to set the color or size or shape of a geom for all data points (that is, not mapped to any variables), be sure to set these outside of aes():\n\nggplot(data = midwest,\n       mapping = aes(x = popdensity,\n                     y = percbelowpoverty)) +\n  geom_point(color = \"purple\") +\n  geom_smooth() +\n  scale_x_log10()\n\n`geom_smooth()` using method = 'loess' and formula 'y ~ x'\n\n\n\n\n\n\n\nHistograms\n\nggplot(data = midwest,\n       mapping = aes(x = percbelowpoverty)) +\n  geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
   },
   {
     "objectID": "resources/index.html",

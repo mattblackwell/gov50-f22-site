@@ -2,118 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/about.html</loc>
-    <lastmod>2022-10-19T14:35:02.088Z</lastmod>
+    <lastmod>2022-10-20T15:26:18.085Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/00-problem-set.html</loc>
-    <lastmod>2022-10-19T14:35:03.380Z</lastmod>
+    <lastmod>2022-10-20T15:26:19.561Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/01_hw_data_viz.html</loc>
-    <lastmod>2022-10-19T14:35:04.068Z</lastmod>
+    <lastmod>2022-10-20T15:26:20.329Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/02_hw_data_wrangling.html</loc>
-    <lastmod>2022-10-19T14:35:04.888Z</lastmod>
+    <lastmod>2022-10-20T15:26:21.049Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/03_hw_causality.html</loc>
-    <lastmod>2022-10-19T14:35:05.460Z</lastmod>
+    <lastmod>2022-10-20T15:26:21.637Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/04_hw_summarizing.html</loc>
-    <lastmod>2022-10-19T14:35:05.992Z</lastmod>
+    <lastmod>2022-10-20T15:26:22.221Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/05_hw_regression.html</loc>
+    <lastmod>2022-10-20T15:26:22.985Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/05_prex_draft.html</loc>
-    <lastmod>2022-10-19T14:35:06.468Z</lastmod>
+    <lastmod>2022-10-20T15:26:23.501Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/distill.html</loc>
-    <lastmod>2022-10-19T14:35:07.132Z</lastmod>
+    <lastmod>2022-10-20T15:26:24.185Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/final-project.html</loc>
-    <lastmod>2022-10-19T14:35:07.636Z</lastmod>
+    <lastmod>2022-10-20T15:26:24.753Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/index.html</loc>
-    <lastmod>2022-10-19T14:35:08.052Z</lastmod>
+    <lastmod>2022-10-20T15:26:25.209Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/problem-sets.html</loc>
-    <lastmod>2022-10-19T14:35:08.572Z</lastmod>
+    <lastmod>2022-10-20T15:26:25.741Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/assignments/tutorials.html</loc>
-    <lastmod>2022-10-19T14:35:09.264Z</lastmod>
+    <lastmod>2022-10-20T15:26:26.445Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/index.html</loc>
-    <lastmod>2022-10-19T14:35:09.792Z</lastmod>
+    <lastmod>2022-10-20T15:26:26.961Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/01_intro.html</loc>
-    <lastmod>2022-10-19T14:35:10.204Z</lastmod>
+    <lastmod>2022-10-20T15:26:27.357Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/02_r_data_viz.html</loc>
-    <lastmod>2022-10-19T14:35:10.616Z</lastmod>
+    <lastmod>2022-10-20T15:26:27.813Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/03_data_wrangling.html</loc>
-    <lastmod>2022-10-19T14:35:11.256Z</lastmod>
+    <lastmod>2022-10-20T15:26:28.485Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/04_causality.html</loc>
-    <lastmod>2022-10-19T14:35:11.932Z</lastmod>
+    <lastmod>2022-10-20T15:26:29.161Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/05_measurement.html</loc>
-    <lastmod>2022-10-19T14:35:12.608Z</lastmod>
+    <lastmod>2022-10-20T15:26:29.857Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/06_bivariate_tidying.html</loc>
-    <lastmod>2022-10-19T14:35:13.288Z</lastmod>
+    <lastmod>2022-10-20T15:26:30.589Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/07_prediction.html</loc>
-    <lastmod>2022-10-19T14:35:13.980Z</lastmod>
+    <lastmod>2022-10-20T15:26:31.301Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/08_regression.html</loc>
-    <lastmod>2022-10-19T14:35:14.660Z</lastmod>
+    <lastmod>2022-10-20T15:26:31.973Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/materials/index.html</loc>
-    <lastmod>2022-10-19T14:35:15.028Z</lastmod>
+    <lastmod>2022-10-20T15:26:32.377Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/resources/cheatsheet.html</loc>
-    <lastmod>2022-10-19T14:35:15.700Z</lastmod>
+    <lastmod>2022-10-20T15:26:33.193Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/resources/index.html</loc>
-    <lastmod>2022-10-19T14:35:16.100Z</lastmod>
+    <lastmod>2022-10-20T15:26:33.573Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/resources/office-hours.html</loc>
-    <lastmod>2022-10-19T14:35:16.544Z</lastmod>
+    <lastmod>2022-10-20T15:26:34.041Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/resources/speaker-series.html</loc>
-    <lastmod>2022-10-19T14:35:16.944Z</lastmod>
+    <lastmod>2022-10-20T15:26:34.457Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/resources/study-halls.html</loc>
-    <lastmod>2022-10-19T14:35:17.428Z</lastmod>
+    <lastmod>2022-10-20T15:26:34.953Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/schedule.html</loc>
-    <lastmod>2022-10-19T14:35:18.464Z</lastmod>
+    <lastmod>2022-10-20T15:26:36.117Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/mattblackwell/gov50-f22-site/syllabus.html</loc>
-    <lastmod>2022-10-19T14:35:19.224Z</lastmod>
+    <lastmod>2022-10-20T15:26:36.893Z</lastmod>
   </url>
 </urlset>
