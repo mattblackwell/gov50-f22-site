@@ -26,3 +26,7 @@ remotes::install_github("mattblackwell/gov50data")
 - Tuesday (10/18) lecture: Model fit and multiple regression
   - [PDF of slides as I present them](/slides/14_regression_ii.pdf)
   - [PDF of handout version of slides](/slides/14_regression_ii_handout.pdf) (no incremental slides)
+
+- Thursday (10/20) lecture: Multiple regression and categorical independent variables
+  - [PDF of slides as I present them](/slides/15_multiple_regression.pdf)
+  - [PDF of handout version of slides](/slides/15_multiple_regression_handout.pdf) (no incremental slides)
