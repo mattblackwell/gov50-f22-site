@@ -14,6 +14,7 @@ title: "Assignments"
 - [Problem set 2: Data Wrangling](/assignments/02_hw_data_wrangling.qmd) 
 - [Problem set 3: Causality](/assignments/03_hw_causality.qmd) 
 - [Problem set 4: Summarizing Data](/assignments/04_hw_summarizing.qmd) 
+- [Problem set 5: Regression](/assignments/05_hw_regression.qmd) 
 
 ## Exams
 
