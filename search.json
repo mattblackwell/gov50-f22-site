@@ -658,6 +658,27 @@
     "text": "Slides and Code\n\nTuesday (10/18) lecture: Model fit and multiple regression\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (10/20) lecture: Multiple regression and categorical independent variables\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
   },
   {
+    "objectID": "materials/09_sampling.html",
+    "href": "materials/09_sampling.html",
+    "title": "Sampling",
+    "section": "",
+    "text": "MD Ch 7"
+  },
+  {
+    "objectID": "materials/09_sampling.html#data",
+    "href": "materials/09_sampling.html#data",
+    "title": "Sampling",
+    "section": "Data",
+    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")\n\n\nCSV files for the data from this week if you cannot install the package:\n\nclass_years.csv"
+  },
+  {
+    "objectID": "materials/09_sampling.html#slides-and-code",
+    "href": "materials/09_sampling.html#slides-and-code",
+    "title": "Sampling",
+    "section": "Slides and Code",
+    "text": "Slides and Code\n\nTuesday (10/25) lecture: Model fit and multiple regression\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+  },
+  {
     "objectID": "materials/index.html",
     "href": "materials/index.html",
     "title": "Readings, lectures, and videos",
