@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Gov 50 - Problem Set 6: Sampling from a Voter File</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/img/gov50-icon-512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gov 50</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html">Syllabus</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html">Schedule</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../materials/index.html">Materials</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignments/index.html">Assignments</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html">Resources</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://edstem.org/us/courses/24957/discussion/">Ed</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.gradescope.com/courses/415456">Gradescope</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#question-1-7-points" id="toc-question-1-7-points" class="nav-link" data-scroll-target="#question-1-7-points">Question 1 (7 points)</a></li>
+  <li><a href="#question-2-5-points" id="toc-question-2-5-points" class="nav-link" data-scroll-target="#question-2-5-points">Question 2 (5 points)</a></li>
+  <li><a href="#question-3-8-points" id="toc-question-3-8-points" class="nav-link" data-scroll-target="#question-3-8-points">Question 3 (8 points)</a></li>
+  <li><a href="#question-4-7-points" id="toc-question-4-7-points" class="nav-link" data-scroll-target="#question-4-7-points">Question 4 (7 points)</a></li>
+  <li><a href="#question-5-3-points" id="toc-question-5-3-points" class="nav-link" data-scroll-target="#question-5-3-points">Question 5 (3 points)</a></li>
+  <li><a href="#question-6-5-points" id="toc-question-6-5-points" class="nav-link" data-scroll-target="#question-6-5-points">Question 6 (5 points)</a></li>
+  <li><a href="#question-7-extra-credit-5pts" id="toc-question-7-extra-credit-5pts" class="nav-link" data-scroll-target="#question-7-extra-credit-5pts">Question 7 (Extra credit, 5pts)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem Set 6: Sampling from a Voter File</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>You can find instructions for obtaining and submitting problem sets <a href="../assignments/problem-sets.html">here</a>.</p>
+<p>You can find the GitHub Classroom link to download the template repository on the <a href="https://edstem.org/us/courses/24957/resources">Ed Board</a></p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>In this exercise, we will focus on sampling and sampling distributions when we have access to an entire census for a given population. In this case, the <code>data/fulton.csv</code> file contains anonymized data on all registered voters in Fulton County, GA from 1994. The variables in this dataset are:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>turnout</code></td>
+<td>did person vote (1) or not (0) in 1994?</td>
+</tr>
+<tr class="even">
+<td><code>black</code></td>
+<td>is this person black (1) or not (0)?</td>
+</tr>
+<tr class="odd">
+<td><code>sex</code></td>
+<td>is this person a woman (1) or not (0)?</td>
+</tr>
+<tr class="even">
+<td><code>age</code></td>
+<td>age of registered voter</td>
+</tr>
+<tr class="odd">
+<td><code>dem</code></td>
+<td>registered as a Democrat (1) or not (0)?</td>
+</tr>
+<tr class="even">
+<td><code>rep</code></td>
+<td>registered as a Republican (1) or not (0)?</td>
+</tr>
+<tr class="odd">
+<td><code>urban</code></td>
+<td>registered in a city (1) or not (0)?</td>
+</tr>
+</tbody>
+</table>
+<p>For the purposed of this exercise, we will treat this data as the population of interest. Doing so is an increasingly common approach for polling, where pollsters are now using the voter file as a sampling frame to conduct their polls. We will repeated sample from this population to better understand sampling uncertainty.</p>
+<p><strong>Note:</strong> please follow the directions carefully about setting the seed for the sampling based questions.</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="question-1-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-7-points">Question 1 (7 points)</h2>
+<p>Load the voter list data into R using <code>read_csv</code> and save the data as <code>fulton</code>.</p>
+<p>Create a density histogram of age with a bin width of 1 and save this plot as <code>age_hist</code> (use the aesthetic mapping <code>y = ..density..</code> in to accomplish this). Create a barplot for turnout with the proportion on the y-axis (use the aesthetic mapping <code>y = ..prop..</code> in <code>geom_barplot</code> to achieve this). Make sure both of these plots are shown in the PDF.</p>
+<p>In the write-up, state how many units are in the population (that is, how many rows are in the <code>fulton</code> data).</p>
+<p><strong>Rubric:</strong> 1pt for Rmd file compiling (autograder); 1pt for data loaded (autograder); 2pts for <code>age_hist</code> (autograder); 2pts for <code>turnout_hist</code> (autograder); 1pt for number of rows reported (PDF).</p>
+</section>
+<section id="question-2-5-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-5-points">Question 2 (5 points)</h2>
+<p>Use <code>summarize()</code> to calculate the population mean and standard deviation of <code>age</code> and <code>turnout</code> (that is the mean and SD of these variables in the <code>fulton</code> data) and save the resulting tibble as <code>pop_parameters</code> with the tibble output looking like:</p>
+<pre><code># A tibble: 1 × 4
+  age_pop_mean age_pop_sd turnout_pop_prop turnout_pop_sd
+         &lt;dbl&gt;      &lt;dbl&gt;            &lt;dbl&gt;          &lt;dbl&gt;
+1         XX.X       XX.X            X.XXX          X.XXX</code></pre>
+<p>Make sure that the column names are the same for the autograder. (<strong>Hint:</strong> you can summarize multiple variables in the same call to <code>summarize</code>.) Use <code>knitr::kable()</code> to present the values in nicely formatted table with <code>digits = 2</code> to create nicely rounded numbers and informative column names (they may need to be abbreviated to fit on the page).</p>
+<p><strong>Rubric:</strong> 4pts for correct <code>pop_parameters</code> tibble (autograder); 1pts for nicely formatted table (PDF).</p>
+</section>
+<section id="question-3-8-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-8-points">Question 3 (8 points)</h2>
+<p>In the first line of the code chunk for this question use the following code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(infer)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">02138</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then use <code>rep_slice_sample()</code> to take 1,000 samples of size 20 from <code>fulton</code> and calculate the sample mean of <code>age</code> and the sample mean/proportion of turnout for each of these samples. Save these as variables named <code>age_mean</code> and <code>turnout_prop</code> and save the resulting tibble as <code>samples_n20</code>.</p>
+<p>Create a density histogram of the age means and with a bin width of 1 and save this as <code>age_mean_hist</code>. Create a density histogram of the turnout proportions and save this as <code>turnout_prop_hist</code>. Make sure both of these plots are shown in the PDF and that they have informative labels.</p>
+<p>In the write-up, compare the sampling distribution of the sample mean and sample proportion here to the population distributions from question 1. Are the shapes of the sampling distributions similar or different to the population distributions? If different, how are they different?</p>
+<p><strong>Rubric:</strong> 2pts for correct <code>sample_n20</code> output (autograder); 2pts for correct <code>age_hist</code> (autograder); 2pts for correct <code>turnout_hist</code> (autograder); 1pt informative labels (PDF); 1pt comparison to population distributions (PDF).</p>
+</section>
+<section id="question-4-7-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-4-7-points">Question 4 (7 points)</h2>
+<p>Use the <code>summarize()</code> function on <code>samples_n20</code> to calculate the average (named <code>ev_age</code> and <code>ev_turnout</code>) and standard deviation (named <code>se_age</code> and <code>se_turnout</code>) of each sample mean/proportion across the repeated samples. Save this tibble as <code>samp_dist_summary</code> and it should look like this:</p>
+<pre><code># A tibble: 1 × 4
+  ev_age se_age ev_turnout se_turnout
+   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
+1   X.XX   X.XX      X.XXX      X.XXX</code></pre>
+<p>Make sure that the column names are the same for the autograder. Use <code>knitr::kable()</code> to present the values in nicely formatted table with <code>digits = 2</code> to create nicely rounded numbers.</p>
+<p>Compare the mean and SD of these sampling distributions to the population means and SDs from the previous question. Are these distributions centered on the same value? Which has more spread, the population distribution of age/turnout or the sampling distributions of their means?</p>
+<p><strong>Rubric</strong>: 4pts for correct <code>samp_dist_summary</code> tibble (autograder); 1pt for nicely formatted table (PDF); 2pts for discussion (PDF).</p>
+</section>
+<section id="question-5-3-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-5-3-points">Question 5 (3 points)</h2>
+<p>The central limit theorem says that sums and means tend to be normally distributed so that 68% of the sampling distribution of the mean should be within 1 standard deviation of the expected value of the expected value. Let’s see if this if this approximation is good for our sampling distributions.</p>
+<p>Use <code>mutate</code> to create a new variable in <code>samples_n20</code> called <code>age_error</code> that is the absolute value of the difference between <code>age_mean</code> and the average of the <code>age_mean</code>. Then create a variable called <code>within_1sd_age</code> that is <code>TRUE</code> is this absolute difference is less than or equal to the standard deviation of <code>age_mean</code>. Finally, take the mean of this variable to obtain the proportion of sample means that are within one SD of the mean of their distribution. Save the resulting 1x1 tibble as <code>age_clt_n20</code>.</p>
+<p>To get you started, you can calculate the absolute value of the difference between a variable <code>x</code> and its mean using the following code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mydata <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">error =</span> <span class="fu">abs</span>(x <span class="sc">-</span> <span class="fu">mean</span>(x))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Report this proportion in the main text and comment on whether it is similar to what the CLT would predict.</p>
+<p><strong>Rubric:</strong> 2pts for correct <code>age_clt_n20</code> tibble (autograder); 1pt for the reporting value and commenting on comparison to CLT (PDF).</p>
+</section>
+<section id="question-6-5-points" class="level2">
+<h2 class="anchored" data-anchor-id="question-6-5-points">Question 6 (5 points)</h2>
+<p>In this question you will repeat the exercise from question 4, using <code>turnout_prop</code> instead.</p>
+<p>Use <code>mutate</code> to create a new variable in <code>samples_n20</code> called <code>turnout_error</code> that is the absolute value of the difference between <code>turnout_prop</code> and the average of the <code>turnout_prop</code>. Then create a variable called <code>within_1sd_turnout</code> that is <code>TRUE</code> is this absolute difference is less than or equal to the standard deviation of <code>turnout_prop</code>. Finally, take the mean of this variable to obtain the proportion of sample means that are within one SD of the mean of their distribution. Save the resulting 1x1 tibble as <code>turnout_clt_n20</code>.</p>
+<p>Report this proportion in the main text and comment on whether it is similar to what the CLT would predict. If this is different than age, can you think of anything about the two variables that differ that might cause the CLT approximation to be better for one than the other?</p>
+<p><strong>Rubric:</strong> 2pts for correct <code>turnout_clt_n20</code> tibble (autograder); 1pt for the reporting value and commenting on comparison to CLT (PDF); 1pt reasoning on why they might differ (PDF).</p>
+</section>
+<section id="question-7-extra-credit-5pts" class="level2">
+<h2 class="anchored" data-anchor-id="question-7-extra-credit-5pts">Question 7 (Extra credit, 5pts)</h2>
+<p><strong>This problem is optional. Any points earned on this problem can be applied to lost points on other parts of the problem set. You cannot earn more than the maximum score on the problem set.</strong></p>
+<p>Write the following line at the beginning of the code chunk for this problem:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">02138</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then create a tibble called <code>samples_n200</code> that replicates the exercise the sampling of question 3 but with 1,000 samples of size 200. With this tibble replicate the analysis of questions 4 and 5 to get the proportion of sample means/proportions <code>age_mean</code> and <code>turnout_prop</code> that are within 1 SD of the means of those distributions. You can save the resulting 1x1 tibbles for age as <code>age_clt_n200</code> and for turnout as <code>turnout_clt_n200</code>.</p>
+<p>In the write-up, report these values and answer the following questions. Does the normal approximation seem better here than with a sample size of 20? Which variable sees more improvement in the approximation?</p>
+<p><strong>Rubric:</strong> 1pt for <code>sample_n200</code> (autograder); 1pt for <code>age_clt_n200</code> (autograder); 1pt for <code>turnout_clt_n200</code>; 2pts for write up (PDF).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

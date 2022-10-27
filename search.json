@@ -329,6 +329,69 @@
     "text": "Question 5\nYour co-workers Bobby Boxplot and Harriet Histogram are arguing about what the treatment should be in this study. Bobby says that the study should use whether the respondent actually served in Vietnam as the treatment, whereas Harriet says that it should be being drafted or not as we have done up until now. Given what you know about the setting, which of these two approaches would have higher internal validity? Discuss your reasoning briefly for your answer in two to four sentences. Hint: be sure to review the description of the study at the beginning of this document to remind yourself of how the draft worked."
   },
   {
+    "objectID": "assignments/06_hw_sampling.html",
+    "href": "assignments/06_hw_sampling.html",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "",
+    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#background",
+    "href": "assignments/06_hw_sampling.html#background",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Background",
+    "text": "Background\nIn this exercise, we will focus on sampling and sampling distributions when we have access to an entire census for a given population. In this case, the data/fulton.csv file contains anonymized data on all registered voters in Fulton County, GA from 1994. The variables in this dataset are:\n\n\n\nName\nDescription\n\n\n\n\nturnout\ndid person vote (1) or not (0) in 1994?\n\n\nblack\nis this person black (1) or not (0)?\n\n\nsex\nis this person a woman (1) or not (0)?\n\n\nage\nage of registered voter\n\n\ndem\nregistered as a Democrat (1) or not (0)?\n\n\nrep\nregistered as a Republican (1) or not (0)?\n\n\nurban\nregistered in a city (1) or not (0)?\n\n\n\nFor the purposed of this exercise, we will treat this data as the population of interest. Doing so is an increasingly common approach for polling, where pollsters are now using the voter file as a sampling frame to conduct their polls. We will repeated sample from this population to better understand sampling uncertainty.\nNote: please follow the directions carefully about setting the seed for the sampling based questions."
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#question-1-7-points",
+    "href": "assignments/06_hw_sampling.html#question-1-7-points",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Question 1 (7 points)",
+    "text": "Question 1 (7 points)\nLoad the voter list data into R using read_csv and save the data as fulton.\nCreate a density histogram of age with a bin width of 1 and save this plot as age_hist (use the aesthetic mapping y = ..density.. in to accomplish this). Create a barplot for turnout with the proportion on the y-axis (use the aesthetic mapping y = ..prop.. in geom_barplot to achieve this). Make sure both of these plots are shown in the PDF.\nIn the write-up, state how many units are in the population (that is, how many rows are in the fulton data).\nRubric: 1pt for Rmd file compiling (autograder); 1pt for data loaded (autograder); 2pts for age_hist (autograder); 2pts for turnout_hist (autograder); 1pt for number of rows reported (PDF)."
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#question-2-5-points",
+    "href": "assignments/06_hw_sampling.html#question-2-5-points",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Question 2 (5 points)",
+    "text": "Question 2 (5 points)\nUse summarize() to calculate the population mean and standard deviation of age and turnout (that is the mean and SD of these variables in the fulton data) and save the resulting tibble as pop_parameters with the tibble output looking like:\n# A tibble: 1 × 4\n  age_pop_mean age_pop_sd turnout_pop_prop turnout_pop_sd\n         <dbl>      <dbl>            <dbl>          <dbl>\n1         XX.X       XX.X            X.XXX          X.XXX\nMake sure that the column names are the same for the autograder. (Hint: you can summarize multiple variables in the same call to summarize.) Use knitr::kable() to present the values in nicely formatted table with digits = 2 to create nicely rounded numbers and informative column names (they may need to be abbreviated to fit on the page).\nRubric: 4pts for correct pop_parameters tibble (autograder); 1pts for nicely formatted table (PDF)."
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#question-3-8-points",
+    "href": "assignments/06_hw_sampling.html#question-3-8-points",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Question 3 (8 points)",
+    "text": "Question 3 (8 points)\nIn the first line of the code chunk for this question use the following code:\n\nlibrary(infer)\nset.seed(02138)\n\nThen use rep_slice_sample() to take 1,000 samples of size 20 from fulton and calculate the sample mean of age and the sample mean/proportion of turnout for each of these samples. Save these as variables named age_mean and turnout_prop and save the resulting tibble as samples_n20.\nCreate a density histogram of the age means and with a bin width of 1 and save this as age_mean_hist. Create a density histogram of the turnout proportions and save this as turnout_prop_hist. Make sure both of these plots are shown in the PDF and that they have informative labels.\nIn the write-up, compare the sampling distribution of the sample mean and sample proportion here to the population distributions from question 1. Are the shapes of the sampling distributions similar or different to the population distributions? If different, how are they different?\nRubric: 2pts for correct sample_n20 output (autograder); 2pts for correct age_hist (autograder); 2pts for correct turnout_hist (autograder); 1pt informative labels (PDF); 1pt comparison to population distributions (PDF)."
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#question-4-7-points",
+    "href": "assignments/06_hw_sampling.html#question-4-7-points",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Question 4 (7 points)",
+    "text": "Question 4 (7 points)\nUse the summarize() function on samples_n20 to calculate the average (named ev_age and ev_turnout) and standard deviation (named se_age and se_turnout) of each sample mean/proportion across the repeated samples. Save this tibble as samp_dist_summary and it should look like this:\n# A tibble: 1 × 4\n  ev_age se_age ev_turnout se_turnout\n   <dbl>  <dbl>      <dbl>      <dbl>\n1   X.XX   X.XX      X.XXX      X.XXX\nMake sure that the column names are the same for the autograder. Use knitr::kable() to present the values in nicely formatted table with digits = 2 to create nicely rounded numbers.\nCompare the mean and SD of these sampling distributions to the population means and SDs from the previous question. Are these distributions centered on the same value? Which has more spread, the population distribution of age/turnout or the sampling distributions of their means?\nRubric: 4pts for correct samp_dist_summary tibble (autograder); 1pt for nicely formatted table (PDF); 2pts for discussion (PDF)."
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#question-5-3-points",
+    "href": "assignments/06_hw_sampling.html#question-5-3-points",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Question 5 (3 points)",
+    "text": "Question 5 (3 points)\nThe central limit theorem says that sums and means tend to be normally distributed so that 68% of the sampling distribution of the mean should be within 1 standard deviation of the expected value of the expected value. Let’s see if this if this approximation is good for our sampling distributions.\nUse mutate to create a new variable in samples_n20 called age_error that is the absolute value of the difference between age_mean and the average of the age_mean. Then create a variable called within_1sd_age that is TRUE is this absolute difference is less than or equal to the standard deviation of age_mean. Finally, take the mean of this variable to obtain the proportion of sample means that are within one SD of the mean of their distribution. Save the resulting 1x1 tibble as age_clt_n20.\nTo get you started, you can calculate the absolute value of the difference between a variable x and its mean using the following code:\n\nmydata |>\n  mutate(\n    error = abs(x - mean(x))\n  )\n\nReport this proportion in the main text and comment on whether it is similar to what the CLT would predict.\nRubric: 2pts for correct age_clt_n20 tibble (autograder); 1pt for the reporting value and commenting on comparison to CLT (PDF)."
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#question-6-5-points",
+    "href": "assignments/06_hw_sampling.html#question-6-5-points",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Question 6 (5 points)",
+    "text": "Question 6 (5 points)\nIn this question you will repeat the exercise from question 4, using turnout_prop instead.\nUse mutate to create a new variable in samples_n20 called turnout_error that is the absolute value of the difference between turnout_prop and the average of the turnout_prop. Then create a variable called within_1sd_turnout that is TRUE is this absolute difference is less than or equal to the standard deviation of turnout_prop. Finally, take the mean of this variable to obtain the proportion of sample means that are within one SD of the mean of their distribution. Save the resulting 1x1 tibble as turnout_clt_n20.\nReport this proportion in the main text and comment on whether it is similar to what the CLT would predict. If this is different than age, can you think of anything about the two variables that differ that might cause the CLT approximation to be better for one than the other?\nRubric: 2pts for correct turnout_clt_n20 tibble (autograder); 1pt for the reporting value and commenting on comparison to CLT (PDF); 1pt reasoning on why they might differ (PDF)."
+  },
+  {
+    "objectID": "assignments/06_hw_sampling.html#question-7-extra-credit-5pts",
+    "href": "assignments/06_hw_sampling.html#question-7-extra-credit-5pts",
+    "title": "Problem Set 6: Sampling from a Voter File",
+    "section": "Question 7 (Extra credit, 5pts)",
+    "text": "Question 7 (Extra credit, 5pts)\nThis problem is optional. Any points earned on this problem can be applied to lost points on other parts of the problem set. You cannot earn more than the maximum score on the problem set.\nWrite the following line at the beginning of the code chunk for this problem:\n\nset.seed(02138)\n\nThen create a tibble called samples_n200 that replicates the exercise the sampling of question 3 but with 1,000 samples of size 200. With this tibble replicate the analysis of questions 4 and 5 to get the proportion of sample means/proportions age_mean and turnout_prop that are within 1 SD of the means of those distributions. You can save the resulting 1x1 tibbles for age as age_clt_n200 and for turnout as turnout_clt_n200.\nIn the write-up, report these values and answer the following questions. Does the normal approximation seem better here than with a sample size of 20? Which variable sees more improvement in the approximation?\nRubric: 1pt for sample_n200 (autograder); 1pt for age_clt_n200 (autograder); 1pt for turnout_clt_n200; 2pts for write up (PDF)."
+  },
+  {
     "objectID": "assignments/distill.html",
     "href": "assignments/distill.html",
     "title": "Creating the Final Project Repository",
@@ -424,7 +487,7 @@
     "href": "assignments/index.html#problem-sets",
     "title": "Assignments",
     "section": "Problem Sets",
-    "text": "Problem Sets\n\nSubmission guide for problem sets\nProblem set 0: Setting up R, RStudio, and GitHub\nProblem set 1: Data Visualization\nProblem set 2: Data Wrangling\nProblem set 3: Causality\nProblem set 4: Summarizing Data\nProblem set 5: Regression"
+    "text": "Problem Sets\n\nSubmission guide for problem sets\nProblem set 0: Setting up R, RStudio, and GitHub\nProblem set 1: Data Visualization\nProblem set 2: Data Wrangling\nProblem set 3: Causality\nProblem set 4: Summarizing Data\nProblem set 5: Regression\nProblem set 6: Sampling"
   },
   {
     "objectID": "assignments/index.html#exams",
