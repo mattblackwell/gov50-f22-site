@@ -23,6 +23,10 @@ remotes::install_github("mattblackwell/gov50data")
 
 ## Slides and Code
 
-- Tuesday (10/25) lecture: Model fit and multiple regression
+- Tuesday (10/25) lecture: Sampling
   - [PDF of slides as I present them](/slides/16_sampling.pdf)
   - [PDF of handout version of slides](/slides/16_sampling_handout.pdf) (no incremental slides)
+
+- Thursday (10/27) lecture: Sampling distributions
+  - [PDF of slides as I present them](/slides/17_sampling_dist.pdf)
+  - [PDF of handout version of slides](/slides/17_sampling_dist_handout.pdf) (no incremental slides)
