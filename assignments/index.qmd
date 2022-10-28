@@ -12,6 +12,7 @@ title: "Assignments"
 - [Tutorial 5: Correlation and Tidying Data](https://mblackwell.shinyapps.io/05-correlation-tidying/)
 - [Tutorial 6: Loops](https://mblackwell.shinyapps.io/06-loops/)
 - [Tutorial 7: Regression and Sampling](https://mblackwell.shinyapps.io/07-regression/)
+- [Tutorial 8: Bootstrap](https://mblackwell.shinyapps.io/08-bootstrap/)
 
 ## Problem Sets
 
