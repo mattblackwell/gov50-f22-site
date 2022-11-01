@@ -54,7 +54,9 @@ website:
             - text: "7: More Regression"
               file: materials/08_regression.qmd
             - text: "8: Sampling"
-              file: materials/09_sampling.qmd              
+              file: materials/09_sampling.qmd
+            - text: "9: Bootstrap and Confidence Intervals"
+              file: materials/10_bootstrap.qmd
               
     - title: "Assignments"
       style: "docked"
@@ -78,6 +80,10 @@ website:
               file: assignments/03_hw_causality.qmd
             - text: "Problem Set 4"
               file: assignments/04_hw_summarizing.qmd
+            - text: "Problem Set 5"
+              file: assignments/05_hw_regression.qmd
+            - text: "Problem Set 6"
+              file: assignments/06_hw_sampling.qmd              
 format:
   html:
     theme:
