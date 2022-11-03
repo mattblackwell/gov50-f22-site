@@ -753,14 +753,14 @@
     "href": "materials/10_bootstrap.html#data",
     "title": "The Bootstrap and Confidence Intervals",
     "section": "Data",
-    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")\n\n\nCSV files for the data from this week if you cannot install the package:\n\nanes.csv"
+    "text": "Data\n\nReinstall the Gov 50 data package that has new data for this week:\n\n\nremotes::install_github(\"mattblackwell/gov50data\")\n\n\nCSV files for the data from this week if you cannot install the package:\n\nanes.csv\ntrains.csv"
   },
   {
     "objectID": "materials/10_bootstrap.html#slides-and-code",
     "href": "materials/10_bootstrap.html#slides-and-code",
     "title": "The Bootstrap and Confidence Intervals",
     "section": "Slides and Code",
-    "text": "Slides and Code\n\nTuesday (11/1) lecture: The Bootstrap\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
+    "text": "Slides and Code\n\nTuesday (11/1) lecture: The Bootstrap\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)\n\nThursday (11/3) lecture: More Confidence Intervals\n\nPDF of slides as I present them\nPDF of handout version of slides (no incremental slides)"
   },
   {
     "objectID": "materials/index.html",
