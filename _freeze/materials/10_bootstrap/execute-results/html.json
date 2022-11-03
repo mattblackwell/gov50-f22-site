@@ -1,8 +1,10 @@
 {
-  "hash": "b4da73aa467f218f713a7b3f749c44b5",
+  "hash": "3cb5be4e4d2b9b0c6a4e3026a52ea7b8",
   "result": {
-    "markdown": "---\ntitle: \"The Bootstrap and Confidence Intervals\"\ndate: 2022-10-24\n---\n\n\n\n## Readings \n\n- MD Ch 8, IMS Ch 12 for another take. \n\n\n\n## Data\n\n- Reinstall the Gov 50 data package that has new data for this week:\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"mattblackwell/gov50data\")\n```\n:::\n\n\n- CSV files for the data from this week if you cannot install the package:\n  - [`anes.csv`](/files/data/anes.csv)\n\n## Slides and Code\n\n- Tuesday (11/1) lecture: The Bootstrap\n  - [PDF of slides as I present them](/slides/18_bootstrap.pdf)\n  - [PDF of handout version of slides](/slides/18_bootstrap_handout.pdf) (no incremental slides)\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"The Bootstrap and Confidence Intervals\"\ndate: 2022-10-24\n---\n\n\n\n## Readings \n\n- MD Ch 8, IMS Ch 12 for another take. \n\n\n\n## Data\n\n- Reinstall the Gov 50 data package that has new data for this week:\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"mattblackwell/gov50data\")\n```\n:::\n\n\n- CSV files for the data from this week if you cannot install the package:\n  - [`anes.csv`](/files/data/anes.csv)\n  - [`trains.csv`](/files/data/trains.csv)\n\n## Slides and Code\n\n- Tuesday (11/1) lecture: The Bootstrap\n  - [PDF of slides as I present them](/slides/18_bootstrap.pdf)\n  - [PDF of handout version of slides](/slides/18_bootstrap_handout.pdf) (no incremental slides)\n\n- Thursday (11/3) lecture: More Confidence Intervals\n  - [PDF of slides as I present them](/slides/19_conf_int.pdf)\n  - [PDF of handout version of slides](/slides/19_conf_int_handout.pdf) (no incremental slides)\n",
+    "supporting": [
+      "10_bootstrap_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
