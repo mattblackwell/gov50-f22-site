@@ -392,6 +392,55 @@
     "text": "Question 7 (Extra credit, 5pts)\nThis problem is optional. Any points earned on this problem can be applied to lost points on other parts of the problem set. You cannot earn more than the maximum score on the problem set.\nWrite the following line at the beginning of the code chunk for this problem:\n\nset.seed(02138)\n\nThen create a tibble called samples_n200 that replicates the exercise the sampling of question 3 but with 1,000 samples of size 200. With this tibble replicate the analysis of questions 4 and 5 to get the proportion of sample means/proportions age_mean and turnout_prop that are within 1 SD of the means of those distributions. You can save the resulting 1x1 tibbles for age as age_clt_n200 and for turnout as turnout_clt_n200.\nIn the write-up, report these values and answer the following questions. Does the normal approximation seem better here than with a sample size of 20? Which variable sees more improvement in the approximation?\nRubric: 1pt for sample_n200 (autograder); 1pt for age_clt_n200 (autograder); 1pt for turnout_clt_n200; 2pts for write up (PDF)."
   },
   {
+    "objectID": "assignments/07_hw_bootstrap.html",
+    "href": "assignments/07_hw_bootstrap.html",
+    "title": "Problem Set 7: Exposure to Inequality and Support for Redistribution",
+    "section": "",
+    "text": "You can find instructions for obtaining and submitting problem sets here.\nYou can find the GitHub Classroom link to download the template repository on the Ed Board"
+  },
+  {
+    "objectID": "assignments/07_hw_bootstrap.html#background",
+    "href": "assignments/07_hw_bootstrap.html#background",
+    "title": "Problem Set 7: Exposure to Inequality and Support for Redistribution",
+    "section": "Background",
+    "text": "Background\nDoes exposure to inequality affect our support for redistributive policies such as taxes on higher income earners? A recent paper explored the effect of brief exposure to socioeconomic inequality in an everyday setting on support for a millionaire’s tax. This exercise is based on:\n\nSands, Melissa L. 2017. “Exposure to inequality affects redistribution.” Proceedings of the National Academy of Sciences, 114(4): 663-668.\n\nIn this experiment, the author hired actors to stand in affluent, predominantly white, commercial areas around Boston, MA that have high pedestrian traffic. These actors were either white or Black, and each actor dressed in attire that indicated either affluence (well-dressed, well-groomed) or poverty (unkempt, shabby clothing). The author randomly assigned shifts to each actor with randomly chosen attire to stand on a city street within 20 feet of a petitioner hired by the researcher. This petitioner would stop every third adult that walked past the actor and ask them to sign a petition for the millionaire’s tax (a measure in MA to impose an additional tax of 4% on individuals with annual incomes of $1 million or more) or to sign a petition about reducing the use of plastic bags in local stores. The type of petition was randomly assigned as well. The outcome of interest is whether the respondent agreed to sign the petition on the millionaire’s tax (the plastic bag petition is used as a placebo).\nA total of 2,591 respondents were petitioned with 1,335 being petitioned about the millionaire’s tax. Petitioners also collected their “best guess” about the gender, age, and race/ethnicity of each person approached. The data file for this study is inequality-exposure.csv and contains the following variables:\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nsigned\n1 if the respondent signed the petition, 0 otherwise\n\n\nmill_tax\n1 if petitioned about the millionaire’s tax, 0 for plastic bag petition.\n\n\nblackactor\n1 if actor was Black for this respondent, 0 for white\n\n\npooractor\n1 if actor was in poverty condition, 0 for affluent condition\n\n\nblack\n1 if petitioner guessed respondent was Black\n\n\nwhite\n1 if petitioner guessed respondent was non-Hispanic white\n\n\nasian\n1 if petitioner guessed respondent was Asian\n\n\nhisp\n1 if petitioner guessed respondent was Hispanic\n\n\nyoung\n1 if petitioner guessed respondent was 18-35 years old\n\n\nmiddle\n1 if petitioner guessed respondent was 36-65 years old\n\n\nold\n1 if petitioner guessed respondent was >65 years old\n\n\nfemale\n1 if petitioner guessed respondent was female\n\n\nclust\nCluster number of respondent (see question 6)"
+  },
+  {
+    "objectID": "assignments/07_hw_bootstrap.html#question-1-5-points",
+    "href": "assignments/07_hw_bootstrap.html#question-1-5-points",
+    "title": "Problem Set 7: Exposure to Inequality and Support for Redistribution",
+    "section": "Question 1 (5 points)",
+    "text": "Question 1 (5 points)\nLoad the data into R and name it ineq. Create a tibble called mill_df that is filtered to respondents petitioned about the millionaire’s tax. We will use this data throughout the exercise. Create two new variables:\n\ncostume that is \"Poor\" when pooractor is 1 and \"Affluent\" otherwise\nrace_actor that is \"Black\" when blackactor is 1 and \"White\" otherwise\n\nCalculate the following object, saving it with the names indicated:\n\nineq_diff: The difference in means in petition signing (signed) between seeing the actor in the poor and affluent conditions (costume) for those who were petitioned about the millionaire’s tax. This should be a 1x1 tibble.\n\nReport this values in the text of your write up and briefly interpret it.\nRubric: 1pt for the Rmd file rendering (autograder); 1pt for correct mill_df tibble (autograder); 2pts for correct ineq_diff tibble (autograder); 1pt write-up and interpretation (PDF)."
+  },
+  {
+    "objectID": "assignments/07_hw_bootstrap.html#question-2-10-points",
+    "href": "assignments/07_hw_bootstrap.html#question-2-10-points",
+    "title": "Problem Set 7: Exposure to Inequality and Support for Redistribution",
+    "section": "Question 2 (10 Points)",
+    "text": "Question 2 (10 Points)\nIn the first line of the code chunk for this question use the following code:\n\nlibrary(infer)\nset.seed(02138)\n\nGenerate 1,000 bootstrap replications of the estimated ATE from Question 1 and save these bootstraps in a tibble called ate_boots. You may use the rep_slice_sample() or specify/generate approach, but the column of bootstrapped ATEs should either be called ATE or stat.\nUse these bootstraps to calculate a 95% confidence interval for the difference in means using the percentile method and save this as ate_ci_95, which should be a 1 by 2 tibble.\nUse ggplot(), geom_histogram() to plot the bootstrap distribution and overlay it with the confidence interval using this geom:\n\ngeom_vline(xintercept = unlist(ate_ci_95))\n\nThis will be manually graded in the PDF so be sure it shows up in the PDF. Use informative labels.\nIn the writeup, discuss if the CI contains zero? What does that mean?\nRubric: 4pts for correct ate_boots tibble (autograder); 2pts for correct ate_ci_95 (autograder); 3pts for plot of the bootstrap distribution and CI (PDF); 1pt for write up (PDF)."
+  },
+  {
+    "objectID": "assignments/07_hw_bootstrap.html#question-3-4-points",
+    "href": "assignments/07_hw_bootstrap.html#question-3-4-points",
+    "title": "Problem Set 7: Exposure to Inequality and Support for Redistribution",
+    "section": "Question 3 (4 points)",
+    "text": "Question 3 (4 points)\nExplain how to interpret 95% confidence intervals in terms of repeated sampling. Is it possible to produce a 100% confidence interval in this setting? If so, what is it and is it useful?\nRubric: 3pts for interpretation of CIs (PDF); 1pt for discussion of 100% confidence interval (PDF)."
+  },
+  {
+    "objectID": "assignments/07_hw_bootstrap.html#question-4-5-points",
+    "href": "assignments/07_hw_bootstrap.html#question-4-5-points",
+    "title": "Problem Set 7: Exposure to Inequality and Support for Redistribution",
+    "section": "Question 4 (5 points)",
+    "text": "Question 4 (5 points)\nCalculate the ATE for Black and White actors separately (using the race_actor variable) and calculate the interaction or difference between these two ATEs. The output should be a 1 row tibble named ate_race with columns ATE_Black, ATE_White, and ATE_Diff that are the ATE for Black actors, White actors and the difference between them, respectively.\nIn the write-up, report the interaction and describe what it means in the substance of this experiment.\nRubric: 3pts for correct ate_race tibble (autograder); 2pt for reporting the effect and interpretation (PDF)."
+  },
+  {
+    "objectID": "assignments/07_hw_bootstrap.html#question-5-11-points",
+    "href": "assignments/07_hw_bootstrap.html#question-5-11-points",
+    "title": "Problem Set 7: Exposure to Inequality and Support for Redistribution",
+    "section": "Question 5 (11 points)",
+    "text": "Question 5 (11 points)\nIn the first line of the code chunk for this question use the following code:\n\nset.seed(02138)\n\nUse rep_slice_sample (not specify/generate) to generate 1000 boostrap replications of the difference in ATEs between Black and White actors from Question 4. Save this tibble as ate_race_boots.\nThen construct a 95% confidence interval for the difference between the ATE for black Actors and the ATE for White actors and save this confidence intervals as ate_race_ci_95.\nUse ggplot(), geom_histogram() to plot the bootstrap distribution and overlay it with the confidence interval using this geom:\n\ngeom_vline(xintercept = unlist(ate_race_ci_95))\n\nThis will be manually graded in the PDF so be sure it shows up in the PDF. Use informative labels.\nIn the writeup, discuss if the CI contains zero? What does that mean?\nRubric: 5pts for correct ate_race_boots tibble (autograder); 2pts for correct ate_race_ci_95 (autograder); 3pts for plot of the bootstrap distribution and CI (PDF); 1pt for write up (PDF)."
+  },
+  {
     "objectID": "assignments/distill.html",
     "href": "assignments/distill.html",
     "title": "Creating the Final Project Repository",
