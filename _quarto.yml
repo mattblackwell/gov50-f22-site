@@ -57,6 +57,8 @@ website:
               file: materials/09_sampling.qmd
             - text: "9: Bootstrap and Confidence Intervals"
               file: materials/10_bootstrap.qmd
+            - text: "10: Hypothesis Testing"
+              file: materials/11_hyp_tests.qmd
               
     - title: "Assignments"
       style: "docked"
