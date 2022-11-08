@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-09-13">
+<meta name="dcterms.date" content="2022-10-24">
 
-<title>Gov 50 - Causality and Pivoting</title>
+<title>Gov 50 - The Bootstrap and Confidence Intervals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -170,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Causality and Pivoting</h1>
+      <h1 class="quarto-secondary-nav-title">The Bootstrap and Confidence Intervals</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -223,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/04_causality.html" class="sidebar-item-text sidebar-link active">3: Causality</a>
+  <a href="../materials/04_causality.html" class="sidebar-item-text sidebar-link">3: Causality</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -258,7 +258,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/11_hyp_tests.html" class="sidebar-item-text sidebar-link">10: Hypothesis Testing</a>
+  <a href="../materials/11_hyp_tests.html" class="sidebar-item-text sidebar-link active">10: Hypothesis Testing</a>
   </div>
 </li>
       </ul>
@@ -283,7 +283,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Causality and Pivoting</h1>
+<h1 class="title d-none d-lg-block">The Bootstrap and Confidence Intervals</h1>
 </div>
 
 
@@ -294,7 +294,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 13, 2022</p>
+      <p class="date">October 24, 2022</p>
     </div>
   </div>
     
@@ -306,7 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="readings" class="level2">
 <h2 class="anchored" data-anchor-id="readings">Readings</h2>
 <ul>
-<li><a href="https://press.princeton.edu/books/hardcover/9780691222271/quantitative-social-science">Chapter 2 of QSS</a></li>
+<li>MD Ch 9, IMS Ch 11 for another take.</li>
 </ul>
 </section>
 <section id="data" class="level2">
@@ -317,20 +317,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"mattblackwell/gov50data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li>CSV files for the data from this week if you cannot install the package:
+<ul>
+<li><a href="../files/data/tea.csv"><code>tea.csv</code></a></li>
+</ul></li>
+</ul>
 </section>
 <section id="slides-and-code" class="level2">
 <h2 class="anchored" data-anchor-id="slides-and-code">Slides and Code</h2>
 <ul>
-<li>Tuesday (9/20) lecture: Causality
+<li>Tuesday (11/8) lecture: Hypothesis tests
 <ul>
-<li><a href="../slides/06_causality.pdf">PDF of slides as I present them</a></li>
-<li><a href="../slides/06_causality_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
-<li>Code: <a href="../files/code/transphobia.Rmd"><code>transphobia.Rmd</code></a></li>
-</ul></li>
-<li>Tuesday (9/22) lecture: Observational Studies
-<ul>
-<li><a href="../slides/07_obs_studies.pdf">PDF of slides as I present them</a></li>
-<li><a href="../slides/07_obs_studies_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
+<li><a href="../slides/20_hyp_tests.pdf">PDF of slides as I present them</a></li>
+<li><a href="../slides/20_hyp_tests_handout.pdf">PDF of handout version of slides</a> (no incremental slides)</li>
 </ul></li>
 </ul>
 
