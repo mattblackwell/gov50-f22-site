@@ -25,6 +25,7 @@ title: "Assignments"
 - [Problem set 5: Regression](/assignments/05_hw_regression.qmd) 
 - [Problem set 6: Sampling](/assignments/06_hw_sampling.qmd) 
 - [Problem set 7: Bootstrapping](/assignments/07_hw_bootstrap.qmd) 
+- [Problem set 8: Hypothesis Tests](/assignments/08_hw_hyp_tests.qmd) 
 
 ## Exams
 
