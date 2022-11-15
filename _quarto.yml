@@ -59,6 +59,8 @@ website:
               file: materials/10_bootstrap.qmd
             - text: "10: Hypothesis Testing"
               file: materials/11_hyp_tests.qmd
+            - text: "11: More Tests and Mathematical Models"
+              file: materials/12_tests_models.qmd
               
     - title: "Assignments"
       style: "docked"

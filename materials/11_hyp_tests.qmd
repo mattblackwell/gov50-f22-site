@@ -1,6 +1,6 @@
 ---
-title: "The Bootstrap and Confidence Intervals"
-date: 2022-10-24
+title: "Hypothesis Tests"
+date: 2022-11-07
 ---
 
 
