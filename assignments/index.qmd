@@ -31,7 +31,7 @@ title: "Assignments"
 
 - [Practice Exam 1: The Effects of the Draft](/assignments/05_prex_draft.qmd)
 - [Exam 1: The Effects of the European Refugee Crisis (Ed page with GH Classroom Link)](https://edstem.org/us/courses/24957/resources)
-
+- [Practice Exam 2: Windpower and NIMBYism](/assignments/12_prex_wind.qmd)
 
 ## Final Project 
 
