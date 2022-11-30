@@ -7,4 +7,4 @@ title: "Readings, lectures, and videos"
 Each class session has a set of required readings that you should complete ***before*** attempting the tutorials. 
 
 
-All lecture notes combined into one PDF (updated 10/18): [`gov50notes.pdf`](/slides/gov50notes.pdf)
+All lecture notes combined into one PDF: [`gov50notes.pdf`](/slides/gov50notes.pdf)
