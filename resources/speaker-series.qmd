@@ -18,10 +18,10 @@ page-layout: full
 [Asmae Toumi](https://www.linkedin.com/in/asmae-toumi-46a661200) is the Director of Analytics at PursueCare, which is a telemedicine treatment company that offers virtual evidence-based addiction treatment for substance use disorders. This talk will be in person. 
 
 
-## November 18 (3-4pm): Meg Schwenzfeier 
+## November 18 (3-4pm): Meg Schwenzfeier (cancelled) 
 
 [Meg Schwenzfeier](https://schwenzfeier.github.io/) is currently the Data and Analytics Director for the Democratic Senatorial Campaign Committee. Previously she was the data science director at Biden for President, and worked as a data scientist at Hillary for America. This talk will be via Zoom. 
 
-## December 2 (3-4pm): Solomon Messing
+## December 2 (3-4pm): Solomon Messing (postponed to December 11)
 
 [Solomon Messing](https://solomonmg.github.io/) is a Senior Engineering Manager Applied Sciences at Twitter and has previously held positions at Facebook, ACRONYM, and the Pew Research Center. This talk will be via Zoom. 
