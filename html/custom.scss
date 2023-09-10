@@ -280,3 +280,23 @@ pre.text, pre.sourceCode, .cell-output pre {
 pre.text {
   color: #ffffff;
 }
+
+.old-course {
+  background: $orange;
+  padding: 10px;
+  color: $light;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+}
+
+
+.old-course a {
+  color: $light;
+}
+
+.old-course a:hover {
+  color: $pink;
+}
+
+

@@ -1,8 +1,8 @@
 ---
 title: "Data Science for the Social Sciences"
-subtitle: "Learning to use data to explore the social, political, and economic world"
+subtitle: "Learning to use data to explore the social, political, and economic world."
 details: |
-  Gov 50 • Fall 2022<br>Harvard University
+  Gov 50 • Fall 2022<br>Harvard University<br>Go to [Fall 2023 site](https://gov50-f23.github.io)
 sidebar: false
 toc: false
 page-layout: full
