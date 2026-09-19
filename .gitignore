@@ -15,3 +15,4 @@
 **/*_cache/*
 
 README.html
+**/*.quarto_ipynb
